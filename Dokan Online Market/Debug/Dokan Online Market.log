@@ -1,0 +1,4 @@
+﻿  HomeGUI.cpp
+C:\Users\Hosam\source\repos\Dokan Online Market\Dokan Online Market\HomeGUI.cpp(7,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  HomeGUI.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Dokan Online Market.vcxproj -> C:\Users\Hosam\source\repos\Dokan Online Market\Debug\Dokan Online Market.exe

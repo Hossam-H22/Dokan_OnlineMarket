@@ -1,0 +1,3 @@
+C:\Users\Hosam\source\repos\Dokan Online Market\Dokan Online Market\Debug\Dokan Online Market.vcxproj.AssemblyReference.cache
+C:\Users\Hosam\source\repos\Dokan Online Market\Dokan Online Market\Debug\DokanOnlineMarket.HomeGUI.resources
+C:\Users\Hosam\source\repos\Dokan Online Market\Dokan Online Market\Debug\Dokan Online Market.vcxproj.GenerateResource.cache
