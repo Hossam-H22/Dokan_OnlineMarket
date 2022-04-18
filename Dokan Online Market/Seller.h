@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <vector>
 #include "Product.h"
@@ -5,11 +6,13 @@
 class Seller
 {
 public:
-	int Id;
+	int ID;
 	std::string Name, Email, Gender, Phone, Address, Password, Path_photo;
-	std::vector<Product> *items[];
+	std::vector<Product*> SelledProducts;
 
-public:
-	Seller(int Id, std::string name, std::string email, std::string gender, std::string phone, std::string address, std::string password, std::string Path_photo,Product item[]);
+	Seller(void);
+	Seller(int, std::string, std::string, std::string, std::string, std::string, std::string, std::string);
+	~Seller(void);
 
 };
+

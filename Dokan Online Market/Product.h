@@ -1,11 +1,18 @@
-#include <string>
+#pragma once
+#include <iostream>
 class Product
 {
+public:
 	int ID, Quantity, Seller_ID, Total_Rate, NoOfVoters, Offer_Percentage, NoOfDeliveryDays;
 	float Price, PriceAfterOffer, FinalRate;
-	bool Avaliability; 
+	bool Avaliability;
 	std::string Name, Category, PathOfPhoto;
 
-	void CalculateRate();
+
+	Product(void);
+	~Product(void);
+	Product(int, std::string, float, int, std::string, int, int, int, std::string);
+	void CalculateRate(int);
 	void CalculatePrice();
 };
+

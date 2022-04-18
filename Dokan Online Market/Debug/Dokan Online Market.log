@@ -1,1 +1,7 @@
-﻿  Dokan Online Market.vcxproj -> C:\Users\Neven\Projects\Dokan_OnlineMarket\Debug\Dokan Online Market.exe
+﻿  Product.cpp
+C:\Users\Hosam\source\repos\Dokan Online Market\Dokan Online Market\Product.cpp(28,19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Hosam\source\repos\Dokan Online Market\Dokan Online Market\Product.cpp(32,47): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Seller.cpp
+  Generating Code...
+  HomeGUI.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Dokan Online Market.vcxproj -> C:\Users\Hosam\source\repos\Dokan Online Market\Debug\Dokan Online Market.exe
