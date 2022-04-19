@@ -109,7 +109,7 @@ namespace DokanOnlineMarket {
 			this->Controls->Add(this->pn_home);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedToolWindow;
 			this->Name = L"HomeGUI";
-			this->Text = L"HomeGUI";
+			this->Text = L"Dokan Online Market";
 			this->pn_home->ResumeLayout(false);
 			this->ResumeLayout(false);
 

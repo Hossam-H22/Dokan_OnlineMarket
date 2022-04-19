@@ -10,5 +10,4 @@ void main(array<String^>^ args)
 	Application::SetCompatibleTextRenderingDefault(false);
 	DokanOnlineMarket::HomeGUI form;
 	Application::Run(% form);
-
 }

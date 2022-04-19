@@ -1,7 +1,8 @@
 #pragma once
 #include <iostream>
-#include<vector>
+#include <vector>
 #include "Product.h"
+
 class Cart
 {
 public:
@@ -11,8 +12,8 @@ public:
 	Cart(void);
 	~Cart(void);
 	double DisplayPrice();
-	void AddProduct(Product);
-	void RemoveProduct(Product,int);
+	void AddProduct(Product*);
+	void RemoveProduct(int);
 
 };
 
