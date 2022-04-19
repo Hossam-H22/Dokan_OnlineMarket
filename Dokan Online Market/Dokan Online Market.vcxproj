@@ -120,11 +120,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Cart.cpp" />
     <ClCompile Include="HomeGUI.cpp" />
     <ClCompile Include="Product.cpp" />
     <ClCompile Include="Seller.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cart.h" />
     <ClInclude Include="HomeGUI.h">
       <FileType>CppForm</FileType>
     </ClInclude>

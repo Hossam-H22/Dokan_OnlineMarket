@@ -1,6 +1,5 @@
 #include "Product.h"
 #include <cmath>
-
 Product::Product() {}
 Product::~Product() {}
 

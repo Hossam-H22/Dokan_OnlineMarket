@@ -24,6 +24,9 @@
     <ClCompile Include="Seller.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Cart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HomeGUI.h">
@@ -33,6 +36,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Seller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cart.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

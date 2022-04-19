@@ -1,7 +1,12 @@
-﻿  Product.cpp
-C:\Users\Hosam\source\repos\Dokan Online Market\Dokan Online Market\Product.cpp(28,19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Hosam\source\repos\Dokan Online Market\Dokan Online Market\Product.cpp(32,47): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+﻿  Cart.cpp
+C:\Users\user\foldary\Dokan_OnlineMarket\Dokan Online Market\Cart.h(7,10): error C3646: 'arrp': unknown override specifier
+C:\Users\user\foldary\Dokan_OnlineMarket\Dokan Online Market\Cart.h(8,1): error C2143: syntax error: missing ';' before '}'
+C:\Users\user\foldary\Dokan_OnlineMarket\Dokan Online Market\Cart.h(8,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  HomeGUI.cpp
+C:\Users\user\foldary\Dokan_OnlineMarket\Dokan Online Market\HomeGUI.cpp(7,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  Product.cpp
+C:\Users\user\foldary\Dokan_OnlineMarket\Dokan Online Market\Product.cpp(27,19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\user\foldary\Dokan_OnlineMarket\Dokan Online Market\Product.cpp(31,47): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   Seller.cpp
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
   Generating Code...
-  HomeGUI.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  Dokan Online Market.vcxproj -> C:\Users\Hosam\source\repos\Dokan Online Market\Debug\Dokan Online Market.exe
