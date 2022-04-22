@@ -6,10 +6,11 @@ class Customer
 {
 	int ID, Phone; 
 	std::string  Name, Address, Email, Gender, PathPhoto,Password; 
-	Product  Favorite[], NameProduct; 
-	Cart cart; 
-	Customer(void) {}; 
+	Product  Favorite , NameProduct; 
+	Cart cart ; 
+	Customer(){}; 
 	Customer(std::string name, int id, int phone, std::string add, std::string pass ,std::string email) {};
     ~Customer(void) {};
 	Product Search(Std::string product_name) {}; 
 };
+  
