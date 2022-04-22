@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+#pragma once
+=======
  #pragma once
+>>>>>>> 437c9ad1ca26b74f151432796ea42aa646c922a5
 #include <iostream>
 #include <vector>
 #include "Product.h"
