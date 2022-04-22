@@ -15,3 +15,7 @@ public:
 	void CalculateRate(int);
 	void CalculatePrice();
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> 437c9ad1ca26b74f151432796ea42aa646c922a5

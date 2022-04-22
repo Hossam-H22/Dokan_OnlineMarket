@@ -36,8 +36,9 @@ namespace DokanOnlineMarket {
 		}
 	private: System::Windows::Forms::Panel^ pn_home;
 	private: System::Windows::Forms::Panel^ pn_logo;
-	private: System::Windows::Forms::Panel^ pn_logoPorder;
-	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Button^ button1;
+
+
 
 	protected:
 
@@ -56,17 +57,16 @@ namespace DokanOnlineMarket {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(HomeGUI::typeid));
 			this->pn_home = (gcnew System::Windows::Forms::Panel());
-			this->pn_logoPorder = (gcnew System::Windows::Forms::Panel());
-			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->pn_logo = (gcnew System::Windows::Forms::Panel());
 			this->pn_home->SuspendLayout();
-			this->pn_logoPorder->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// pn_home
 			// 
-			this->pn_home->BackColor = System::Drawing::Color::Black;
-			this->pn_home->Controls->Add(this->pn_logoPorder);
+			this->pn_home->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(33)), static_cast<System::Int32>(static_cast<System::Byte>(113)),
+				static_cast<System::Int32>(static_cast<System::Byte>(155)));
+			this->pn_home->Controls->Add(this->button1);
 			this->pn_home->Controls->Add(this->pn_logo);
 			this->pn_home->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->pn_home->Location = System::Drawing::Point(0, 0);
@@ -74,34 +74,28 @@ namespace DokanOnlineMarket {
 			this->pn_home->Size = System::Drawing::Size(1291, 819);
 			this->pn_home->TabIndex = 0;
 			// 
-			// pn_logoPorder
+			// button1
 			// 
-			this->pn_logoPorder->BackColor = System::Drawing::Color::Black;
-			this->pn_logoPorder->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pn_logoPorder->Controls->Add(this->label1);
-			this->pn_logoPorder->Location = System::Drawing::Point(387, 564);
-			this->pn_logoPorder->Name = L"pn_logoPorder";
-			this->pn_logoPorder->Size = System::Drawing::Size(516, 95);
-			this->pn_logoPorder->TabIndex = 2;
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->BackColor = System::Drawing::Color::Transparent;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Bauhaus 93", 36, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(213)), static_cast<System::Int32>(static_cast<System::Byte>(170)),
+				static_cast<System::Int32>(static_cast<System::Byte>(68)));
+			this->button1->FlatAppearance->BorderColor = System::Drawing::Color::White;
+			this->button1->FlatAppearance->BorderSize = 0;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 27.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->ForeColor = System::Drawing::Color::White;
-			this->label1->Location = System::Drawing::Point(49, 20);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(418, 54);
-			this->label1->TabIndex = 1;
-			this->label1->Text = L"Start your journey";
+			this->button1->ForeColor = System::Drawing::Color::White;
+			this->button1->Location = System::Drawing::Point(420, 577);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(450, 77);
+			this->button1->TabIndex = 3;
+			this->button1->Text = L"Start your journey";
+			this->button1->UseVisualStyleBackColor = false;
 			// 
 			// pn_logo
 			// 
 			this->pn_logo->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pn_logo.BackgroundImage")));
 			this->pn_logo->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->pn_logo->Location = System::Drawing::Point(184, 116);
+			this->pn_logo->Location = System::Drawing::Point(184, 165);
 			this->pn_logo->Name = L"pn_logo";
 			this->pn_logo->Size = System::Drawing::Size(922, 388);
 			this->pn_logo->TabIndex = 0;
@@ -115,14 +109,13 @@ namespace DokanOnlineMarket {
 			this->Controls->Add(this->pn_home);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedToolWindow;
 			this->Name = L"HomeGUI";
-			this->Text = L"HomeGUI";
+			this->Text = L"Dokan Online Market";
 			this->pn_home->ResumeLayout(false);
-			this->pn_logoPorder->ResumeLayout(false);
-			this->pn_logoPorder->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+
 
 
 

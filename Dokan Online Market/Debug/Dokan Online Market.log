@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  HomeGUI.cpp
 C:\Dokan\Dokan_OnlineMarket\Dokan Online Market\HomeGUI.cpp(7,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
   Product.cpp
@@ -10,3 +11,16 @@ C:\Dokan\Dokan_OnlineMarket\Dokan Online Market\Seller.h(10,24): message : This 
   Generating Code...
   HomeGUI.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Dokan Online Market.vcxproj -> C:\Dokan\Dokan_OnlineMarket\Debug\Dokan Online Market.exe
+=======
+﻿  Cart.cpp
+  HomeGUI.cpp
+C:\Users\Hosam\My-Github\Dokan_OnlineMarket\Dokan Online Market\HomeGUI.cpp(7,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  Product.cpp
+C:\Users\Hosam\My-Github\Dokan_OnlineMarket\Dokan Online Market\Product.cpp(27,19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Hosam\My-Github\Dokan_OnlineMarket\Dokan Online Market\Product.cpp(31,47): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Seller.cpp
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Generating Code...
+  Cart.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Dokan Online Market.vcxproj -> C:\Users\Hosam\My-Github\Dokan_OnlineMarket\Debug\Dokan Online Market.exe
+>>>>>>> 437c9ad1ca26b74f151432796ea42aa646c922a5

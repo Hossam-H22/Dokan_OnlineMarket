@@ -1,9 +1,19 @@
 C:\Users\Hosam\source\repos\Dokan Online Market\Dokan Online Market\Debug\Dokan Online Market.vcxproj.AssemblyReference.cache
 C:\Users\Hosam\source\repos\Dokan Online Market\Dokan Online Market\Debug\DokanOnlineMarket.HomeGUI.resources
 C:\Users\Hosam\source\repos\Dokan Online Market\Dokan Online Market\Debug\Dokan Online Market.vcxproj.GenerateResource.cache
+<<<<<<< HEAD
 C:\Users\Neven\Projects\Dokan_OnlineMarket\Dokan Online Market\Debug\Dokan Online Market.vcxproj.AssemblyReference.cache
 C:\Users\Neven\Projects\Dokan_OnlineMarket\Dokan Online Market\Debug\DokanOnlineMarket.HomeGUI.resources
 C:\Users\Neven\Projects\Dokan_OnlineMarket\Dokan Online Market\Debug\Dokan Online Market.vcxproj.GenerateResource.cache
 C:\Dokan\Dokan_OnlineMarket\Dokan Online Market\Debug\Dokan Online Market.vcxproj.AssemblyReference.cache
 C:\Dokan\Dokan_OnlineMarket\Dokan Online Market\Debug\DokanOnlineMarket.HomeGUI.resources
 C:\Dokan\Dokan_OnlineMarket\Dokan Online Market\Debug\Dokan Online Market.vcxproj.GenerateResource.cache
+=======
+C:\Users\Hosam\My-Github\Dokan_OnlineMarket\Dokan Online Market\Debug\Dokan Online Market.vcxproj.AssemblyReference.cache
+C:\Users\Hosam\My-Github\Dokan_OnlineMarket\Dokan Online Market\Debug\DokanOnlineMarket.HomeGUI.resources
+C:\Users\Hosam\My-Github\Dokan_OnlineMarket\Dokan Online Market\Debug\Dokan Online Market.vcxproj.GenerateResource.cache
+C:\Users\osama\Dokan_OnlineMarket\Dokan Online Market\Debug\Dokan Online Market.vcxproj.AssemblyReference.cache
+C:\Users\osama\Dokan_OnlineMarket\Dokan Online Market\Debug\DokanOnlineMarket.HomeGUI.resources
+C:\Users\osama\Dokan_OnlineMarket\Dokan Online Market\Debug\Dokan Online Market.vcxproj.GenerateResource.cache
+C:\Users\osama\Dokan_OnlineMarket\Dokan Online Market\Debug\Dokan Online Market.exe
+>>>>>>> 437c9ad1ca26b74f151432796ea42aa646c922a5
