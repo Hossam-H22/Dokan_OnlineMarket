@@ -1,2 +1,2 @@
-PlatformToolSet=v142:VCToolArchitecture=Native32Bit:VCToolsVersion=14.29.30133:VCServicingVersionCrtHeaders=14.29.30136:TargetPlatformVersion=10.0.19041.0:TargetFrameworkVersion=v4.7.2::EnableManagedIncrementalBuild=true:
-Debug|Win32|C:\Users\Neven\Projects\Dokan_OnlineMarket\|
+PlatformToolSet=v142:VCToolArchitecture=Native32Bit:VCToolsVersion=14.29.30037:VCServicingVersionATL=14.29.30038:VCServicingVersionCrtHeaders=14.29.30038:VCServicingVersionCompilers=14.29.30038:TargetPlatformVersion=10.0.19041.0:TargetFrameworkVersion=v4.7.2::EnableManagedIncrementalBuild=true:
+Debug|Win32|C:\Dokan\Dokan_OnlineMarket\|

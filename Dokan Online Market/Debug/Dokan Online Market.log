@@ -1,1 +1,12 @@
-﻿  Dokan Online Market.vcxproj -> C:\Users\Neven\Projects\Dokan_OnlineMarket\Debug\Dokan Online Market.exe
+﻿  HomeGUI.cpp
+C:\Dokan\Dokan_OnlineMarket\Dokan Online Market\HomeGUI.cpp(7,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  Product.cpp
+C:\Dokan\Dokan_OnlineMarket\Dokan Online Market\Product.cpp(5,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Dokan\Dokan_OnlineMarket\Dokan Online Market\Product.cpp(9,47): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Seller.cpp
+C:\Dokan\Dokan_OnlineMarket\Dokan Online Market\Seller.h(10,24): warning C4200: nonstandard extension used: zero-sized array in struct/union
+C:\Dokan\Dokan_OnlineMarket\Dokan Online Market\Seller.h(10,24): message : This member will be ignored by a defaulted constructor or copy/move assignment operator
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Generating Code...
+  HomeGUI.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Dokan Online Market.vcxproj -> C:\Dokan\Dokan_OnlineMarket\Debug\Dokan Online Market.exe
