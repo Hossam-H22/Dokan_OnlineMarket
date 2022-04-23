@@ -27,3 +27,10 @@ Seller::Seller(int Id, string Name, string Email, string Gender, string Phone, s
     this->Password = Password;
     this->Path_photo = "";
 }
+
+void Seller::CalculateRate(float UserRate)
+{
+    Total_Rate += UserRate;
+    NoOfVoters++;
+    FinalRate = Total_Rate / (double)NoOfVoters;
+}

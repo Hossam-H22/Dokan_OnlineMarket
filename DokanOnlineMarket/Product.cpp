@@ -4,14 +4,14 @@
 Product::Product() {}
 Product::~Product() {}
 
-Product::Product(int id, string name, float price, int quantity, string categoty_name, int sellerID, int offer_percentage, int delivery, string photo)
+Product::Product(int id, string name, float price, int quantity, string categoty_name, string sellerMail, int offer_percentage, int delivery, string photo)
 {
     this->ID = id;
     this->Name = name;
     this->Price = price;
     this->Quantity = quantity;
     this->Category = categoty_name;
-    this->Seller_ID = sellerID;
+    this->Seller_mail = sellerMail;
     this->Offer_Percentage = offer_percentage;
     this->NoOfDeliveryDays = delivery;
     this->FinalRate = 0;
@@ -21,14 +21,14 @@ Product::Product(int id, string name, float price, int quantity, string categoty
     this->Avaliability = true;
 }
 
-Product::Product(int id, string name, float price, int quantity, string categoty_name, int sellerID, int offer_percentage, int delivery)
+Product::Product(int id, string name, float price, int quantity, string categoty_name, string sellerMail, int offer_percentage, int delivery)
 {
     this->ID = id;
     this->Name = name;
     this->Price = price;
     this->Quantity = quantity;
     this->Category = categoty_name;
-    this->Seller_ID = sellerID;
+    this->Seller_mail = sellerMail;
     this->Offer_Percentage = offer_percentage;
     this->NoOfDeliveryDays = delivery;
     this->FinalRate = 0;
