@@ -17,11 +17,20 @@ public:
 
 private slots:
     void on_pushButton_clicked();
-    void on_pushButton_2_clicked();
 
     void on_btn1_bar1_3_clicked();
 
     void on_btn2_bar1_3_clicked();
+
+    void on_btn_logout_clicked();
+
+    void on_btn_back_clicked();
+
+    void on_btn_fav_clicked();
+
+    void on_btn_Cart_clicked();
+
+    void on_btn_Home_clicked();
 
 private:
     void GoToHome();

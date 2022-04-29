@@ -19,11 +19,7 @@ HomeGui::~HomeGui()
 
 void HomeGui::on_pushButton_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(1);
-}
-void HomeGui::on_pushButton_2_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(2);
+    ui->stackedWidget->setCurrentIndex(4);
 }
 
 void HomeGui::GoToHome()
@@ -41,5 +37,35 @@ void HomeGui::on_btn1_bar1_3_clicked()
 void HomeGui::on_btn2_bar1_3_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
+}
+
+
+void HomeGui::on_btn_logout_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(3);
+}
+
+
+void HomeGui::on_btn_back_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(3);
+}
+
+
+void HomeGui::on_btn_fav_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(1);
+}
+
+
+void HomeGui::on_btn_Cart_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(0);
+}
+
+
+void HomeGui::on_btn_Home_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(2);
 }
 
