@@ -20,12 +20,14 @@ public:
     ~HomeGui();
 
 private slots:
+    //Hosam
     void on_btn1_bar1_signUp_3_clicked();
     void on_btn2_bar1_login_3_clicked();
     void on_btn_login_1_clicked();
 
     void on_btn_sign_2_clicked();
 
+    //Omar
     void on_btn1_bar1_3_clicked();
     void on_btn2_bar1_3_clicked();
     void on_btn_logout_clicked();
@@ -34,10 +36,22 @@ private slots:
     void on_btn_Cart_clicked();
     void on_btn_Home_clicked();
 
+    //Aya
     void on_btn_bar1_Home_0_4_clicked();
     void on_btn_bar1_Products_1_4_clicked();
     void on_btn_bar1_Wallet_2_4_clicked();
     void on_btn_bar1_Feedback_3_4_clicked();
+
+    //Karim
+    void on_btn_bar1_Login_0_1_clicked();
+    void on_btn_bar1_Register_0_2_clicked();
+    void on_btn_bar1_Feedaback_1_4_clicked();
+
+
+    //Bassant
+
+
+
 
 private:
     void GoToHome();

@@ -142,3 +142,19 @@ void HomeGui::on_btn_bar1_Feedback_3_4_clicked()
 {
     ui->stackedWidget_3->setCurrentIndex(3);
 }
+
+void HomeGui::on_btn_bar1_Login_0_1_clicked()
+{
+   ui->stackedWidget->setCurrentIndex(1);
+}
+
+void HomeGui::on_btn_bar1_Register_0_2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+
+}
+
+void HomeGui::on_btn_bar1_Feedaback_1_4_clicked()
+{
+ ui->stackedWidget_2->setCurrentIndex(1);
+}
