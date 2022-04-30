@@ -958,11 +958,8 @@ letter-spacing: 0.5px;
            <x>50</x>
            <y>10</y>
            <width>1181</width>
-<<<<<<< HEAD
            <height>71</height>
-=======
            <height>86</height>
->>>>>>> 931128b87444df586075918fe0f6fa9682e6cbfc
           </rect>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -1132,7 +1129,6 @@ padding: 0 0 20px 0;
          </layout>
         </widget>
        </widget>
-<<<<<<< HEAD
        <widget class="QFrame" name="frm4_content_3">
         <property name="geometry">
          <rect>
@@ -1163,7 +1159,6 @@ padding: 0 0 20px 0;
           </layout>
          </item>
         </layout>
-=======
        <widget class="QPushButton" name="pushButton">
         <property name="geometry">
          <rect>
@@ -1176,16 +1171,12 @@ padding: 0 0 20px 0;
         <property name="text">
          <string>PushButton</string>
         </property>
->>>>>>> 931128b87444df586075918fe0f6fa9682e6cbfc
        </widget>
        <zorder>frm2_secondBar_3</zorder>
        <zorder>frm1_mainBar_3</zorder>
        <zorder>frm3_footBar_3</zorder>
-<<<<<<< HEAD
        <zorder>frm4_content_3</zorder>
-=======
        <zorder>pushButton</zorder>
->>>>>>> 931128b87444df586075918fe0f6fa9682e6cbfc
       </widget>
       <widget class="QWidget" name="pg_4_Cust">
        <widget class="Line" name="Hor_line">
