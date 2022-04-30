@@ -35,6 +35,14 @@ HomeGui::~HomeGui()
     delete ui;
 }
 
+<<<<<<< HEAD
+=======
+void HomeGui::on_pushButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(4);
+}
+
+>>>>>>> 931128b87444df586075918fe0f6fa9682e6cbfc
 void HomeGui::GoToHome()
 {
     ui->stackedWidget->setCurrentIndex(3);
@@ -63,6 +71,7 @@ void HomeGui::on_btn2_bar1_login_3_clicked()
     ui->stackedWidget->setCurrentIndex(1);
 }
 
+<<<<<<< HEAD
 void HomeGui::on_btn_login_1_clicked()
 {
     string email, password;
@@ -86,5 +95,35 @@ void HomeGui::on_btn_login_1_clicked()
 void HomeGui::on_btn_sign_2_clicked()
 {
 
+=======
+
+void HomeGui::on_btn_logout_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(3);
+}
+
+
+void HomeGui::on_btn_back_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(3);
+}
+
+
+void HomeGui::on_btn_fav_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(1);
+}
+
+
+void HomeGui::on_btn_Cart_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(0);
+}
+
+
+void HomeGui::on_btn_Home_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(2);
+>>>>>>> 931128b87444df586075918fe0f6fa9682e6cbfc
 }
 
