@@ -6,6 +6,7 @@ SellerInfoView::SellerInfoView(QWidget *parent) :
     ui(new Ui::SellerInfoView)
 {
     ui->setupUi(this);
+
 }
 
 SellerInfoView::~SellerInfoView()

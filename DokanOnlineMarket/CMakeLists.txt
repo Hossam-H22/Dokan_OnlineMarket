@@ -32,6 +32,12 @@ set(PROJECT_SOURCES
         SellerInfoView.h
         SellerInfoView.cpp
         SellerInfoView.ui
+        Resources.qrc
+        ProductGuiWidget.h
+        ProductGuiWidget.cpp
+        ProductGuiWidget.ui
+        Model.h
+        Model.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

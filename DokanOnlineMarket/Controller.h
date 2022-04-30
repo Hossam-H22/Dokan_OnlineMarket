@@ -2,11 +2,13 @@
 #define CONTROLLER_H
 
 #include<iostream>
+#include <string>
 #include <vector>
 #include <map>
 #include "Seller.h"
 #include "Customer.h"
 #include "Product.h"
+#include "Model.h"
 
 using namespace std;
 
@@ -14,29 +16,23 @@ class Controller
 {
 
 public:
+    Model *data;
 
-    map<string, Seller> SellerArr;
-    map<string, Customer> CustomerArr;
-    vector<Product> ProductArr;
+    Seller *s;
+    Customer *c;
+    Product *p;
 
-
-//	string	Product_PhotoPath = "Online Marketplace\\images\\Products\\",
-//		Seller_PhotoPath = "Online Marketplace\\images\\Seller\\",
-//		Customer_PhotoPath = "Online Marketplace\\images\\Customer\\";
-
-    int CountSeller = 1000, CountCustomer = 1000, CountProduct = 100;
-
-
-    Controller(void);
+    Controller(Model *data);
     ~Controller(void);
 
-    Seller* LogSeller(string, string);
-    Customer* LogCustomer(string, string);
+    void LogSeller(string Email, string Password);
+    void LogCustomer(string Email, string Password);
 
-    Seller* RegisterSeller(string, string, string, string, string, string, string);
-    Customer* RegisterCustomer(string, string, string, string, string, string);
+    void RegisterSeller(string FirstName, string SecondName, string Phone, string Email, string Password, string Gender);
+    void RegisterCustomer(string FirstName, string SecondName, string PhoneNumber, string Gender, string Email, string Password);
 
-//    void ReadSellerDetails(void);
+
+
 };
 
 #endif // CONTROLLER_H

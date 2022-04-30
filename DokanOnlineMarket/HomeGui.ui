@@ -26,8 +26,8 @@
    <string>Dokan Online Market</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>../assist/icons8-small-business-96.png</normaloff>../assist/icons8-small-business-96.png</iconset>
+   <iconset resource="Resources.qrc">
+    <normaloff>:/img/assets/icons8-small-business-96.png</normaloff>:/img/assets/icons8-small-business-96.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -420,7 +420,7 @@ letter-spacing: 1px;
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QPushButton" name="btn_login_2">
+       <widget class="QPushButton" name="btn_sign_2">
         <property name="geometry">
          <rect>
           <x>600</x>
@@ -705,7 +705,7 @@ border-radius: 25px;
           <bool>true</bool>
          </property>
         </widget>
-        <widget class="QPushButton" name="btn1_bar1_3">
+        <widget class="QPushButton" name="btn1_bar1_signUp_3">
          <property name="geometry">
           <rect>
            <x>1130</x>
@@ -732,7 +732,7 @@ color: #ffffff;
           <string>Sign up</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="btn2_bar1_3">
+        <widget class="QPushButton" name="btn2_bar1_login_3">
          <property name="geometry">
           <rect>
            <x>1020</x>
@@ -816,7 +816,7 @@ color: #ffffff;
           <bool>false</bool>
          </property>
         </widget>
-        <widget class="QPushButton" name="btn1_bar2_4">
+        <widget class="QPushButton" name="btn2_bar2_3">
          <property name="geometry">
           <rect>
            <x>203</x>
@@ -851,7 +851,7 @@ color: #ffffff;
           <bool>false</bool>
          </property>
         </widget>
-        <widget class="QPushButton" name="btn1_bar2_5">
+        <widget class="QPushButton" name="btn3_bar2_3">
          <property name="geometry">
           <rect>
            <x>321</x>
@@ -886,7 +886,7 @@ color: #ffffff;
           <bool>false</bool>
          </property>
         </widget>
-        <widget class="QPushButton" name="btn1_bar2_6">
+        <widget class="QPushButton" name="btn4_bar2_3">
          <property name="geometry">
           <rect>
            <x>446</x>
@@ -926,9 +926,9 @@ color: #ffffff;
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>727</y>
+          <y>717</y>
           <width>1270</width>
-          <height>121</height>
+          <height>130</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -950,7 +950,7 @@ letter-spacing: 0.5px;
            <x>50</x>
            <y>10</y>
            <width>1181</width>
-           <height>61</height>
+           <height>71</height>
           </rect>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -1120,15 +1120,49 @@ padding: 0 0 20px 0;
          </layout>
         </widget>
        </widget>
+       <widget class="QFrame" name="frm4_content_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>90</y>
+          <width>1270</width>
+          <height>621</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>1270</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <layout class="QGridLayout" name="gridLayout1">
+           <property name="horizontalSpacing">
+            <number>6</number>
+           </property>
+          </layout>
+         </item>
+        </layout>
+       </widget>
        <zorder>frm2_secondBar_3</zorder>
        <zorder>frm1_mainBar_3</zorder>
        <zorder>frm3_footBar_3</zorder>
+       <zorder>frm4_content_3</zorder>
       </widget>
      </widget>
     </item>
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

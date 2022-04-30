@@ -9,16 +9,20 @@ class Seller
 {
 public:
     int ID, NoOfVoters;
-    string Name, Email, Gender, Phone, Address, Password, Path_photo;
+    string FirstName, SecondName, Email, Gender, Phone, Address, Password, Path_photo, Description;
     float Wallet, FinalRate, Total_Rate;
-    vector<string> Comments, Wallet_Hestory;
-    vector<Product*> SelledProducts;
+    bool ProfileCompleted;
+    vector<string> Comments;
+    vector<Product*> SelledProducts, Wallet_History;
 
     Seller(void);
-    Seller(int, string, string, string, string, string, string, string);
-    Seller(int, string, string, string, string, string, string);
+    Seller(int Id, string FirstName, string SecondName, string Phone, string Email, string Password, string Gender, string Address,
+           string Description, float Wallet, int NoOfVoters, float Total_Rate, string photo, bool ProfileCompleted);
+
+    Seller(int Id, string FirstName, string SecondName, string Phone, string Email, string Password, string Gender);
     ~Seller(void);
-    void CalculateRate(float);
+    void CalculateRate(float = -1);
+    void IsCompletedProfile();
 
 };
 

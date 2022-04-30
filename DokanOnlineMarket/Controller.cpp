@@ -1,65 +1,46 @@
-#include <fstream>
 #include "Controller.h"
+#include <cctype>
 
+Controller::Controller(Model *data)
+{
+    this->data = data;
+//    this->c = new Customer();
+//    this->s = new Seller();
+//    this->p = new Product();
+}
 
-Controller::Controller() {}
 Controller::~Controller() {}
 
-Seller* Controller::LogSeller(string email, string password)
+void Controller::LogSeller(string Email, string Password)
 {
-    if (&SellerArr[email]!=nullptr && SellerArr[email].Password == password)
+    if (data->SellerArr[Email].Email==Email && data->SellerArr[Email].Password == Password)
     {
-        return &SellerArr[email];
+        s = &data->SellerArr[Email];
+        return;
     }
-
-    return nullptr;
+    s = nullptr;
 }
 
-Customer* Controller::LogCustomer(string email, string password)
+void Controller::LogCustomer(string Email, string Password)
 {
-    if (&CustomerArr[email]!=nullptr && CustomerArr[email].Password == password)
+    if (data->CustomerArr[Email].Email==Email && data->CustomerArr[Email].Password == Password)
     {
-        return &CustomerArr[email];
+        c = &data->CustomerArr[Email];
+        return;
     }
-    return nullptr;
+    c = nullptr;
 }
 
-Seller* Controller::RegisterSeller(string name, string number, string address, string phone, string gender, string email, string password)
+void Controller::RegisterSeller(string FirstName, string SecondName, string Phone, string Email, string Password, string Gender)
 {
-    Seller new_seller(CountSeller++, name, email, gender, phone, address, password);
-    SellerArr[email] = new_seller;
-    return &SellerArr[email];
+    Seller new_seller(data->CountSeller++, FirstName, SecondName, Phone, Email, Password, Gender);
+    data->SellerArr[Email] = new_seller;
+    s = &data->SellerArr[Email];
 }
 
-Customer* Controller::RegisterCustomer(string name, string number, string address, string gender, string email, string password)
+void Controller::RegisterCustomer(string FirstName, string SecondName, string PhoneNumber, string Gender, string Email, string Password)
 {
-    Customer new_customer(CountCustomer++, name, number, gender, address, email, password);
-    CustomerArr[email] = new_customer;
-    return &CustomerArr[email];
+    Customer new_customer(data->CountCustomer++, FirstName, SecondName, PhoneNumber, Gender, Email, Password);
+    data->CustomerArr[Email] = new_customer;
+    c = &data->CustomerArr[Email];
 }
-
-
-
-
-//void Controller::ReadSellerDetails()
-//{
-//    ifstream ReadSeller;
-//    ReadSeller.open("ReadSeller.csv");
-//    //ReadSeller.open("C:\\Users\\Hosam\\source\\repos\\Online Marketplace\\ReadSeller.csv");
-//    while (ReadSeller.good())
-//    {
-//        Seller s;
-//        string line;
-//        getline(ReadSeller, line, ',');
-//        s.ID = stoi(line);
-//        getline(ReadSeller, s.Name, ',');
-//        getline(ReadSeller, s.PhoneNumber, ',');
-//        getline(ReadSeller, s.Address, ',');
-//        getline(ReadSeller, s.Email, ',');
-//        getline(ReadSeller, s.Password, ',');
-//        SellerArr.push_back(s);
-//    }
-//    ReadSeller.close();
-
-//}
-
