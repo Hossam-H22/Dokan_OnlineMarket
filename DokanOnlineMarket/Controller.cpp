@@ -44,3 +44,12 @@ void Controller::RegisterCustomer(string FirstName, string SecondName, string Ph
     data->CustomerArr[Email] = new_customer;
     c = &data->CustomerArr[Email];
 }
+
+bool Controller::CkeckNumber(string Number)
+{
+    for (int i=0 ; i<Number.size() ; i++)
+    {
+        if (Number[i]<=43 || Number[i]>=57) return false;
+    }
+    return true;
+}

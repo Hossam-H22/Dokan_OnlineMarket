@@ -3,25 +3,23 @@
 
 Model::Model(string s)
 {
-    this->z = s;
-//    Get_Data();
+    this->PathOfFile = s;
+    Get_Data();
     Product p(0, "0", 0, 0, "0", 0, 0, "0", "0");
     ProductArr.push_back(p);
-//    Push_Data();
 }
-
 Model::Model()
 {
-//    Get_Data();
+    Get_Data();
     Product p(0, "0", 0, 0, "0", 0, 0, "0", "0");
     ProductArr.push_back(p);
-//    Push_Data();
 }
-
 Model::~Model()
 {
 
 }
+
+
 
 void Model::Get_Data()
 {
@@ -35,7 +33,6 @@ void Model::Get_Data()
     Get_CustomerFavorite_Data();
     Get_CustomerCartProduct_Data();
 }
-
 void Model::Get_Seller_Data()
 {
     int ID, NoOfVoters;
@@ -75,7 +72,6 @@ void Model::Get_Seller_Data()
     file.close();
 
 }
-
 void Model::Get_SellerComments_Data()
 {
     string Seller_mail, Comment;
@@ -94,7 +90,6 @@ void Model::Get_SellerComments_Data()
     }
     file.close();
 }
-
 void Model::Get_Product_Data()
 {
     int ID, Quantity, Offer_Percentage, NoOfDeliveryDays;
@@ -145,7 +140,6 @@ void Model::Get_Product_Data()
     file.close();
 
 }
-
 void Model::Get_ProductComments_Data()
 {
     int Product_ID;
@@ -165,7 +159,6 @@ void Model::Get_ProductComments_Data()
     }
     file.close();
 }
-
 void Model::Get_SellerWalletHistory_Data()
 {
     int Product_ID;
@@ -188,7 +181,6 @@ void Model::Get_SellerWalletHistory_Data()
     }
     file.close();
 }
-
 void Model::Get_Customer_Data()
 {
     int ID;
@@ -219,7 +211,6 @@ void Model::Get_Customer_Data()
     }
     file.close();
 }
-
 void Model::Get_CustomerAddress_Data()
 {
     string Customer_mail, Address;
@@ -239,7 +230,6 @@ void Model::Get_CustomerAddress_Data()
     }
     file.close();
 }
-
 void Model::Get_CustomerFavorite_Data()
 {
     int Product_ID;
@@ -263,7 +253,6 @@ void Model::Get_CustomerFavorite_Data()
     }
     file.close();
 }
-
 void Model::Get_CustomerCartProduct_Data()
 {
     int Product_ID;
@@ -288,21 +277,23 @@ void Model::Get_CustomerCartProduct_Data()
     file.close();
 }
 
+
+
 void Model::Push_Data()
 {
-//    Push_Seller_Data();
-//    Push_Customer_Data();
+    Push_Seller_Data();
+    Push_Customer_Data();
     Push_Product_Data();
 }
-
 void Model::Push_Seller_Data()
 {
-    QFile seller(":/data/assets/data/Seller.csv");
+    // ----->>>  Seller  <<<---------
+    string x = PathOfFile + "Seller.csv";
+    QFile seller(x.c_str());
     if(seller.open(QFile::WriteOnly |QFile::Truncate))
     {
         QTextStream sell(&seller);
-
-        map<string, Seller>::iterator it;
+        unordered_map<string, Seller>::iterator it;
         for (it = SellerArr.begin(); it != SellerArr.end(); it++)
         {
             if (it->second.ID ==0) break;
@@ -314,7 +305,11 @@ void Model::Push_Seller_Data()
                      <<it->second.ProfileCompleted<<'\n';
 
 
-            QFile comments(":/data/assets/data/Seller Comment.csv");
+
+
+            // ----->>>  Seller Comment  <<<---------
+            string x2 = PathOfFile + "Seller Comment.csv";
+            QFile comments(x2.c_str());
             if(comments.open(QFile::WriteOnly |QFile::Truncate))
             {
                 QTextStream comm(&comments);
@@ -326,7 +321,10 @@ void Model::Push_Seller_Data()
             comments.close();
 
 
-            QFile Wallet(":/data/assets/data/Seller Wallet History.csv");
+
+            // ----->>>  Seller Wallet History  <<<---------
+            string x3 = PathOfFile + "Seller Wallet History.csv";
+            QFile Wallet(x3.c_str());
             if(Wallet.open(QFile::WriteOnly |QFile::Truncate))
             {
                 QTextStream wall(&Wallet);
@@ -336,18 +334,22 @@ void Model::Push_Seller_Data()
                 }
             }
             Wallet.close();
+
+
+
         }
     }
     seller.close();
 }
-
 void Model::Push_Customer_Data()
 {
-    QFile customer(":/data/assets/data/Customer.csv");
+    // ----->>>  Customer  <<<---------
+    string x = PathOfFile + "Customer.csv";
+    QFile customer(x.c_str());
     if(customer.open(QFile::WriteOnly |QFile::Truncate))
     {
         QTextStream cust(&customer);
-        map<string, Customer>::iterator it;
+        unordered_map<string, Customer>::iterator it;
         for (it = CustomerArr.begin(); it != CustomerArr.end(); it++)
         {
             if (it->second.ID ==0) break;
@@ -358,7 +360,11 @@ void Model::Push_Customer_Data()
                      <<it->second.ProfileCompleted<<'\n';
 
 
-            QFile addresses(":/data/assets/data/Customer Address.csv");
+
+
+            // ----->>>  Customer Address  <<<---------
+            string x1 = PathOfFile + "Customer Address.csv";
+            QFile addresses(x1.c_str());
             if(addresses.open(QFile::WriteOnly |QFile::Truncate))
             {
                 QTextStream addr(&addresses);
@@ -370,7 +376,10 @@ void Model::Push_Customer_Data()
             addresses.close();
 
 
-            QFile favorite(":/data/assets/data/Customer Favorites.csv");
+
+            // ----->>> Customer Favorites  <<<---------
+            string x2 = PathOfFile + "Customer Favorites.csv";
+            QFile favorite(x2.c_str());
             if(favorite.open(QFile::WriteOnly |QFile::Truncate))
             {
                 QTextStream fav(&favorite);
@@ -382,7 +391,10 @@ void Model::Push_Customer_Data()
             favorite.close();
 
 
-            QFile cart(":/data/assets/data/Customer Cart Product.csv");
+
+            // ----->>>  Customer Cart Product  <<<---------
+            string x3 = PathOfFile + "Customer Cart Product.csv";
+            QFile cart(x3.c_str());
             if(favorite.open(QFile::WriteOnly |QFile::Truncate))
             {
                 QTextStream ca(&cart);
@@ -394,61 +406,54 @@ void Model::Push_Customer_Data()
             cart.close();
 
 
+
         }
     }
     customer.close();
 }
-
 void Model::Push_Product_Data()
 {
-    string x = z + "Product.csv";
+    // ----->>>  Product  <<<---------
+    string x = PathOfFile + "Product.csv";
     QFile product(x.c_str());
 //    product.resize(0);
-
-    qDebug() << x.c_str() << "   ----------";
-
-//    QFile product("E:/Dokan Project/DokanOnlineMarket/assets/data/1.csv");
-
-    if (product.open(QFile::ReadWrite | QFile::Text))
+    if(product.open(QFile::WriteOnly | QFile::Text))
     {
         QTextStream prod(&product);
-        prod<<"hosam hatem,";
-        prod<<"bassant hossam\n";
+        for (int it=0 ; it<ProductArr.size() ; it++)
+        {
+
+            prod<<ProductArr[it].ID<<','<<ProductArr[it].Name.c_str()<<','<<ProductArr[it].Price<<','
+               <<ProductArr[it].Quantity<<','<<ProductArr[it].Category.c_str()<<','<<ProductArr[it].Offer_Percentage<<','
+                 <<ProductArr[it].NoOfDeliveryDays<<','<<ProductArr[it].PathOfPhoto.c_str()<<','<<ProductArr[it].Zero<<','
+                    <<ProductArr[it].One<<','<<ProductArr[it].Two<<','<<ProductArr[it].Three<<','<<ProductArr[it].Four<<','
+                      <<ProductArr[it].Five<<','<<ProductArr[it].Avaliability<<','<<ProductArr[it].Seller_mail.c_str()<<'\n';
+
+
+
+
+
+            // ----->>>  Product Comments  <<<---------
+            string x1 = PathOfFile + "Product Comments.csv";
+            QFile comments(x1.c_str());
+            if(comments.open(QFile::WriteOnly |QFile::Truncate))
+            {
+                QTextStream comm(&comments);
+                for (int i=0 ; i<ProductArr[it].Comments.size() ; i++)
+                {
+                    comm<<ProductArr[it].ID<<','<<ProductArr[it].Comments[i].c_str()<<'\n';
+                }
+            }
+            comments.flush();
+            comments.close();
+
+
+
+
+        }
     }
-    else qDebug() << product.errorString() << "     productt not opennnn";
+    else qDebug() << product.errorString() << "   productt not opennnn";
     product.flush();
-
-
-
-
-//    if(product.open(QFile::WriteOnly | QFile::Text))
-//    {
-//        QTextStream prod(&product);
-//        for (int it=0 ; it<ProductArr.size() ; it++)
-//        {
-
-//            prod<<ProductArr[it].ID<<','<<ProductArr[it].Name.c_str()<<','<<ProductArr[it].Price<<','
-//               <<ProductArr[it].Quantity<<','<<ProductArr[it].Category.c_str()<<','<<ProductArr[it].Offer_Percentage<<','
-//                 <<ProductArr[it].NoOfDeliveryDays<<','<<ProductArr[it].PathOfPhoto.c_str()<<','<<ProductArr[it].Zero<<','
-//                    <<ProductArr[it].One<<','<<ProductArr[it].Two<<','<<ProductArr[it].Three<<','<<ProductArr[it].Four<<','
-//                      <<ProductArr[it].Five<<','<<ProductArr[it].Avaliability<<','<<ProductArr[it].Seller_mail.c_str()<<'\n';
-
-
-//            QFile comments(":/data/assets/data/Product Comments.csv");
-//            if(comments.open(QFile::WriteOnly |QFile::Truncate))
-//            {
-//                QTextStream comm(&comments);
-//                for (int i=0 ; i<ProductArr[it].Comments.size() ; i++)
-//                {
-//                    comm<<ProductArr[it].ID<<','<<ProductArr[it].Comments[i].c_str()<<'\n';
-//                }
-//            }
-//            comments.flush();
-//            comments.close();
-//        }
-//    }
-//    else qDebug() << product.errorString() << "   productt not opennnn";
-//    product.flush();
     product.close();
 }
 

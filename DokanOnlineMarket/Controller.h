@@ -31,6 +31,7 @@ public:
     void RegisterSeller(string FirstName, string SecondName, string Phone, string Email, string Password, string Gender);
     void RegisterCustomer(string FirstName, string SecondName, string PhoneNumber, string Gender, string Email, string Password);
 
+    bool CkeckNumber(string Number);
 
 
 };

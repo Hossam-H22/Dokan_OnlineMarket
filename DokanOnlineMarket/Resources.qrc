@@ -1,10 +1,47 @@
 <RCC>
     <qresource prefix="/img">
-        <file>assets/icons8-small-business-96.png</file>
-        <file>assets/logo.png</file>
-        <file>assets/logo-crop.png</file>
-        <file>assets/1.jpg</file>
-        <file>assets/moon.png</file>
+        <file>assets/img/Offer Home/offer_1.jpg</file>
+        <file>assets/img/Offer Home/offer_2.jpg</file>
+        <file>assets/img/Offer Home/offer_3.jpg</file>
+        <file>assets/img/Offer Home/offer_4.jpg</file>
+        <file>assets/img/Offer Home/offer_5.jpg</file>
+        <file>assets/img/Offer Home/offer_6.jpg</file>
+        <file>assets/img/Offer Home/offer_7.jpg</file>
+        <file>assets/img/Offer Home/offer_8.jpg</file>
+        <file>assets/img/logo-black.png</file>
+        <file>assets/img/logo-blue.png</file>
+        <file>assets/img/logo-white.png</file>
+        <file>assets/img/logo-Yellow.png</file>
+        <file>assets/img/categories/labtop_2.png</file>
+        <file>assets/img/categories/mobile_1.png</file>
+        <file>assets/img/categories/tv_3.png</file>
+        <file>assets/img/categories/womens_4.png</file>
+        <file>assets/img/categories/men_5.png</file>
+        <file>assets/img/categories/kids_6.png</file>
+        <file>assets/img/categories/automotive_14.png</file>
+        <file>assets/img/categories/books_13.png</file>
+        <file>assets/img/categories/health_7.png</file>
+        <file>assets/img/categories/Home - Furniture _9.png</file>
+        <file>assets/img/categories/Kitchen_10.png</file>
+        <file>assets/img/categories/market_8.png</file>
+        <file>assets/img/categories/sports_12.png</file>
+        <file>assets/img/categories/toys_11.png</file>
+        <file>assets/img/Ads/Horizontal/ad_1.jpg</file>
+        <file>assets/img/Ads/Horizontal/ad_2.jpg</file>
+        <file>assets/img/Ads/Horizontal/ad_3.jpg</file>
+        <file>assets/img/Ads/Horizontal/ad_4.jpg</file>
+        <file>assets/img/Ads/Horizontal/ad_5.jpg</file>
+        <file>assets/img/Ads/Vertical/ad_1.jpg</file>
+        <file>assets/img/Ads/Vertical/ad_2.jpg</file>
+        <file>assets/img/Products/100.jpg</file>
+        <file>assets/img/icons/icons8-chevron-left-90.png</file>
+        <file>assets/img/icons/icons8-chevron-right-90.png</file>
+        <file>assets/img/icons/icons8-small-business-96.png</file>
+        <file>assets/img/icons/icons8-remove-from-cart-64.png</file>
+        <file>assets/img/icons/icons8-add-to-cart-64.png</file>
+        <file>assets/img/icons/icons8-add-to-favorites-96.png</file>
+        <file>assets/img/icons/icons8-back-96.png</file>
+        <file>assets/img/icons/icons8-add-product-96.png</file>
     </qresource>
     <qresource prefix="/data">
         <file>assets/data/Customer Address.csv</file>

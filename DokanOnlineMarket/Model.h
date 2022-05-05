@@ -5,7 +5,8 @@
 #include <fstream>
 #include <string>
 #include <vector>
-#include <map>
+//#include <map>
+#include <unordered_map>
 
 #include <QDebug>
 #include <QFile>
@@ -22,29 +23,29 @@ class Model
 {
 public:
 
-    map<string, Seller> SellerArr;
-    map<string, Customer> CustomerArr;
-    map<string, vector<Product*>> CategoryArr;
+    unordered_map<string, Seller> SellerArr;
+    unordered_map<string, Customer> CustomerArr;
+    unordered_map<string, vector<Product*>> CategoryArr;
     vector<Product> ProductArr;
     string CategoryName[14] = {
-        "Mobiles, Tablets & Accessories",
-        "Computer & Office Supplies",
-        "TV & Electronics",
+        "Mobiles, Tablets && Accessories",
+        "Computer && Office Supplies",
+        "TV && Electronics",
         "Women's Fashion",
         "Men's Fashion",
         "Kids Fashion",
-        "Health, Beauty & Perfumes",
+        "Health, Beauty && Perfumes",
         "Supermarket",
-        "Home, Furniture & Tools",
-        "Kitchen & Appliances",
+        "Home, Furniture && Tools",
+        "Kitchen && Appliances",
         "Toys, Games & Baby",
-        "Sports, Fitness & Outdoors",
+        "Sports, Fitness && Outdoors",
         "Books",
         "Automotive"
     };
 
     int CountSeller = 1000, CountCustomer = 1000, CountProduct = 100;
-    string z;
+    string PathOfFile;
 
     void Get_Data();
     void Get_Seller_Data();

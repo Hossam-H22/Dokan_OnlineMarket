@@ -38,6 +38,9 @@ set(PROJECT_SOURCES
         ProductGuiWidget.ui
         Model.h
         Model.cpp
+        product_in_cart.h
+        product_in_cart.cpp
+        product_in_cart.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
