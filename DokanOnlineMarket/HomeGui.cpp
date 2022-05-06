@@ -15,22 +15,17 @@ HomeGui::HomeGui(Controller *users, QWidget *parent)
 
 
 
-
-
-    ui->frm_scroll_1_3->setMinimumHeight(363*4);
-    int x=0;
-    for (int i=0 ; i<4 ; i++)
+    ui->frm_scroll_1_3->setMinimumHeight(363*8);
+    for (int i=0 ; i<8 ; i++)
     {
         for(int j=0 ; j<4 ; j++)
         {
-            if (x<14)
-            {
                 productItem = new ProductGuiWidget;
-                x++;
                 ui->gridLayout_3->addWidget(productItem, i, j);
-            }
         }
     }
+
+
 
     Connection();
 }
@@ -54,6 +49,21 @@ void HomeGui::Connection()
     connect(ui->btn_frm1_Login_7, &QPushButton::clicked, this, &HomeGui::login);
     connect(ui->btn_frm1_Register_7, &QPushButton::clicked, this, &HomeGui::SignUp);
     connect(time1, &QTimer::timeout, this, &HomeGui::SwitchAd);
+}
+void HomeGui::clearLayout(QLayout *layout)
+{
+    if (layout == NULL) return;
+    QLayoutItem *item;
+    while (item = ui->gridLayout_3->takeAt(0))
+    {
+        if (item->layout())
+        {
+            clearLayout(item->layout());
+            item->layout();
+        }
+        if (item->widget()) delete item->widget();
+        delete item;
+    }
 }
 void HomeGui::GoToHome()
 {
@@ -305,11 +315,7 @@ void HomeGui::on_btn_frm2_Cart_4_clicked() // Cart
 {
     ui->stackedWidget_cust_4->setCurrentIndex(1);
 
-//    ui->frm_scroll_1_4->setMinimumHeight(250*5);
-//    for (int i=0 ; i<5 ; i++){
-//        crt = new product_in_cart();
-//        ui->verticalLayout_scroll_1_4->addWidget(crt);
-//    }
+    // product in cart
 }
 void HomeGui::on_btn_frm2_Home_4_clicked() // Home
 {
@@ -384,6 +390,7 @@ void HomeGui::SetSellerViewPage()
 {
 
 }
+
 
 
 

@@ -79,9 +79,11 @@ public:
 
     //Hosam
     void GoToHome();
+    void clearLayout(QLayout *layout);
     void login();
     void SignUp();
     void SwitchAd();
+
 
     //Omar
     void SetCustomerProfile();
@@ -106,6 +108,8 @@ public:
 
     ProductGuiWidget *productItem;
     product_in_cart *crt;
+
+
 
 };
 #endif // HOMEGUI_H

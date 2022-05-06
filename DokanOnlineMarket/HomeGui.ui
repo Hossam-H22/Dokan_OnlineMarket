@@ -53,7 +53,7 @@ background-color: #2880AE;
 }</string>
       </property>
       <property name="currentIndex">
-       <number>5</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="pg_0_Start">
        <property name="styleSheet">
@@ -125,7 +125,7 @@ background-color: #dead3b;
         <property name="font">
          <font>
           <pointsize>11</pointsize>
-          <bold>true</bold>
+          <bold>false</bold>
          </font>
         </property>
         <property name="styleSheet">
@@ -1163,7 +1163,7 @@ padding: 0 0 20px 0;
          </rect>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="pg_0_categories_3">
          <widget class="QScrollArea" name="scrollArea_category_0_3">
@@ -2448,6 +2448,32 @@ border: 0;
            </size>
           </property>
          </widget>
+         <widget class="QPushButton" name="pushButton">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>10</y>
+            <width>75</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>pull</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>10</y>
+            <width>75</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>push</string>
+          </property>
+         </widget>
         </widget>
        </widget>
        <zorder>frm2_secondBar_3</zorder>
@@ -3520,7 +3546,7 @@ border-radius: 11px;
          </rect>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="pg_0_Home_5">
          <widget class="QLabel" name="lb_About_0_5">
@@ -4847,7 +4873,7 @@ background-color: #dead3b;
          </rect>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>2</number>
         </property>
         <widget class="QWidget" name="pg_0_home_6">
          <widget class="QTextBrowser" name="txtbrowser_Description_0_6">
