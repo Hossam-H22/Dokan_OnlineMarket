@@ -42,16 +42,7 @@
         <file>assets/img/icons/icons8-add-to-favorites-96.png</file>
         <file>assets/img/icons/icons8-back-96.png</file>
         <file>assets/img/icons/icons8-add-product-96.png</file>
-    </qresource>
-    <qresource prefix="/data">
-        <file>assets/data/Customer Address.csv</file>
-        <file>assets/data/Customer Favorites.csv</file>
-        <file>assets/data/Customer.csv</file>
-        <file>assets/data/Product Comments.csv</file>
-        <file>assets/data/Product.csv</file>
-        <file>assets/data/Seller Comment.csv</file>
-        <file>assets/data/Seller Wallet History.csv</file>
-        <file>assets/data/Seller.csv</file>
-        <file>assets/data/Customer Cart Product.csv</file>
+        <file>assets/img/icons/icons8-circled-user-female-skin-type-7-96.png</file>
+        <file>assets/img/icons/icons8-circled-user-male-skin-type-7-96.png</file>
     </qresource>
 </RCC>

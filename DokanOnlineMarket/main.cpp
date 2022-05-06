@@ -1,7 +1,6 @@
 #include "HomeGui.h"
 #include "Controller.h"
 #include "Model.h"
-#include "SellerInfoView.h"
 #include <QApplication>
 #include <QDesktopServices>
 #include <QDebug>
@@ -16,7 +15,7 @@ int main(int argc, char *argv[])
     string s =  QCoreApplication::applicationFilePath().toStdString();
 //    string s =  QDir::currentPath().toStdString();
     s.erase(s.end()-85, s.end());
-    s += "/DokanOnlineMarket/assets/data/";
+    s += "/DokanOnlineMarket/assets/";
     QString s1 = s.c_str();
 //    qDebug() << s1;
     Model data(s1.toStdString());
@@ -26,6 +25,6 @@ int main(int argc, char *argv[])
     w.show();
 
     int exit = a.exec();
-//    data.Push_Data();
+    data.Push_Data();
     return 0;
 }

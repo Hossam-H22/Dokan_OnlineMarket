@@ -4,18 +4,18 @@
 Seller::Seller(void)
 {
     this->ID = 0;
-    this->FirstName = "";
-    this->SecondName = "";
-    this->Phone = "";
-    this->Email = "";
-    this->Password = "";
-    this->Gender = "";
-    this->Address = "";
-    this->Description = "";
+    this->FirstName = "0";
+    this->SecondName = "0";
+    this->Phone = "0";
+    this->Email = "0";
+    this->Password = "0";
+    this->Gender = "0";
+    this->Address = "0";
+    this->Description = "0";
     this->Wallet = 0;
     this->NoOfVoters = 0;
     this->Total_Rate = 0;
-    this->Path_photo = "";
+    this->Path_photo = "0";
     this->ProfileCompleted = 0;
 }
 Seller::~Seller(void) {}
@@ -48,8 +48,8 @@ Seller::Seller(int Id, string FirstName, string SecondName, string Phone, string
     this->Email = Email;
     this->Password = Password;
     this->Gender = Gender;
-    this->Address = "";
-    this->Description = "";
+    this->Address = "0";
+    this->Description = "0";
     this->Wallet = 0;
     this->NoOfVoters = 0;
     this->Total_Rate = 0;

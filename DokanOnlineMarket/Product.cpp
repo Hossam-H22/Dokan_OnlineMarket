@@ -4,13 +4,14 @@
 Product::Product()
 {
     this->ID = 0;
-    this->Name = "";
+    this->Name = "0";
     this->Price = 0;
     this->Quantity = 0;
-    this->Category = "";
+    this->Category = "0";
     this->Offer_Percentage = 0;
     this->NoOfDeliveryDays = 0;
-    this->PathOfPhoto = "";
+    this->Description = "0";
+    this->PathOfPhoto = "0";
     this->Zero = 0;
     this->One = 0;
     this->Two = 0;
@@ -19,11 +20,11 @@ Product::Product()
     this->Five = 0;
     this->FinalRate = 0;
     this->Avaliability = 0;
-    this->Seller_mail = "";
+    this->Seller_mail = "0";
 }
 Product::~Product() {}
 
-Product::Product(int ID, string Name, float Price, int Quantity, string Category, int Offer_Percentage, int NoOfDeliveryDays, string PathOfPhoto,
+Product::Product(int ID, string Name, float Price, int Quantity, string Description, string Category, int Offer_Percentage, int NoOfDeliveryDays, string PathOfPhoto,
                  int Zero, int One, int Two, int Three, int Four, int Five, bool Avaliability, string Seller_mail)
 {
     this->ID = ID;
@@ -33,6 +34,7 @@ Product::Product(int ID, string Name, float Price, int Quantity, string Category
     this->Category = Category;
     this->Offer_Percentage = Offer_Percentage;
     this->NoOfDeliveryDays = NoOfDeliveryDays;
+    this->Description = Description;
     this->PathOfPhoto = PathOfPhoto;
     this->Zero = Zero;
     this->One = One;
@@ -45,7 +47,7 @@ Product::Product(int ID, string Name, float Price, int Quantity, string Category
     this->Seller_mail = Seller_mail;
 }
 
-Product::Product(int ID, string Name, float Price, int Quantity, string Category, int Offer_Percentage, int NoOfDeliveryDays,
+Product::Product(int ID, string Name, float Price, int Quantity, string Description, string Category, int Offer_Percentage, int NoOfDeliveryDays,
                  string PathOfPhoto, string Seller_mail)
 {
     this->ID = ID;
@@ -55,6 +57,7 @@ Product::Product(int ID, string Name, float Price, int Quantity, string Category
     this->Category = Category;
     this->Offer_Percentage = Offer_Percentage;
     this->NoOfDeliveryDays = NoOfDeliveryDays;
+    this->Description = Description;
     this->PathOfPhoto = PathOfPhoto;
     this->Zero = 0;
     this->One = 0;

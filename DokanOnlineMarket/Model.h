@@ -8,6 +8,7 @@
 //#include <map>
 #include <unordered_map>
 
+#include <QDir>
 #include <QDebug>
 #include <QFile>
 #include <QCoreApplication>
@@ -54,7 +55,6 @@ public:
     void Get_ProductComments_Data();
     void Get_SellerWalletHistory_Data();
     void Get_Customer_Data();
-    void Get_CustomerAddress_Data();
     void Get_CustomerFavorite_Data();
     void Get_CustomerCartProduct_Data();
 

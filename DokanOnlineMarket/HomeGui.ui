@@ -4119,6 +4119,9 @@ border-radius: 100px;
          <property name="text">
           <string/>
          </property>
+         <property name="pixmap">
+          <pixmap resource="Resources.qrc">:/img/assets/img/icons/icons8-circled-user-male-skin-type-7-96.png</pixmap>
+         </property>
          <property name="scaledContents">
           <bool>true</bool>
          </property>
@@ -4213,7 +4216,7 @@ border-radius: 100px;
           </item>
          </layout>
         </widget>
-        <widget class="QWidget" name="">
+        <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
            <x>20</x>

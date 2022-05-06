@@ -29,9 +29,6 @@ set(PROJECT_SOURCES
         Customer.cpp
         Controller.h
         Controller.cpp
-        SellerInfoView.h
-        SellerInfoView.cpp
-        SellerInfoView.ui
         Resources.qrc
         ProductGuiWidget.h
         ProductGuiWidget.cpp

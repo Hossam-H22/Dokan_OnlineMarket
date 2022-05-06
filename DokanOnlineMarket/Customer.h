@@ -14,16 +14,16 @@ class Customer
 {
 public:
     int ID;
-    string  FirstName, SecondName, PhoneNumber, Gender, Email, Password, PathPhoto, Interested;
+    string  FirstName, SecondName, PhoneNumber, Gender, Email, Password, PathPhoto, Interested, Address;
     bool ProfileCompleted;
     vector<Product*> Favorite;
-    vector<string> Address;
+//    vector<string> Address;
     Cart My_Cart ;
 
 
     Customer(void);
     Customer(int ID, string FirstName, string SecondName, string PhoneNumber, string Gender, string Email,
-             string Password, string Interested, string PathPhoto, bool ProfileCompleted);
+             string Password, string Address, string Interested, string PathPhoto, bool ProfileCompleted);
 
     Customer(int ID, string FirstName, string SecondName, string PhoneNumber, string Gender, string Email, string Password);
     ~Customer(void);

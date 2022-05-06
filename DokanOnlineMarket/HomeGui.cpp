@@ -8,10 +8,12 @@ HomeGui::HomeGui(Controller *users, QWidget *parent)
     ui->setupUi(this);
     this->users = users;
     IsSeller = false;
-    ui->stackedWidget_main->setCurrentIndex(5);
+    ui->stackedWidget_main->setCurrentIndex(0);
 
     time1 = new QTimer(this);
     time1->start(10000);
+
+
 
 
 
@@ -63,7 +65,23 @@ void HomeGui::GoToHome()
 
     ui->btn_frm1_Login_7->setText("Log in");
     ui->btn_frm1_Register_7->setText("Sign up");
+
+
+    ui->lineEdit_FisrtName_2->setText("");
+    ui->lineEdit_LastName_2->setText("");
+    ui->lineEdit_username_2->setText("");
+    ui->lineEdit_password_2->setText("");
+    ui->lineEdit_phone_2->setText("");
+    ui->radioButton_mail_2->setChecked(false);
+    ui->radioButton_femail_2->setChecked(false);
+
+
+    ui->lineEdit_username_1->setText("");
+    ui->lineEdit_password_1->setText("");
+
+
     IsSeller = false;
+
 }
 void HomeGui::login()
 {
@@ -122,7 +140,7 @@ void HomeGui::on_btn_sign_2_clicked()
     fname = ui->lineEdit_FisrtName_2->text().toStdString();
     lname = ui->lineEdit_LastName_2->text().toStdString();
     phone = ui->lineEdit_phone_2->text().toStdString();
-    mail = ui->lineEdit_password_2->text().toStdString();
+    mail = ui->lineEdit_username_2->text().toStdString();
     pass = ui->lineEdit_password_2->text().toStdString();
     if (ui->radioButton_femail_2->isChecked()) gender = "Female";
     if (ui->radioButton_mail_2->isChecked()) gender = "Male";
@@ -164,8 +182,8 @@ void HomeGui::on_btn_sign_2_clicked()
     ui->lineEdit_username_2->setText("");
     ui->lineEdit_password_2->setText("");
     ui->lineEdit_phone_2->setText("");
-    ui->radioButton_mail_2->setCheckable(false);
-    ui->radioButton_femail_2->setCheckable(false);
+    ui->radioButton_mail_2->setChecked(false);
+    ui->radioButton_femail_2->setChecked(false);
     IsSeller = false;
 }
 void HomeGui::on_btn_back_1_3_clicked()
