@@ -8,6 +8,7 @@
 #include "ProductGuiWidget.h"
 #include "Controller.h"
 #include "product_in_cart.h"
+#include "CategoryGuiWidget.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -26,76 +27,83 @@ public:
 
 private slots:
 
-    //Hosam
+    // Hosam
     void on_btn_login_1_clicked();
     void on_btn_sign_2_clicked();
-    void on_btn_back_1_3_clicked();
-    void on_btn_frm1_nameCategory_0_3_clicked();
-    void on_btn_frm2_nameCategory_0_3_clicked();
-    void on_btn_frm3_nameCategory_0_3_clicked();
-    void on_btn_frm4_nameCategory_0_3_clicked();
-    void on_btn_frm5_nameCategory_0_3_clicked();
-    void on_btn_frm6_nameCategory_0_3_clicked();
-    void on_btn_frm7_nameCategory_0_3_clicked();
-    void on_btn_frm8_nameCategory_0_3_clicked();
-    void on_btn_frm9_nameCategory_0_3_clicked();
-    void on_btn_frm10_nameCategory_0_3_clicked();
-    void on_btn_frm11_nameCategory_0_3_clicked();
-    void on_btn_frm12_nameCategory_0_3_clicked();
-    void on_btn_frm13_nameCategory_0_3_clicked();
-    void on_btn_frm14_nameCategory_0_3_clicked();
+    void on_btn_frm1_back_1_3_clicked();
+    void on_btn_frm1_search_1_3_clicked();
+    void on_btn_frm1_clear1_1_3_clicked();
+    void on_btn_frm1_setfilter_1_3_clicked();
+    void on_btn_frm1_clear2_1_3_clicked();
 
 
-
-    //Omar
+    // Omar
     void on_btn_back_4_clicked();
     void on_btn_frm2_fav_4_clicked();
     void on_btn_frm2_Cart_4_clicked();
     void on_btn_frm2_Home_4_clicked();
 
 
-    //Karim
+    // Karim
     void on_btn_frm1_Home_7_clicked();
     void on_btn_frm1_Feedaback_7_clicked();
+    void on_btn_back_7_clicked();
+    void on_btn_sellerName_0_7_clicked();
+    void on_btn_addCart_0_7_clicked();
 
-
-    //Aya
+    // Aya
     void on_btn_frm2_Home_5_clicked();
     void on_btn_frm2_Products_5_clicked();
     void on_btn_frm2_Wallet_5_clicked();
     void on_btn_frm2_Feedback_5_clicked();
+    void on_btn_frm1_EditProfile_5_clicked();
 
 
-    //Bassant
+    // Bassant
     void on_btn_frm1_AddRate_6_clicked();
     void on_btn_frm3_Submit_0_6_clicked();
+    void on_btn_frm2_Home_6_clicked();
+    void on_btn_frm2_avaliable_6_clicked();
+    void on_btn_frm2_Feedback_6_clicked();
+    void on_btn_back_6_clicked();
 
 
 
 
 public:
     void Connection();
-
-
-    //Hosam
-    void GoToHome();
+    void SwitchAd();
     void clearLayout(QLayout *layout);
+
+    // Hosam
+    void GoToHome();
     void login();
     void SignUp();
-    void SwitchAd();
+    void SwitchAd_Home();
+    void GoToCategoryPage(vector<Product *> &pro, string s);
+    void GoToProductProfile(int id);
+    void SetHomePage();
 
 
-    //Omar
+    // Omar
     void SetCustomerProfile();
+    void SwitchAd_CustomerPage();
 
-    //karim
+    // karim
     void SetProductPage();
+    void SwitchAd_ProductPage();
 
-    //Aya
+
+    // Aya
     void SetSellerProfile();
+    void SwitchAd_SellerProfile();
 
-    //Bassant
+
+    // Bassant
     void SetSellerViewPage();
+    void SwitchAd_SetSellerViewPage();
+
+
 
 public:
     Ui::HomeGui *ui;
@@ -104,8 +112,9 @@ public:
     string CategoryName;
     bool IsSeller;
     QTimer *time1;
-    int IndexOfAdHome=1;
+    int IndexOfAdHome=1, IndexOfAdSellerInfoView=1, IndexOfAdSellerProfile=1, IndexOfProductads=1, IndexOfAdCustomerProfile=1;
 
+    CategoryGuiWidget *categoryItem;
     ProductGuiWidget *productItem;
     product_in_cart *crt;
 

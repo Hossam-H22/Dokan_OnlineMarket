@@ -1,15 +1,17 @@
 #include "ProductGuiWidget.h"
 #include "ui_ProductGuiWidget.h"
 #include <QPainter>
+#include "HomeGui.h"
 
 
-ProductGuiWidget::ProductGuiWidget(QWidget *parent) :
+ProductGuiWidget::ProductGuiWidget(Product *pro, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ProductGuiWidget)
 {
     ui->setupUi(this);
-//    this->p = p;
-//    this->goToProduct = goToProduct;
+
+    Btn_Name = ui->btn_name;
+    ui->btn_name->setText(pro->Name.c_str());
 
 
 
@@ -30,6 +32,11 @@ ProductGuiWidget::ProductGuiWidget(QWidget *parent) :
 //     ui->lb_photo->setMask(*region);
 
 
+
+}
+
+void ProductGuiWidget::try1()
+{
 
 }
 

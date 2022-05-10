@@ -2,8 +2,10 @@
 #define PRODUCTGUIWIDGET_H
 
 #include <QWidget>
+#include <QPushButton>
 #include <iostream>
 #include "Product.h"
+
 
 using namespace std;
 
@@ -14,15 +16,17 @@ class ProductGuiWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit ProductGuiWidget(QWidget *parent = nullptr);
+    explicit ProductGuiWidget(Product *pro = nullptr, QWidget *parent = nullptr);
     ~ProductGuiWidget();
 
 
 public:
     Ui::ProductGuiWidget *ui;
-    bool *goToProduct;
-    Product *p;
+    Product *pro;
 
+    QPushButton *Btn_Name;
+
+    void try1();
 };
 
 #endif // PRODUCTGUIWIDGET_H

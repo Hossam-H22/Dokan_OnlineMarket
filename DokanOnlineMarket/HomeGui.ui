@@ -70,6 +70,12 @@ background: #2880AE;
           <height>321</height>
          </rect>
         </property>
+        <property name="mouseTracking">
+         <bool>false</bool>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
         <property name="text">
          <string/>
         </property>
@@ -78,6 +84,9 @@ background: #2880AE;
         </property>
         <property name="scaledContents">
          <bool>true</bool>
+        </property>
+        <property name="openExternalLinks">
+         <bool>false</bool>
         </property>
        </widget>
        <widget class="QPushButton" name="btn_start_0">
@@ -1163,7 +1172,7 @@ padding: 0 0 20px 0;
          </rect>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="pg_0_categories_3">
          <widget class="QScrollArea" name="scrollArea_category_0_3">
@@ -1198,8 +1207,8 @@ border-radius: 6px;
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>6318</width>
-             <height>299</height>
+             <width>1120</width>
+             <height>311</height>
             </rect>
            </property>
            <property name="styleSheet">
@@ -1210,7 +1219,7 @@ border-radius: 6px;
              <widget class="QFrame" name="frm_scroll_0_3">
               <property name="minimumSize">
                <size>
-                <width>6300</width>
+                <width>1000</width>
                 <height>0</height>
                </size>
               </property>
@@ -1231,1074 +1240,7 @@ border-radius: 6px;
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_4">
                <item>
-                <widget class="QFrame" name="frm1_categoryItem_0_3">
-                 <property name="minimumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true"/>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_17">
-                  <item row="0" column="0">
-                   <widget class="QLabel" name="lb_frm1_img_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>150</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true"/>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="pixmap">
-                     <pixmap resource="Resources.qrc">:/img/assets/img/categories/mobile_1.png</pixmap>
-                    </property>
-                    <property name="scaledContents">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="0">
-                   <widget class="QPushButton" name="btn_frm1_nameCategory_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                    <property name="cursor">
-                     <cursorShape>PointingHandCursor</cursorShape>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">*{
-background-color: ;
-border: 4px solid #2880AE;
-border-radius: 15px;
-color: #000000;
-font: 13pt &quot;Segoe UI&quot;;
-letter-spacing: 2px;
-}
-*:hover {
-font: 500 14pt &quot;Segoe UI&quot;;
-border: 4px solid #44a2d5;
-padding: 0 0 2px 0;
-}
-
-</string>
-                    </property>
-                    <property name="text">
-                     <string>Mobiles, Tablets &amp;&amp; Accessories</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QFrame" name="frm2_categoryItem_0_3">
-                 <property name="minimumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_18">
-                  <item row="0" column="0">
-                   <widget class="QLabel" name="lb_frm2_img_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>150</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="pixmap">
-                     <pixmap resource="Resources.qrc">:/img/assets/img/categories/labtop_2.png</pixmap>
-                    </property>
-                    <property name="scaledContents">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="0">
-                   <widget class="QPushButton" name="btn_frm2_nameCategory_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                    <property name="cursor">
-                     <cursorShape>PointingHandCursor</cursorShape>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">*{
-background-color: ;
-border: 4px solid #2880AE;
-border-radius: 15px;
-color: #000000;
-font: 13pt &quot;Segoe UI&quot;;
-letter-spacing: 2px;
-}
-*:hover {
-font: 500 14pt &quot;Segoe UI&quot;;
-border: 4px solid #44a2d5;
-padding: 0 0 2px 0;
-}
-
-</string>
-                    </property>
-                    <property name="text">
-                     <string>Computer &amp;&amp; Office Supplies</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QFrame" name="frm3_categoryItem_0_3">
-                 <property name="minimumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_19">
-                  <item row="0" column="0">
-                   <widget class="QLabel" name="lb_frm3_img_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>150</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="pixmap">
-                     <pixmap resource="Resources.qrc">:/img/assets/img/categories/tv_3.png</pixmap>
-                    </property>
-                    <property name="scaledContents">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="0">
-                   <widget class="QPushButton" name="btn_frm3_nameCategory_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                    <property name="cursor">
-                     <cursorShape>PointingHandCursor</cursorShape>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">*{
-background-color: ;
-border: 4px solid #2880AE;
-border-radius: 15px;
-color: #000000;
-font: 13pt &quot;Segoe UI&quot;;
-letter-spacing: 2px;
-}
-*:hover {
-font: 500 14pt &quot;Segoe UI&quot;;
-border: 4px solid #44a2d5;
-padding: 0 0 2px 0;
-}
-
-</string>
-                    </property>
-                    <property name="text">
-                     <string>TV &amp;&amp; Electronics</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QFrame" name="frm4_categoryItem_0_3">
-                 <property name="minimumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_20">
-                  <item row="0" column="0">
-                   <widget class="QLabel" name="lb_frm4_img_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>150</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="pixmap">
-                     <pixmap resource="Resources.qrc">:/img/assets/img/categories/womens_4.png</pixmap>
-                    </property>
-                    <property name="scaledContents">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="0">
-                   <widget class="QPushButton" name="btn_frm4_nameCategory_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                    <property name="cursor">
-                     <cursorShape>PointingHandCursor</cursorShape>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">*{
-background-color: ;
-border: 4px solid #2880AE;
-border-radius: 15px;
-color: #000000;
-font: 13pt &quot;Segoe UI&quot;;
-letter-spacing: 2px;
-}
-*:hover {
-font: 500 14pt &quot;Segoe UI&quot;;
-border: 4px solid #44a2d5;
-padding: 0 0 2px 0;
-}
-
-</string>
-                    </property>
-                    <property name="text">
-                     <string>Women's Fashion</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QFrame" name="frm5_categoryItem_0_3">
-                 <property name="minimumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_21">
-                  <item row="0" column="0">
-                   <widget class="QLabel" name="lb_frm5_img_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>150</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="pixmap">
-                     <pixmap resource="Resources.qrc">:/img/assets/img/categories/men_5.png</pixmap>
-                    </property>
-                    <property name="scaledContents">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="0">
-                   <widget class="QPushButton" name="btn_frm5_nameCategory_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                    <property name="cursor">
-                     <cursorShape>PointingHandCursor</cursorShape>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">*{
-background-color: ;
-border: 4px solid #2880AE;
-border-radius: 15px;
-color: #000000;
-font: 13pt &quot;Segoe UI&quot;;
-letter-spacing: 2px;
-}
-*:hover {
-font: 500 14pt &quot;Segoe UI&quot;;
-border: 4px solid #44a2d5;
-padding: 0 0 2px 0;
-}
-
-</string>
-                    </property>
-                    <property name="text">
-                     <string>Men's Fashion</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QFrame" name="frm6_categoryItem_0_3">
-                 <property name="minimumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_22">
-                  <item row="0" column="0">
-                   <widget class="QLabel" name="lb_frm6_img_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>150</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="pixmap">
-                     <pixmap resource="Resources.qrc">:/img/assets/img/categories/kids_6.png</pixmap>
-                    </property>
-                    <property name="scaledContents">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="0">
-                   <widget class="QPushButton" name="btn_frm6_nameCategory_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                    <property name="cursor">
-                     <cursorShape>PointingHandCursor</cursorShape>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">*{
-background-color: ;
-border: 4px solid #2880AE;
-border-radius: 15px;
-color: #000000;
-font: 13pt &quot;Segoe UI&quot;;
-letter-spacing: 2px;
-}
-*:hover {
-font: 500 14pt &quot;Segoe UI&quot;;
-border: 4px solid #44a2d5;
-padding: 0 0 2px 0;
-}
-
-</string>
-                    </property>
-                    <property name="text">
-                     <string>Kids Fashion</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QFrame" name="frm7_categoryItem_0_3">
-                 <property name="minimumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_23">
-                  <item row="0" column="0">
-                   <widget class="QLabel" name="lb_frm7_img_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>150</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="pixmap">
-                     <pixmap resource="Resources.qrc">:/img/assets/img/categories/health_7.png</pixmap>
-                    </property>
-                    <property name="scaledContents">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="0">
-                   <widget class="QPushButton" name="btn_frm7_nameCategory_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                    <property name="cursor">
-                     <cursorShape>PointingHandCursor</cursorShape>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">*{
-background-color: ;
-border: 4px solid #2880AE;
-border-radius: 15px;
-color: #000000;
-font: 13pt &quot;Segoe UI&quot;;
-letter-spacing: 2px;
-}
-*:hover {
-font: 500 14pt &quot;Segoe UI&quot;;
-border: 4px solid #44a2d5;
-padding: 0 0 2px 0;
-}
-
-</string>
-                    </property>
-                    <property name="text">
-                     <string>Health, Beauty &amp;&amp; Perfumes</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QFrame" name="frm8_categoryItem_0_3">
-                 <property name="minimumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_24">
-                  <item row="0" column="0">
-                   <widget class="QLabel" name="lb_frm8_img_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>150</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="pixmap">
-                     <pixmap resource="Resources.qrc">:/img/assets/img/categories/market_8.png</pixmap>
-                    </property>
-                    <property name="scaledContents">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="0">
-                   <widget class="QPushButton" name="btn_frm8_nameCategory_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                    <property name="cursor">
-                     <cursorShape>PointingHandCursor</cursorShape>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">*{
-background-color: ;
-border: 4px solid #2880AE;
-border-radius: 15px;
-color: #000000;
-font: 13pt &quot;Segoe UI&quot;;
-letter-spacing: 2px;
-}
-*:hover {
-font: 500 14pt &quot;Segoe UI&quot;;
-border: 4px solid #44a2d5;
-padding: 0 0 2px 0;
-}
-
-</string>
-                    </property>
-                    <property name="text">
-                     <string>Supermarket</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QFrame" name="frm9_categoryItem_0_3">
-                 <property name="minimumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_25">
-                  <item row="0" column="0">
-                   <widget class="QLabel" name="lb_frm9_img_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>150</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="pixmap">
-                     <pixmap resource="Resources.qrc">:/img/assets/img/categories/Home - Furniture _9.png</pixmap>
-                    </property>
-                    <property name="scaledContents">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="0">
-                   <widget class="QPushButton" name="btn_frm9_nameCategory_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                    <property name="cursor">
-                     <cursorShape>PointingHandCursor</cursorShape>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">*{
-background-color: ;
-border: 4px solid #2880AE;
-border-radius: 15px;
-color: #000000;
-font: 13pt &quot;Segoe UI&quot;;
-letter-spacing: 2px;
-}
-*:hover {
-font: 500 14pt &quot;Segoe UI&quot;;
-border: 4px solid #44a2d5;
-padding: 0 0 2px 0;
-}
-
-</string>
-                    </property>
-                    <property name="text">
-                     <string>Home, Furniture &amp;&amp; Tools</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QFrame" name="frm10_categoryItem_0_3">
-                 <property name="minimumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_26">
-                  <item row="0" column="0">
-                   <widget class="QLabel" name="lb_frm10_img_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>150</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="pixmap">
-                     <pixmap resource="Resources.qrc">:/img/assets/img/categories/Kitchen_10.png</pixmap>
-                    </property>
-                    <property name="scaledContents">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="0">
-                   <widget class="QPushButton" name="btn_frm10_nameCategory_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                    <property name="cursor">
-                     <cursorShape>PointingHandCursor</cursorShape>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">*{
-background-color: ;
-border: 4px solid #2880AE;
-border-radius: 15px;
-color: #000000;
-font: 13pt &quot;Segoe UI&quot;;
-letter-spacing: 2px;
-}
-*:hover {
-font: 500 14pt &quot;Segoe UI&quot;;
-border: 4px solid #44a2d5;
-padding: 0 0 2px 0;
-}
-
-</string>
-                    </property>
-                    <property name="text">
-                     <string>Kitchen &amp;&amp; Appliances</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QFrame" name="frm11_categoryItem_0_3">
-                 <property name="minimumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_27">
-                  <item row="0" column="0">
-                   <widget class="QLabel" name="lb_frm11_img_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>150</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="pixmap">
-                     <pixmap resource="Resources.qrc">:/img/assets/img/categories/toys_11.png</pixmap>
-                    </property>
-                    <property name="scaledContents">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="0">
-                   <widget class="QPushButton" name="btn_frm11_nameCategory_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                    <property name="cursor">
-                     <cursorShape>PointingHandCursor</cursorShape>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">*{
-background-color: ;
-border: 4px solid #2880AE;
-border-radius: 15px;
-color: #000000;
-font: 13pt &quot;Segoe UI&quot;;
-letter-spacing: 2px;
-}
-*:hover {
-font: 500 14pt &quot;Segoe UI&quot;;
-border: 4px solid #44a2d5;
-padding: 0 0 2px 0;
-}
-
-</string>
-                    </property>
-                    <property name="text">
-                     <string>Toys, Games &amp;&amp; Baby</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QFrame" name="frm12_categoryItem_0_3">
-                 <property name="minimumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_28">
-                  <item row="0" column="0">
-                   <widget class="QLabel" name="lb_frm12_img_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>150</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="pixmap">
-                     <pixmap resource="Resources.qrc">:/img/assets/img/categories/sports_12.png</pixmap>
-                    </property>
-                    <property name="scaledContents">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="0">
-                   <widget class="QPushButton" name="btn_frm12_nameCategory_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                    <property name="cursor">
-                     <cursorShape>PointingHandCursor</cursorShape>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">*{
-background-color: ;
-border: 4px solid #2880AE;
-border-radius: 15px;
-color: #000000;
-font: 13pt &quot;Segoe UI&quot;;
-letter-spacing: 2px;
-}
-*:hover {
-font: 500 14pt &quot;Segoe UI&quot;;
-border: 4px solid #44a2d5;
-padding: 0 0 2px 0;
-}
-
-</string>
-                    </property>
-                    <property name="text">
-                     <string>Sports, Fitness &amp;&amp; Outdoors</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QFrame" name="frm13_categoryItem_0_3">
-                 <property name="minimumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_29">
-                  <item row="0" column="0">
-                   <widget class="QLabel" name="lb_frm13_img_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>150</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="pixmap">
-                     <pixmap resource="Resources.qrc">:/img/assets/img/categories/books_13.png</pixmap>
-                    </property>
-                    <property name="scaledContents">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="0">
-                   <widget class="QPushButton" name="btn_frm13_nameCategory_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                    <property name="cursor">
-                     <cursorShape>PointingHandCursor</cursorShape>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">*{
-background-color: ;
-border: 4px solid #2880AE;
-border-radius: 15px;
-color: #000000;
-font: 13pt &quot;Segoe UI&quot;;
-letter-spacing: 2px;
-}
-*:hover {
-font: 500 14pt &quot;Segoe UI&quot;;
-border: 4px solid #44a2d5;
-padding: 0 0 2px 0;
-}
-
-</string>
-                    </property>
-                    <property name="text">
-                     <string>Books</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QFrame" name="frm14_categoryItem_0_3">
-                 <property name="minimumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>430</width>
-                   <height>250</height>
-                  </size>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_30">
-                  <item row="0" column="0">
-                   <widget class="QLabel" name="lb_frm14_img_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>150</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="pixmap">
-                     <pixmap resource="Resources.qrc">:/img/assets/img/categories/automotive_14.png</pixmap>
-                    </property>
-                    <property name="scaledContents">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="0">
-                   <widget class="QPushButton" name="btn_frm14_nameCategory_0_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                    <property name="cursor">
-                     <cursorShape>PointingHandCursor</cursorShape>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">*{
-background-color: ;
-border: 4px solid #2880AE;
-border-radius: 15px;
-color: #000000;
-font: 13pt &quot;Segoe UI&quot;;
-letter-spacing: 2px;
-}
-*:hover {
-font: 500 14pt &quot;Segoe UI&quot;;
-border: 4px solid #44a2d5;
-padding: 0 0 2px 0;
-}
-
-</string>
-                    </property>
-                    <property name="text">
-                     <string>Automotive</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
+                <layout class="QHBoxLayout" name="horizontalLayout_8"/>
                </item>
               </layout>
              </widget>
@@ -2330,9 +1272,9 @@ padding: 0 0 2px 0;
          <widget class="QScrollArea" name="scrollArea_cart_1_3">
           <property name="geometry">
            <rect>
-            <x>41</x>
+            <x>205</x>
             <y>50</y>
-            <width>1195</width>
+            <width>1041</width>
             <height>541</height>
            </rect>
           </property>
@@ -2359,8 +1301,8 @@ border-radius: 6px;
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1183</width>
-             <height>818</height>
+             <width>1041</width>
+             <height>541</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -2369,7 +1311,13 @@ border-radius: 6px;
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>800</height>
+                <height>500</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
                </size>
               </property>
               <property name="frameShape">
@@ -2391,8 +1339,8 @@ border-radius: 6px;
          <widget class="QLabel" name="lb_CategoryName_1_3">
           <property name="geometry">
            <rect>
-            <x>360</x>
-            <y>18</y>
+            <x>480</x>
+            <y>16</y>
             <width>521</width>
             <height>51</height>
            </rect>
@@ -2417,62 +1365,377 @@ color: #ffffff;
            <set>Qt::AlignCenter</set>
           </property>
          </widget>
-         <widget class="QPushButton" name="btn_back_1_3">
+         <widget class="QFrame" name="frm1_filter_1_3">
           <property name="geometry">
            <rect>
-            <x>42</x>
-            <y>541</y>
-            <width>50</width>
-            <height>50</height>
+            <x>24</x>
+            <y>70</y>
+            <width>191</width>
+            <height>511</height>
            </rect>
-          </property>
-          <property name="cursor">
-           <cursorShape>PointingHandCursor</cursorShape>
           </property>
           <property name="styleSheet">
            <string notr="true">*{
-border: 0;
+border: 2px solid #099ef2;
+border-radius: 20px;
+/*background-color: #ffffff;*/
 }</string>
           </property>
-          <property name="text">
-           <string/>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
           </property>
-          <property name="icon">
-           <iconset resource="Resources.qrc">
-            <normaloff>:/img/assets/img/icons/icons8-back-96.png</normaloff>:/img/assets/img/icons/icons8-back-96.png</iconset>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
           </property>
-          <property name="iconSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="pushButton">
-          <property name="geometry">
-           <rect>
-            <x>40</x>
-            <y>10</y>
-            <width>75</width>
-            <height>24</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>pull</string>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="pushButton_2">
-          <property name="geometry">
-           <rect>
-            <x>150</x>
-            <y>10</y>
-            <width>75</width>
-            <height>24</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>push</string>
-          </property>
+          <widget class="QPushButton" name="btn_frm1_back_1_3">
+           <property name="geometry">
+            <rect>
+             <x>70</x>
+             <y>440</y>
+             <width>50</width>
+             <height>50</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">*{
+border: 0;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="Resources.qrc">
+             <normaloff>:/img/assets/img/icons/icons8-back-96.png</normaloff>:/img/assets/img/icons/icons8-back-96.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_frm1_search_1_3">
+           <property name="geometry">
+            <rect>
+             <x>5</x>
+             <y>20</y>
+             <width>181</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">*{
+border-radius: 20px;
+padding: 0 0 0 10px;
+border: 1px solid #000000
+}
+</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string>Search</string>
+           </property>
+           <property name="cursorMoveStyle">
+            <enum>Qt::LogicalMoveStyle</enum>
+           </property>
+           <property name="clearButtonEnabled">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="lb_frm1_sort_1_3">
+           <property name="geometry">
+            <rect>
+             <x>5</x>
+             <y>190</y>
+             <width>101</width>
+             <height>30</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>13</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">*{
+border: 0;
+border-radius: 0;
+/*background-color: #ffffff;*/
+}</string>
+           </property>
+           <property name="text">
+            <string> Sort by :</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_frm1_Name_1_3">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>220</y>
+             <width>80</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">*{
+border: 0;
+border-radius: 0;
+/*background-color: #ffffff;*/
+}</string>
+           </property>
+           <property name="text">
+            <string>Name</string>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_frm1_Price_1_3">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>250</y>
+             <width>80</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">*{
+border: 0;
+border-radius: 0;
+/*background-color: #ffffff;*/
+}</string>
+           </property>
+           <property name="text">
+            <string>Price</string>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_frm1_search_1_3">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>70</y>
+             <width>130</width>
+             <height>30</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">*{
+border: 1px solid #000000;
+border-radius: 10px;
+}
+*:hover {
+border: 2px solid #000000;
+}</string>
+           </property>
+           <property name="text">
+            <string>Search</string>
+           </property>
+          </widget>
+          <widget class="Line" name="line2_frm1_1_3">
+           <property name="geometry">
+            <rect>
+             <x>11</x>
+             <y>420</y>
+             <width>165</width>
+             <height>3</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">*{
+border: 0;
+border-radius: 0;
+background-color: #ffffff;
+}</string>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_frm1_Rate_1_3">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>280</y>
+             <width>80</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">*{
+border: 0;
+border-radius: 0;
+/*background-color: #ffffff;*/
+}</string>
+           </property>
+           <property name="text">
+            <string>Rate</string>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="Line" name="line1_frm1_1_3">
+           <property name="geometry">
+            <rect>
+             <x>11</x>
+             <y>160</y>
+             <width>165</width>
+             <height>3</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">*{
+border: 0;
+border-radius: 0;
+background-color: #ffffff;
+}</string>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_frm1_clear1_1_3">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>105</y>
+             <width>130</width>
+             <height>30</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">*{
+border: 1px solid #000000;
+border-radius: 10px;
+}
+*:hover {
+border: 2px solid #000000;
+}</string>
+           </property>
+           <property name="text">
+            <string>Clear</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_frm1_clear2_1_3">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>360</y>
+             <width>130</width>
+             <height>30</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">*{
+border: 1px solid #000000;
+border-radius: 10px;
+}
+*:hover {
+border: 2px solid #000000;
+}</string>
+           </property>
+           <property name="text">
+            <string>Clear</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_frm1_setfilter_1_3">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>325</y>
+             <width>130</width>
+             <height>30</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">*{
+border: 1px solid #000000;
+border-radius: 10px;
+}
+*:hover {
+border: 2px solid #000000;
+}</string>
+           </property>
+           <property name="text">
+            <string>Set Filter</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_frm1_rubbish_1_3">
+           <property name="geometry">
+            <rect>
+             <x>140</x>
+             <y>280</y>
+             <width>21</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>rubbish</string>
+           </property>
+          </widget>
          </widget>
         </widget>
        </widget>
@@ -2489,7 +1752,7 @@ border: 0;
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>110</y>
+          <y>95</y>
           <width>1191</width>
           <height>20</height>
          </rect>
@@ -2504,8 +1767,8 @@ border: 0;
        <widget class="QPushButton" name="btn_logout_4">
         <property name="geometry">
          <rect>
-          <x>1080</x>
-          <y>50</y>
+          <x>1060</x>
+          <y>33</y>
           <width>141</width>
           <height>41</height>
          </rect>
@@ -2518,14 +1781,14 @@ border: 0;
         </property>
         <property name="styleSheet">
          <string notr="true">*{
-   border-radius: 20px;
-   border-color: rgb(255, 255, 255);
-   color: #ffffff;
-   
-   }
-   *:hover {
-   background-color: #6c9eb7;
-   }</string>
+    border-radius: 20px;
+    border-color: rgb(255, 255, 255);
+    color: #ffffff;
+    
+    }
+    *:hover {
+    background-color: #6c9eb7;
+    }</string>
         </property>
         <property name="text">
          <string>Log out</string>
@@ -2535,7 +1798,7 @@ border: 0;
         <property name="geometry">
          <rect>
           <x>50</x>
-          <y>30</y>
+          <y>19</y>
           <width>171</width>
           <height>71</height>
          </rect>
@@ -2548,39 +1811,6 @@ border: 0;
         </property>
         <property name="scaledContents">
          <bool>true</bool>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="linedite_searchbar_4">
-        <property name="geometry">
-         <rect>
-          <x>250</x>
-          <y>50</y>
-          <width>601</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <italic>false</italic>
-          <bold>false</bold>
-          <underline>false</underline>
-          <strikeout>false</strikeout>
-          <kerning>true</kerning>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">*{
-   background-color: rgb(214, 229, 237);
-   border-radius:20px;
-   padding-left : 40px;
-   }</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="placeholderText">
-         <string>Search</string>
         </property>
        </widget>
        <widget class="QPushButton" name="btn_back_4">
@@ -2600,15 +1830,15 @@ border: 0;
         </property>
         <property name="styleSheet">
          <string notr="true">*{
-   border-radius: 20px;
-   border: 2px solid #E3BA5A;
-   background-color: #2e81aa;
-   color:  #E3BA5A;
-   }
-   *:hover {
-   color:white;
-   background-color: #E3BA5A;
-   }</string>
+    border-radius: 20px;
+    border: 2px solid #E3BA5A;
+    background-color: #2e81aa;
+    color:  #E3BA5A;
+    }
+    *:hover {
+    color:white;
+    background-color: #E3BA5A;
+    }</string>
         </property>
         <property name="text">
          <string>Back</string>
@@ -2618,7 +1848,7 @@ border: 0;
         <property name="geometry">
          <rect>
           <x>90</x>
-          <y>700</y>
+          <y>696</y>
           <width>201</width>
           <height>41</height>
          </rect>
@@ -2631,14 +1861,14 @@ border: 0;
         </property>
         <property name="styleSheet">
          <string notr="true">*{
-   border-radius: 20px;
-   background-color: #E3BA5A;
-   color: #ffffff;
-   letter-spacing: 1px;
-   }
-   *:hover {
-   background-color: #dead3b;
-   }</string>
+    border-radius: 20px;
+    background-color: #E3BA5A;
+    color: #ffffff;
+    letter-spacing: 1px;
+    }
+    *:hover {
+    background-color: #dead3b;
+    }</string>
         </property>
         <property name="text">
          <string>Edit profile</string>
@@ -2673,7 +1903,7 @@ border: 0;
            <rect>
             <x>15</x>
             <y>13</y>
-            <width>181</width>
+            <width>221</width>
             <height>31</height>
            </rect>
           </property>
@@ -2702,6 +1932,21 @@ border: 0;
             <height>251</height>
            </rect>
           </property>
+          <property name="styleSheet">
+           <string notr="true">*{
+ border: 0;
+ }
+ QScrollBar:horizontal {
+ max-height: 12px;
+ background-color: #2e81aa;
+ }
+ QScrollBar::handle:horizontal {
+ background-color: #E3BA5A;
+ border-radius: 6px;
+ }
+ 
+ </string>
+          </property>
           <property name="widgetResizable">
            <bool>true</bool>
           </property>
@@ -2711,7 +1956,7 @@ border: 0;
              <x>0</x>
              <y>0</y>
              <width>1200</width>
-             <height>232</height>
+             <height>239</height>
             </rect>
            </property>
            <property name="minimumSize">
@@ -2719,6 +1964,9 @@ border: 0;
              <width>1200</width>
              <height>0</height>
             </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
            </property>
            <widget class="QFrame" name="frame_3">
             <property name="geometry">
@@ -2734,6 +1982,9 @@ border: 0;
               <width>0</width>
               <height>0</height>
              </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
             </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
@@ -2752,14 +2003,14 @@ border: 0;
              </property>
              <property name="styleSheet">
               <string notr="true">*{
-   border-radius: 25px;
-   border-color: rgb(255, 255, 255);
-   background-color: #2e81aa;
-   color: #ffffff;
-   }
-   *:hover {
-   background-color: #6c9eb7;
-   }</string>
+    border-radius: 25px;
+    border-color: rgb(255, 255, 255);
+    background-color: #2e81aa;
+    color: #ffffff;
+    }
+    *:hover {
+    background-color: #6c9eb7;
+    }</string>
              </property>
              <property name="text">
               <string/>
@@ -2791,13 +2042,13 @@ border: 0;
              </property>
              <property name="styleSheet">
               <string notr="true">*{
-   border-radius: 25px;
-   border-color: rgb(255, 255, 255);
-   background-color: #2e81aa;
-   color: #ffffff;
-   }
-   
-   </string>
+    border-radius: 25px;
+    border-color: rgb(255, 255, 255);
+    background-color: #2e81aa;
+    color: #ffffff;
+    }
+    
+    </string>
              </property>
              <property name="text">
               <string>Shoses</string>
@@ -2822,15 +2073,15 @@ border: 0;
              </property>
              <property name="styleSheet">
               <string notr="true">*{
-   border-radius: 25px;
-   border-color: rgb(255, 255, 255);
-   background-color: #2e81aa;
-   color: #ffffff;
-   }
-   *:hover {
-   background-color: #6c9eb7;
-   }
-   </string>
+    border-radius: 25px;
+    border-color: rgb(255, 255, 255);
+    background-color: #2e81aa;
+    color: #ffffff;
+    }
+    *:hover {
+    background-color: #6c9eb7;
+    }
+    </string>
              </property>
              <property name="text">
               <string>Games</string>
@@ -2850,14 +2101,14 @@ border: 0;
              </property>
              <property name="styleSheet">
               <string notr="true">*{
-   border-radius: 25px;
-   border-color: rgb(255, 255, 255);
-   background-color: #2e81aa;
-   color: #ffffff;
-   }
-   *:hover {
-   background-color: #6c9eb7;
-   }</string>
+    border-radius: 25px;
+    border-color: rgb(255, 255, 255);
+    background-color: #2e81aa;
+    color: #ffffff;
+    }
+    *:hover {
+    background-color: #6c9eb7;
+    }</string>
              </property>
              <property name="text">
               <string/>
@@ -2889,13 +2140,13 @@ border: 0;
              </property>
              <property name="styleSheet">
               <string notr="true">*{
-   border-radius: 25px;
-   border-color: rgb(255, 255, 255);
-   background-color: #2e81aa;
-   color: #ffffff;
-   }
-   
-   </string>
+    border-radius: 25px;
+    border-color: rgb(255, 255, 255);
+    background-color: #2e81aa;
+    color: #ffffff;
+    }
+    
+    </string>
              </property>
              <property name="text">
               <string>Clothes</string>
@@ -2915,14 +2166,14 @@ border: 0;
              </property>
              <property name="styleSheet">
               <string notr="true">*{
-   border-radius: 25px;
-   border-color: rgb(255, 255, 255);
-   background-color: #2e81aa;
-   color: #ffffff;
-   }
-   *:hover {
-   background-color: #6c9eb7;
-   }</string>
+    border-radius: 25px;
+    border-color: rgb(255, 255, 255);
+    background-color: #2e81aa;
+    color: #ffffff;
+    }
+    *:hover {
+    background-color: #6c9eb7;
+    }</string>
              </property>
              <property name="text">
               <string/>
@@ -2954,15 +2205,13 @@ border: 0;
              </property>
              <property name="styleSheet">
               <string notr="true">*{
-   border-radius: 25px;
-   border-color: rgb(255, 255, 255);
-   background-color: #2e81aa;
-   color: #ffffff;
-   }
-   *:hover {
-   background-color: #6c9eb7;
-   }
-   </string>
+    border-radius: 25px;
+    border-color: rgb(255, 255, 255);
+    background-color: #2e81aa;
+    color: #ffffff;
+    }
+  
+    </string>
              </property>
              <property name="text">
               <string>Games</string>
@@ -2987,13 +2236,13 @@ border: 0;
              </property>
              <property name="styleSheet">
               <string notr="true">*{
-   border-radius: 25px;
-   border-color: rgb(255, 255, 255);
-   background-color: #2e81aa;
-   color: #ffffff;
-   }
-   
-   </string>
+    border-radius: 25px;
+    border-color: rgb(255, 255, 255);
+    background-color: #2e81aa;
+    color: #ffffff;
+    }
+    
+    </string>
              </property>
              <property name="text">
               <string>Clothes</string>
@@ -3018,13 +2267,13 @@ border: 0;
              </property>
              <property name="styleSheet">
               <string notr="true">*{
-   border-radius: 25px;
-   border-color: rgb(255, 255, 255);
-   background-color: #2e81aa;
-   color: #ffffff;
-   }
-   
-   </string>
+    border-radius: 25px;
+    border-color: rgb(255, 255, 255);
+    background-color: #2e81aa;
+    color: #ffffff;
+    }
+    
+    </string>
              </property>
              <property name="text">
               <string>Shoses</string>
@@ -3044,14 +2293,14 @@ border: 0;
              </property>
              <property name="styleSheet">
               <string notr="true">*{
-   border-radius: 25px;
-   border-color: rgb(255, 255, 255);
-   background-color: #2e81aa;
-   color: #ffffff;
-   }
-   *:hover {
-   background-color: #6c9eb7;
-   }</string>
+    border-radius: 25px;
+    border-color: rgb(255, 255, 255);
+    background-color: #2e81aa;
+    color: #ffffff;
+    }
+    *:hover {
+    background-color: #6c9eb7;
+    }</string>
              </property>
              <property name="text">
               <string/>
@@ -3078,14 +2327,14 @@ border: 0;
              </property>
              <property name="styleSheet">
               <string notr="true">*{
-   border-radius: 25px;
-   border-color: rgb(255, 255, 255);
-   background-color: #2e81aa;
-   color: #ffffff;
-   }
-   *:hover {
-   background-color: #6c9eb7;
-   }</string>
+    border-radius: 25px;
+    border-color: rgb(255, 255, 255);
+    background-color: #2e81aa;
+    color: #ffffff;
+    }
+    *:hover {
+    background-color: #6c9eb7;
+    }</string>
              </property>
              <property name="text">
               <string/>
@@ -3112,14 +2361,14 @@ border: 0;
              </property>
              <property name="styleSheet">
               <string notr="true">*{
-   border-radius: 25px;
-   border-color: rgb(255, 255, 255);
-   background-color: #2e81aa;
-   color: #ffffff;
-   }
-   *:hover {
-   background-color: #6c9eb7;
-   }</string>
+    border-radius: 25px;
+    border-color: rgb(255, 255, 255);
+    background-color: #2e81aa;
+    color: #ffffff;
+    }
+    *:hover {
+    background-color: #6c9eb7;
+    }</string>
              </property>
              <property name="text">
               <string/>
@@ -3154,16 +2403,16 @@ border: 0;
           <property name="geometry">
            <rect>
             <x>25</x>
-            <y>400</y>
+            <y>390</y>
             <width>801</width>
-            <height>121</height>
+            <height>131</height>
            </rect>
           </property>
           <property name="text">
            <string/>
           </property>
           <property name="pixmap">
-           <pixmap resource="Resources.qrc">:/img/assets/img/Ads/Horizontal/ad_5.jpg</pixmap>
+           <pixmap resource="Resources.qrc">:/img/assets/img/Ads/CustomerPage/5.png</pixmap>
           </property>
           <property name="scaledContents">
            <bool>true</bool>
@@ -3178,10 +2427,24 @@ border: 0;
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>0</y>
-            <width>851</width>
-            <height>380</height>
+            <y>20</y>
+            <width>831</width>
+            <height>491</height>
            </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">*{
+ border: 0;
+ }
+ QScrollBar:vertical {
+ max-width: 12px;
+ background-color: #transparent;
+ }
+ QScrollBar::handle:vertical {
+ background-color: #E3BA5A;
+ border-radius: 6px;
+ }
+ </string>
           </property>
           <property name="widgetResizable">
            <bool>true</bool>
@@ -3191,13 +2454,19 @@ border: 0;
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>832</width>
-             <height>818</height>
+             <width>819</width>
+             <height>800</height>
             </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>800</height>
+            </size>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_6">
             <item>
-             <widget class="QFrame" name="frm_scroll_1_4">
+             <widget class="QFrame" name="frame_2">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -3210,36 +2479,112 @@ border: 0;
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
-              <layout class="QVBoxLayout" name="verticalLayout_7">
-               <item>
-                <layout class="QVBoxLayout" name="verticalLayout_scroll_1_4"/>
-               </item>
-              </layout>
              </widget>
             </item>
            </layout>
           </widget>
          </widget>
         </widget>
-        <widget class="QWidget" name="pg_2_Fav_4"/>
+        <widget class="QWidget" name="pg_2_Fav_4">
+         <widget class="QScrollArea" name="scrollArea">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>20</y>
+            <width>831</width>
+            <height>491</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">*{
+ border: 0;
+ }
+ QScrollBar:vertical {
+ max-width: 12px;
+ background-color: #transparent;
+ }
+ QScrollBar::handle:vertical {
+ background-color: #E3BA5A;
+ border-radius: 6px;
+ }
+ 
+ </string>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>819</width>
+             <height>800</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>800</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <widget class="QFrame" name="frame">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>-1</y>
+              <width>831</width>
+              <height>811</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>800</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QWidget" name="gridLayoutWidget">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>-1</y>
+               <width>821</width>
+               <height>491</height>
+              </rect>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_6"/>
+            </widget>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
        </widget>
        <widget class="QFrame" name="frm1_info_4">
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>160</y>
+          <y>151</y>
           <width>321</width>
           <height>561</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">*{
-   background-color: rgb(40, 128, 174);
-   opacity: 0.5;
-   border-radius: 25px;
-   border-color: rgb(255, 255, 255);
-   color: #ffffff;
-   }</string>
+    background-color: rgb(40, 128, 174);
+    opacity: 0.5;
+    border-radius: 25px;
+    border-color: rgb(255, 255, 255);
+    color: #ffffff;
+    }</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
@@ -3247,26 +2592,13 @@ border: 0;
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QLabel" name="lb_frm1_photo_4">
-         <property name="geometry">
-          <rect>
-           <x>47</x>
-           <y>22</y>
-           <width>230</width>
-           <height>230</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
         <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>280</y>
+           <y>290</y>
            <width>321</width>
-           <height>211</height>
+           <height>201</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -3282,7 +2614,7 @@ border: 0;
              <string notr="true">color: rgb(229, 229, 229);</string>
             </property>
             <property name="text">
-             <string>Youssef mohamed </string>
+             <string>name</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -3300,7 +2632,7 @@ border: 0;
              <string notr="true">color: rgb(232, 232, 232);</string>
             </property>
             <property name="text">
-             <string>01106542931</string>
+             <string>phone</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -3318,7 +2650,7 @@ border: 0;
              <string notr="true">color: rgb(232, 232, 232);</string>
             </property>
             <property name="text">
-             <string>youssefmohamed@gmail.com</string>
+             <string>email</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -3337,10 +2669,10 @@ border: 0;
             </property>
             <property name="styleSheet">
              <string notr="true">color: rgb(232, 232, 232);
-   font: 12pt &quot;Segoe UI&quot;;</string>
+    font: 12pt &quot;Segoe UI&quot;;</string>
             </property>
             <property name="text">
-             <string>15 Mohamed Rashad, Ain Shams</string>
+             <string>address</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -3362,22 +2694,48 @@ border: 0;
           <string>Completed ?</string>
          </property>
         </widget>
+        <widget class="QLabel" name="lb_frm1_photo_4">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>40</y>
+           <width>200</width>
+           <height>200</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">*{
+ background-color: #ffffff;
+ border-radius: 100px;
+ }
+ </string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="Resources.qrc">:/img/assets/img/icons/icons8-circled-user-male-skin-type-7-96.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
        </widget>
        <widget class="QFrame" name="frm2_Statusbar_4">
         <property name="geometry">
          <rect>
           <x>377</x>
-          <y>140</y>
+          <y>129</y>
           <width>861</width>
           <height>51</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">*{
-background-color: #2880AE;
-border-radius: 20px;
-}
-</string>
+ background-color: #2880AE;
+ border-radius: 20px;
+ }
+ </string>
         </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
@@ -3385,31 +2743,16 @@ border-radius: 20px;
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QWidget" name="layoutWidget_3">
+        <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
-           <x>20</x>
+           <x>10</x>
            <y>0</y>
-           <width>451</width>
+           <width>531</width>
            <height>51</height>
           </rect>
          </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_6">
-          <property name="spacing">
-           <number>25</number>
-          </property>
-          <property name="leftMargin">
-           <number>5</number>
-          </property>
-          <property name="topMargin">
-           <number>0</number>
-          </property>
-          <property name="rightMargin">
-           <number>0</number>
-          </property>
-          <property name="bottomMargin">
-           <number>5</number>
-          </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
            <widget class="QPushButton" name="btn_frm2_Home_4">
             <property name="minimumSize">
@@ -3423,14 +2766,14 @@ border-radius: 20px;
             </property>
             <property name="styleSheet">
              <string notr="true">*{
-color: rgb(255, 255, 255);
-font: 700 14pt &quot;Segoe UI&quot;;
-border-radius: 20px;
-margin: 0 0 0 -40px;
-}
-*:hover{
-font: 700 16pt &quot;Segoe UI&quot;;
-}</string>
+ color: rgb(255, 255, 255);
+ font: 700 14pt &quot;Segoe UI&quot;;
+ border-radius: 20px;
+ margin: 0 0 0 -40px;
+ }
+ *:hover{
+ font: 700 16pt &quot;Segoe UI&quot;;
+ }</string>
             </property>
             <property name="text">
              <string>Home</string>
@@ -3450,14 +2793,14 @@ font: 700 16pt &quot;Segoe UI&quot;;
             </property>
             <property name="styleSheet">
              <string notr="true">*{
-color: rgb(255, 255, 255);
-font: 700 14pt &quot;Segoe UI&quot;;
-border-radius: 20px;
-margin: 0 0 0 -40px;
-}
-*:hover{
-font: 700 16pt &quot;Segoe UI&quot;;
-}</string>
+ color: rgb(255, 255, 255);
+ font: 700 14pt &quot;Segoe UI&quot;;
+ border-radius: 20px;
+ margin: 0 0 0 -40px;
+ }
+ *:hover{
+ font: 700 16pt &quot;Segoe UI&quot;;
+ }</string>
             </property>
             <property name="text">
              <string>Cart</string>
@@ -3477,17 +2820,17 @@ font: 700 16pt &quot;Segoe UI&quot;;
             </property>
             <property name="styleSheet">
              <string notr="true">*{
-color: rgb(255, 255, 255);
-font: 700 14pt &quot;Segoe UI&quot;;
-border-radius: 35px;
-margin: 0 0 0 -40px;
-}
-*:hover{
-font: 700 16pt &quot;Segoe UI&quot;;
-}</string>
+ color: rgb(255, 255, 255);
+ font: 700 14pt &quot;Segoe UI&quot;;
+ border-radius: 35px;
+ margin: 0 0 0 -40px;
+ }
+ *:hover{
+ font: 700 16pt &quot;Segoe UI&quot;;
+ }</string>
             </property>
             <property name="text">
-             <string>Favorite</string>
+             <string>Favorites</string>
             </property>
            </widget>
           </item>
@@ -3497,7 +2840,6 @@ font: 700 16pt &quot;Segoe UI&quot;;
        <zorder>line1_4</zorder>
        <zorder>btn_logout_4</zorder>
        <zorder>lb_logo_4</zorder>
-       <zorder>linedite_searchbar_4</zorder>
        <zorder>btn_back_4</zorder>
        <zorder>stackedWidget_cust_4</zorder>
        <zorder>frm1_info_4</zorder>
@@ -3507,30 +2849,47 @@ font: 700 16pt &quot;Segoe UI&quot;;
       <widget class="QWidget" name="pg_5_Seller">
        <property name="styleSheet">
         <string notr="true">*{
-background-color:#1978ab ;
-}</string>
+ background-color:#1978ab ;
+ }</string>
        </property>
        <widget class="QPushButton" name="btn_LogOut_5">
         <property name="geometry">
          <rect>
-          <x>1100</x>
+          <x>1040</x>
           <y>30</y>
-          <width>121</width>
-          <height>41</height>
+          <width>165</width>
+          <height>40</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <bold>true</bold>
+         </font>
         </property>
         <property name="autoFillBackground">
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">*{
-color: #ffffff;
-font: 700 12pt &quot;Segoe UI&quot;;
-background-color: #2880AE;
-border-radius: 15px;
-border-radius: 11px;
-}
-</string>
+         <string notr="true">/*{
+ color: #ffffff;
+ font: 700 12pt &quot;Segoe UI&quot;;
+ background-color: #2880AE;
+ border-radius: 15px;
+ border-radius: 11px;
+ }*/
+ *{
+ color: #ffffff;
+ border-radius: 20px;
+ padding: -3 0 0 0px;
+ 
+ }
+ *:hover{
+ border: 4px solid #ffffff;
+ }
+ 
+ 
+ </string>
         </property>
         <property name="text">
          <string>log out</string>
@@ -3539,9 +2898,9 @@ border-radius: 11px;
        <widget class="QStackedWidget" name="stackedWidget_SellerProfile_5">
         <property name="geometry">
          <rect>
-          <x>330</x>
+          <x>300</x>
           <y>180</y>
-          <width>931</width>
+          <width>951</width>
           <height>613</height>
          </rect>
         </property>
@@ -3552,68 +2911,70 @@ border-radius: 11px;
          <widget class="QLabel" name="lb_About_0_5">
           <property name="geometry">
            <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>241</width>
+            <x>46</x>
+            <y>10</y>
+            <width>281</width>
             <height>41</height>
            </rect>
           </property>
           <property name="styleSheet">
            <string notr="true">*{
-color: #ffffff;
-font: 700 13pt &quot;Segoe UI&quot;;
-}</string>
+ color: #ffffff;
+ font: 700 13pt &quot;Segoe UI&quot;;
+padding:0 0 0 10px;
+ }</string>
           </property>
           <property name="text">
-           <string>        About the seller:</string>
+           <string>About the seller :</string>
           </property>
          </widget>
          <widget class="QTextBrowser" name="textBrowser_About_0_5">
           <property name="geometry">
            <rect>
-            <x>30</x>
+            <x>35</x>
             <y>60</y>
             <width>830</width>
-            <height>361</height>
+            <height>371</height>
            </rect>
           </property>
           <property name="styleSheet">
            <string notr="true">*{background-color:#2880AE;
-opacity:0.5;
-border-radius: 25px;
-padding: 10 2 2 12px;
-}</string>
+ opacity:0.5;
+ border-radius: 25px;
+ padding: 10 2 2 12px;
+ }</string>
           </property>
           <property name="html">
            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; color:#ffffff;&quot;&gt;This is the seller detailed idintifier, contains brief about his company, and info about his           services.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; color:#ffffff;&quot;&gt;This is the seller detailed idintifier, contains brief about his company, and info about his           services.&lt;/span&gt; &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; color:#ffffff;&quot;&gt;This should be no longer than 250 word.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
          <widget class="QLabel" name="lb_Ad_0_5">
           <property name="geometry">
            <rect>
-            <x>30</x>
+            <x>21</x>
             <y>450</y>
-            <width>830</width>
-            <height>121</height>
+            <width>866</width>
+            <height>131</height>
            </rect>
           </property>
           <property name="text">
            <string/>
           </property>
           <property name="pixmap">
-           <pixmap resource="Resources.qrc">:/img/assets/img/Ads/Horizontal/ad_5.jpg</pixmap>
+           <pixmap resource="Resources.qrc">:/img/assets/img/Ads/SellerProfile/4.png</pixmap>
           </property>
           <property name="scaledContents">
            <bool>true</bool>
@@ -3624,10 +2985,10 @@ p, li { white-space: pre-wrap; }
          <widget class="QPushButton" name="btn_AddProduct_1_5">
           <property name="geometry">
            <rect>
-            <x>660</x>
-            <y>10</y>
-            <width>209</width>
-            <height>49</height>
+            <x>770</x>
+            <y>550</y>
+            <width>165</width>
+            <height>40</height>
            </rect>
           </property>
           <property name="font">
@@ -3644,21 +3005,18 @@ p, li { white-space: pre-wrap; }
           </property>
           <property name="styleSheet">
            <string notr="true">*{
-color: #ffffff;
-border-radius: 24px;
-border: 2px solid #ffffff;
-}
-*:hover{
-border: 4px solid #ffffff;
-}
-</string>
+ color: #ffffff;
+ border-radius: 20px;
+ padding: 0 0 0 0px;
+ 
+ }
+ *:hover{
+ border: 4px solid #ffffff;
+ }
+ </string>
           </property>
           <property name="text">
-           <string>   Add Product</string>
-          </property>
-          <property name="icon">
-           <iconset resource="Resources.qrc">
-            <normaloff>:/img/assets/img/icons/icons8-add-product-96.png</normaloff>:/img/assets/img/icons/icons8-add-product-96.png</iconset>
+           <string> Add Product</string>
           </property>
           <property name="iconSize">
            <size>
@@ -3672,24 +3030,24 @@ border: 4px solid #ffffff;
            <rect>
             <x>0</x>
             <y>70</y>
-            <width>901</width>
-            <height>501</height>
+            <width>46</width>
+            <height>480</height>
            </rect>
           </property>
           <property name="styleSheet">
            <string notr="true">*{
-border: 0;
-}
-QScrollBar:vertical {
-max-width: 12px;
-/*background-color: traceparent;*/
-}
-QScrollBar::handle:vertical {
-background-color: #ffffff;
-border-radius: 6px;
-}
-
-</string>
+ border: 0;
+ }
+ QScrollBar:vertical {
+ max-width: 12px;
+ /*background-color: traceparent;*/
+ }
+ QScrollBar::handle:vertical {
+ background-color: #ffffff;
+ border-radius: 6px;
+ }
+ 
+ </string>
           </property>
           <property name="widgetResizable">
            <bool>true</bool>
@@ -3699,17 +3057,41 @@ border-radius: 6px;
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>889</width>
-             <height>818</height>
+             <width>46</width>
+             <height>480</height>
             </rect>
            </property>
-           <layout class="QVBoxLayout" name="verticalLayout_12">
+           <layout class="QVBoxLayout" name="verticalLayout_12"/>
+          </widget>
+         </widget>
+         <widget class="QScrollArea" name="scrollArea_2">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>20</y>
+            <width>881</width>
+            <height>511</height>
+           </rect>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_7">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>862</width>
+             <height>518</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_15">
             <item>
              <widget class="QFrame" name="frm_scroll_1_5">
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>800</height>
+                <height>500</height>
                </size>
               </property>
               <property name="frameShape">
@@ -3733,26 +3115,27 @@ border-radius: 6px;
          <widget class="QLabel" name="lb_wallet_2_5">
           <property name="geometry">
            <rect>
-            <x>220</x>
+            <x>170</x>
             <y>20</y>
-            <width>411</width>
-            <height>121</height>
+            <width>601</width>
+            <height>61</height>
            </rect>
           </property>
           <property name="font">
            <font>
             <family>Segoe UI</family>
-            <pointsize>36</pointsize>
+            <pointsize>30</pointsize>
             <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
            <string notr="true">*{
-color: #ffffff;
-}
-
-</string>
+ color: #ffffff;
+         font: 700 30pt &quot;Segoe UI&quot;;
+ }
+ 
+ </string>
           </property>
           <property name="text">
            <string>00.00 LE</string>
@@ -3761,134 +3144,98 @@ color: #ffffff;
            <set>Qt::AlignCenter</set>
           </property>
          </widget>
-         <widget class="QListWidget" name="listWidget">
+         <widget class="QWidget" name="layoutWidget_5">
           <property name="geometry">
            <rect>
-            <x>100</x>
-            <y>190</y>
-            <width>261</width>
-            <height>371</height>
+            <x>360</x>
+            <y>170</y>
+            <width>2</width>
+            <height>2</height>
            </rect>
           </property>
-          <property name="styleSheet">
-           <string notr="true">*{
-	color: rgb(255, 255, 255);
-background-color:#2880AE;
-opacity:0.5; 
-}</string>
-          </property>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
+          <layout class="QGridLayout" name="gridLayout_5" rowminimumheight="0"/>
          </widget>
-         <widget class="QListWidget" name="listWidget_2">
+         <widget class="QWidget" name="layoutWidget_6">
           <property name="geometry">
            <rect>
-            <x>500</x>
-            <y>190</y>
-            <width>261</width>
-            <height>371</height>
+            <x>260</x>
+            <y>240</y>
+            <width>2</width>
+            <height>2</height>
            </rect>
           </property>
-          <property name="styleSheet">
-           <string notr="true">*{
-	color: rgb(255, 255, 255);
-background-color:#2880AE;
-opacity:0.5; 
-}</string>
+          <layout class="QGridLayout" name="gridLayout_6" rowminimumheight="0"/>
+         </widget>
+         <widget class="QScrollArea" name="scrollArea_3">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>100</y>
+            <width>881</width>
+            <height>471</height>
+           </rect>
           </property>
-          <item>
-           <property name="text">
-            <string>New Item</string>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_8">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>862</width>
+             <height>518</height>
+            </rect>
            </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
+           <layout class="QVBoxLayout" name="verticalLayout_16">
+            <item>
+             <widget class="QFrame" name="frm_scroll_1_7">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>500</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_18">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_17"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
          </widget>
         </widget>
         <widget class="QWidget" name="pg_3_Feedback_5">
          <widget class="QProgressBar" name="progressBar_SellerRate_3_5">
           <property name="geometry">
            <rect>
-            <x>310</x>
-            <y>20</y>
-            <width>201</width>
-            <height>20</height>
+            <x>490</x>
+            <y>19</y>
+            <width>171</width>
+            <height>21</height>
            </rect>
           </property>
           <property name="styleSheet">
            <string notr="true">*{
-padding 0 0 0 0px;
-margin 0 0 0 0px;
-background-color: rgb(255, 255, 255);
-border-style: outset;
-border-width: 0px;
-border-radius: 10px;                      
-}
-QProgressBar::chunk {border-radius: 7px;
-	background-color: rgb(0, 189, 13);
-	background-color: rgb(85, 170, 0);
-}</string>
+ padding 0 0 0 0px;
+ margin 0 0 0 0px;
+ background-color: rgb(255, 255, 255);
+ border-style: outset;
+ border-width: 0px;
+ border-radius: 10px;                      
+ }
+ QProgressBar::chunk {border-radius: 7px;
+         background-color: rgb(0, 189, 13);
+         background-color: rgb(85, 170, 0);
+ }</string>
           </property>
           <property name="value">
            <number>70</number>
@@ -3900,45 +3247,23 @@ QProgressBar::chunk {border-radius: 7px;
          <widget class="QLabel" name="label_2">
           <property name="geometry">
            <rect>
-            <x>20</x>
+            <x>150</x>
             <y>0</y>
-            <width>281</width>
+            <width>321</width>
             <height>51</height>
            </rect>
           </property>
           <property name="styleSheet">
            <string notr="true">*{
-color: #ffffff;
-font: 700 14pt &quot;Segoe UI&quot;;
-}
-*:hover{
-font: 700 16pt &quot;Segoe UI&quot;;
-}</string>
+ color: #ffffff;
+ font: 700 14pt &quot;Segoe UI&quot;;
+ }
+ *:hover{
+ font: 700 16pt &quot;Segoe UI&quot;;
+ }</string>
           </property>
           <property name="text">
-           <string>     Verified Ratings (      )</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_3">
-          <property name="geometry">
-           <rect>
-            <x>240</x>
-            <y>10</y>
-            <width>31</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">*{
-color: #ffffff;
-font: 700 14pt &quot;Segoe UI&quot;;
-}
-*:hover{
-font: 700 16pt &quot;Segoe UI&quot;;
-}</string>
-          </property>
-          <property name="text">
-           <string> 5</string>
+           <string>     Verified Ratings out of 5 :</string>
           </property>
          </widget>
          <widget class="QScrollArea" name="scrollArea_sellerProduct_1_6">
@@ -3946,24 +3271,24 @@ font: 700 16pt &quot;Segoe UI&quot;;
            <rect>
             <x>10</x>
             <y>60</y>
-            <width>891</width>
-            <height>501</height>
+            <width>109</width>
+            <height>422</height>
            </rect>
           </property>
           <property name="styleSheet">
            <string notr="true">*{
-border: 0;
-}
-QScrollBar:vertical {
-max-width: 12px;
-/*background-color: traceparent;*/
-}
-QScrollBar::handle:vertical {
-background-color: #ffffff;
-border-radius: 6px;
-}
-
-</string>
+ border: 0;
+ }
+ QScrollBar:vertical {
+ max-width: 12px;
+ /*background-color: traceparent;*/
+ }
+ QScrollBar::handle:vertical {
+ background-color: #ffffff;
+ border-radius: 6px;
+ }
+ 
+ </string>
           </property>
           <property name="widgetResizable">
            <bool>true</bool>
@@ -3973,8 +3298,8 @@ border-radius: 6px;
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>891</width>
-             <height>501</height>
+             <width>109</width>
+             <height>422</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_14">
@@ -3992,36 +3317,146 @@ border-radius: 6px;
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
-              <layout class="QVBoxLayout" name="verticalLayout_15">
-               <item>
-                <layout class="QVBoxLayout" name="verticalLayout_16">
-                 <item>
-                  <widget class="QLabel" name="label">
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>55</height>
-                    </size>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">*{
-background-color: #2880AE;
-border-radius: 25px;
-color: #ffffff;
-}</string>
-                   </property>
-                   <property name="text">
-                    <string>TextLabel</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </item>
-              </layout>
              </widget>
             </item>
            </layout>
           </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page">
+         <widget class="QLabel" name="lb_img_5_5">
+          <property name="geometry">
+           <rect>
+            <x>420</x>
+            <y>10</y>
+            <width>200</width>
+            <height>200</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">*{
+ background-color: #ffffff;
+ border-radius: 100px;
+ }
+ </string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="Resources.qrc">:/img/assets/img/icons/icons8-circled-user-male-skin-type-7-96.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lb_address_5_5">
+          <property name="geometry">
+           <rect>
+            <x>390</x>
+            <y>490</y>
+            <width>249</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+  font: 700 14pt &quot;Segoe UI&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Address</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lb_ID_5_5">
+          <property name="geometry">
+           <rect>
+            <x>390</x>
+            <y>310</y>
+            <width>249</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+  font: 700 14pt &quot;Segoe UI&quot;;</string>
+          </property>
+          <property name="text">
+           <string>ID</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lb_mail_5_5">
+          <property name="geometry">
+           <rect>
+            <x>390</x>
+            <y>430</y>
+            <width>249</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+  font: 700 14pt &quot;Segoe UI&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Mail</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lb_phone_5_5">
+          <property name="geometry">
+           <rect>
+            <x>390</x>
+            <y>370</y>
+            <width>249</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+  font: 700 14pt &quot;Segoe UI&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Number</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lb_Name_5_5">
+          <property name="geometry">
+           <rect>
+            <x>390</x>
+            <y>240</y>
+            <width>249</width>
+            <height>44</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>20</pointsize>
+            <italic>false</italic>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+  font: 700 20pt &quot;Segoe UI&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Seller Name</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
          </widget>
         </widget>
        </widget>
@@ -4045,16 +3480,16 @@ color: #ffffff;
         <property name="geometry">
          <rect>
           <x>310</x>
-          <y>40</y>
+          <y>30</y>
           <width>501</width>
           <height>41</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">*{
-background-color:rgb(255, 255, 255) ; 
-border-radius: 15px;
-}</string>
+ background-color:rgb(255, 255, 255) ; 
+ border-radius: 15px;
+ }</string>
         </property>
         <property name="placeholderText">
          <string>          Search</string>
@@ -4093,10 +3528,10 @@ border-radius: 15px;
         </property>
         <property name="styleSheet">
          <string notr="true">*{
-background-color:#2880AE;
-opacity:0.5; 
-border-radius: 25px;
-}</string>
+ background-color:#2880AE;
+ opacity:0.5; 
+ border-radius: 25px;
+ }</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
@@ -4109,18 +3544,27 @@ border-radius: 25px;
           <rect>
            <x>50</x>
            <y>500</y>
-           <width>168</width>
-           <height>33</height>
+           <width>165</width>
+           <height>30</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>12</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
          </property>
          <property name="styleSheet">
           <string notr="true">*{
-color: #ffffff;
-background-color: #dead3b;
-border-radius: 15px;
-font: 700 12pt &quot;Segoe UI&quot;;
-}
-</string>
+ color: #ffffff;
+ background-color: #dead3b;
+ border-radius: 15px;
+ font: 700 12pt &quot;Segoe UI&quot;;
+ padding: -3 0 0 0px;
+ }
+ </string>
          </property>
          <property name="text">
           <string>Edit Profile</string>
@@ -4137,10 +3581,10 @@ font: 700 12pt &quot;Segoe UI&quot;;
          </property>
          <property name="styleSheet">
           <string notr="true">*{
-background-color: #ffffff;
-border-radius: 100px;
-}
-</string>
+ background-color: #ffffff;
+ border-radius: 100px;
+ }
+ </string>
          </property>
          <property name="text">
           <string/>
@@ -4174,7 +3618,7 @@ border-radius: 100px;
             </property>
             <property name="styleSheet">
              <string notr="true">color: rgb(255, 255, 255);
- font: 700 20pt &quot;Segoe UI&quot;;</string>
+  font: 700 20pt &quot;Segoe UI&quot;;</string>
             </property>
             <property name="text">
              <string>Seller Name</string>
@@ -4188,7 +3632,7 @@ border-radius: 100px;
            <widget class="QLabel" name="lb_frm1_ID_5">
             <property name="styleSheet">
              <string notr="true">color: rgb(255, 255, 255);
- font: 700 14pt &quot;Segoe UI&quot;;</string>
+  font: 700 14pt &quot;Segoe UI&quot;;</string>
             </property>
             <property name="text">
              <string>ID</string>
@@ -4202,7 +3646,7 @@ border-radius: 100px;
            <widget class="QLabel" name="lb_frm1_phone_5">
             <property name="styleSheet">
              <string notr="true">color: rgb(255, 255, 255);
- font: 700 14pt &quot;Segoe UI&quot;;</string>
+  font: 700 14pt &quot;Segoe UI&quot;;</string>
             </property>
             <property name="text">
              <string>Number</string>
@@ -4216,7 +3660,7 @@ border-radius: 100px;
            <widget class="QLabel" name="lb_frm1_mail_5">
             <property name="styleSheet">
              <string notr="true">color: rgb(255, 255, 255);
- font: 700 14pt &quot;Segoe UI&quot;;</string>
+  font: 700 14pt &quot;Segoe UI&quot;;</string>
             </property>
             <property name="text">
              <string>Mail</string>
@@ -4230,7 +3674,7 @@ border-radius: 100px;
            <widget class="QLabel" name="lb_frm1_address_5">
             <property name="styleSheet">
              <string notr="true">color: rgb(255, 255, 255);
- font: 700 14pt &quot;Segoe UI&quot;;</string>
+  font: 700 14pt &quot;Segoe UI&quot;;</string>
             </property>
             <property name="text">
              <string>Address</string>
@@ -4248,7 +3692,7 @@ border-radius: 100px;
            <x>20</x>
            <y>590</y>
            <width>231</width>
-           <height>41</height>
+           <height>43</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -4267,7 +3711,7 @@ border-radius: 100px;
             </property>
             <property name="styleSheet">
              <string notr="true">color: rgb(255, 255, 255);
- font: 700 8pt &quot;Segoe UI&quot;;</string>
+  font: 700 8pt &quot;Segoe UI&quot;;</string>
             </property>
             <property name="text">
              <string>Copyright@DokanOnlineMarket</string>
@@ -4289,7 +3733,7 @@ border-radius: 100px;
             </property>
             <property name="styleSheet">
              <string notr="true">color: rgb(255, 255, 255);
- font: 700 7pt &quot;Segoe UI&quot;;</string>
+  font: 700 7pt &quot;Segoe UI&quot;;</string>
             </property>
             <property name="text">
              <string>Fcis 2021-2022</string>
@@ -4316,10 +3760,10 @@ border-radius: 100px;
         </property>
         <property name="styleSheet">
          <string notr="true">*{
-background-color: #2880AE;
-opacity:0.5; 
-border-radius: 25px;
-}</string>
+ background-color: #2880AE;
+ /*opacity:0.5;*/ 
+ border-radius: 25px;
+ }</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
@@ -4349,12 +3793,12 @@ border-radius: 25px;
          </property>
          <property name="styleSheet">
           <string notr="true">*{
-color: #ffffff;
-font: 700 14pt &quot;Segoe UI&quot;;
-}
-*:hover{
-font: 700 16pt &quot;Segoe UI&quot;;
-}</string>
+ color: #ffffff;
+ font: 700 14pt &quot;Segoe UI&quot;;
+ }
+ *:hover{
+ font: 700 16pt &quot;Segoe UI&quot;;
+ }</string>
          </property>
          <property name="text">
           <string>Available products</string>
@@ -4394,12 +3838,12 @@ font: 700 16pt &quot;Segoe UI&quot;;
          </property>
          <property name="styleSheet">
           <string notr="true">*{
-color: #ffffff;
-font: 700 14pt &quot;Segoe UI&quot;;
-}
-*:hover{
-font: 700 16pt &quot;Segoe UI&quot;;
-}</string>
+ color: #ffffff;
+ font: 700 14pt &quot;Segoe UI&quot;;
+ }
+ *:hover{
+ font: 700 16pt &quot;Segoe UI&quot;;
+ }</string>
          </property>
          <property name="text">
           <string>Feedback</string>
@@ -4436,12 +3880,12 @@ font: 700 16pt &quot;Segoe UI&quot;;
          </property>
          <property name="styleSheet">
           <string notr="true">*{
-color: #ffffff;
-font: 700 14pt &quot;Segoe UI&quot;;
-}
-*:hover{
-font: 700 16pt &quot;Segoe UI&quot;;
-}</string>
+ color: #ffffff;
+ font: 700 14pt &quot;Segoe UI&quot;;
+ }
+ *:hover{
+ font: 700 16pt &quot;Segoe UI&quot;;
+ }</string>
          </property>
          <property name="text">
           <string>Wallet</string>
@@ -4481,14 +3925,14 @@ font: 700 16pt &quot;Segoe UI&quot;;
          </property>
          <property name="styleSheet">
           <string notr="true">*:hover{
-font: 700 16pt &quot;Segoe UI&quot;;
-}
-*{
-color: #ffffff;
-font: 12pt &quot;Segoe UI&quot;;
-	font: 700 14pt &quot;Segoe UI&quot;;
-
-}</string>
+ font: 700 16pt &quot;Segoe UI&quot;;
+ }
+ *{
+ color: #ffffff;
+ font: 12pt &quot;Segoe UI&quot;;
+         font: 700 14pt &quot;Segoe UI&quot;;
+ 
+ }</string>
          </property>
          <property name="text">
           <string>Home</string>
@@ -4508,8 +3952,8 @@ font: 12pt &quot;Segoe UI&quot;;
       <widget class="QWidget" name="pg_6_sellerInfoView">
        <property name="styleSheet">
         <string notr="true">*{
- background: #ffffff;
- }</string>
+  background: #ffffff;
+  }</string>
        </property>
        <widget class="QFrame" name="frm1_Info_6">
         <property name="geometry">
@@ -4522,10 +3966,10 @@ font: 12pt &quot;Segoe UI&quot;;
         </property>
         <property name="styleSheet">
          <string notr="true">*{
- background-color: #2880AE;
- border-radius: 90px;
- border-color: rgb(255, 255, 255);
- }</string>
+  background-color: #2880AE;
+  border-radius: 90px;
+  border-color: rgb(255, 255, 255);
+  }</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
@@ -4542,12 +3986,15 @@ font: 12pt &quot;Segoe UI&quot;;
            <height>181</height>
           </rect>
          </property>
+         <property name="cursor">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
          <property name="styleSheet">
           <string notr="true">*{
- background-color: #b3b3b3;
- border-radius: 90px;
- border: 2px solid #000000;
- }</string>
+  background-color: #b3b3b3;
+  border-radius: 90px;
+  border: 2px solid #000000;
+  }</string>
          </property>
          <property name="text">
           <string/>
@@ -4581,7 +4028,7 @@ font: 12pt &quot;Segoe UI&quot;;
          </property>
          <property name="styleSheet">
           <string notr="true">color: rgb(255, 255, 255);
- font: 700 8pt &quot;Segoe UI&quot;;</string>
+  font: 700 8pt &quot;Segoe UI&quot;;</string>
          </property>
          <property name="text">
           <string>Copyright@DokanOnlineMarket</string>
@@ -4609,7 +4056,7 @@ font: 12pt &quot;Segoe UI&quot;;
          </property>
          <property name="styleSheet">
           <string notr="true">color: rgb(255, 255, 255);
- font: 700 7pt &quot;Segoe UI&quot;;</string>
+  font: 700 7pt &quot;Segoe UI&quot;;</string>
          </property>
          <property name="text">
           <string>Fcis 2021-2022</string>
@@ -4640,7 +4087,7 @@ font: 12pt &quot;Segoe UI&quot;;
             </property>
             <property name="styleSheet">
              <string notr="true">color: rgb(255, 255, 255);
- font: 700 20pt &quot;Segoe UI&quot;;</string>
+  font: 700 20pt &quot;Segoe UI&quot;;</string>
             </property>
             <property name="text">
              <string>Seller Name</string>
@@ -4654,7 +4101,7 @@ font: 12pt &quot;Segoe UI&quot;;
            <widget class="QLabel" name="lb_frm1_ID_6">
             <property name="styleSheet">
              <string notr="true">color: rgb(255, 255, 255);
- font: 700 14pt &quot;Segoe UI&quot;;</string>
+  font: 700 14pt &quot;Segoe UI&quot;;</string>
             </property>
             <property name="text">
              <string>ID</string>
@@ -4668,7 +4115,7 @@ font: 12pt &quot;Segoe UI&quot;;
            <widget class="QLabel" name="lb_frm1_phone_6">
             <property name="styleSheet">
              <string notr="true">color: rgb(255, 255, 255);
- font: 700 14pt &quot;Segoe UI&quot;;</string>
+  font: 700 14pt &quot;Segoe UI&quot;;</string>
             </property>
             <property name="text">
              <string>Number</string>
@@ -4682,7 +4129,7 @@ font: 12pt &quot;Segoe UI&quot;;
            <widget class="QLabel" name="lb_frm1_mail_6">
             <property name="styleSheet">
              <string notr="true">color: rgb(255, 255, 255);
- font: 700 14pt &quot;Segoe UI&quot;;</string>
+  font: 700 14pt &quot;Segoe UI&quot;;</string>
             </property>
             <property name="text">
              <string>Mail</string>
@@ -4696,7 +4143,7 @@ font: 12pt &quot;Segoe UI&quot;;
            <widget class="QLabel" name="lb_frm1_address_6">
             <property name="styleSheet">
              <string notr="true">color: rgb(255, 255, 255);
- font: 700 14pt &quot;Segoe UI&quot;;</string>
+  font: 700 14pt &quot;Segoe UI&quot;;</string>
             </property>
             <property name="text">
              <string>Address</string>
@@ -4717,13 +4164,16 @@ font: 12pt &quot;Segoe UI&quot;;
            <height>41</height>
           </rect>
          </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="styleSheet">
           <string notr="true">*{
-background-color: #dead3b;
- color: #ffffff;
- font: 700 14pt &quot;Segoe UI&quot;;
- border-radius: 20px;
-}</string>
+ background-color: #dead3b;
+  color: #ffffff;
+  font: 700 14pt &quot;Segoe UI&quot;;
+  border-radius: 20px;
+ }</string>
          </property>
          <property name="text">
           <string>Add Rate</string>
@@ -4746,10 +4196,10 @@ background-color: #dead3b;
         </property>
         <property name="styleSheet">
          <string notr="true">*{
- background-color: #2880AE;
- border-radius: 20px;
- }
- </string>
+  background-color: #2880AE;
+  border-radius: 20px;
+  }
+  </string>
         </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
@@ -4795,13 +4245,13 @@ background-color: #dead3b;
             </property>
             <property name="styleSheet">
              <string notr="true">*{
- color: rgb(255, 255, 255);
- font: 700 14pt &quot;Segoe UI&quot;;
- border-radius: 20px;
- }
- *:hover{
- font: 700 16pt &quot;Segoe UI&quot;;
- }</string>
+  color: rgb(255, 255, 255);
+  font: 700 14pt &quot;Segoe UI&quot;;
+  border-radius: 20px;
+  }
+  *:hover{
+  font: 700 16pt &quot;Segoe UI&quot;;
+  }</string>
             </property>
             <property name="text">
              <string>Home</string>
@@ -4821,13 +4271,13 @@ background-color: #dead3b;
             </property>
             <property name="styleSheet">
              <string notr="true">*{
- color: rgb(255, 255, 255);
- font: 700 14pt &quot;Segoe UI&quot;;
- border-radius: 20px;
- }
- *:hover{
- font: 700 16pt &quot;Segoe UI&quot;;
- }</string>
+  color: rgb(255, 255, 255);
+  font: 700 14pt &quot;Segoe UI&quot;;
+  border-radius: 20px;
+  }
+  *:hover{
+  font: 700 16pt &quot;Segoe UI&quot;;
+  }</string>
             </property>
             <property name="text">
              <string>Avaliable Products</string>
@@ -4847,13 +4297,13 @@ background-color: #dead3b;
             </property>
             <property name="styleSheet">
              <string notr="true">*{
- color: rgb(255, 255, 255);
- font: 700 14pt &quot;Segoe UI&quot;;
- border-radius: 35px;
- }
- *:hover{
- font: 700 16pt &quot;Segoe UI&quot;;
- }</string>
+  color: rgb(255, 255, 255);
+  font: 700 14pt &quot;Segoe UI&quot;;
+  border-radius: 35px;
+  }
+  *:hover{
+  font: 700 16pt &quot;Segoe UI&quot;;
+  }</string>
             </property>
             <property name="text">
              <string>Feedback</string>
@@ -4866,29 +4316,29 @@ background-color: #dead3b;
        <widget class="QStackedWidget" name="stackedWidget_SellerView_6">
         <property name="geometry">
          <rect>
-          <x>339</x>
+          <x>319</x>
           <y>159</y>
-          <width>891</width>
-          <height>621</height>
+          <width>931</width>
+          <height>591</height>
          </rect>
         </property>
         <property name="currentIndex">
-         <number>2</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="pg_0_home_6">
          <widget class="QTextBrowser" name="txtbrowser_Description_0_6">
           <property name="geometry">
            <rect>
-            <x>30</x>
-            <y>70</y>
-            <width>791</width>
-            <height>331</height>
+            <x>20</x>
+            <y>40</y>
+            <width>901</width>
+            <height>291</height>
            </rect>
           </property>
           <property name="styleSheet">
            <string notr="true">*{
-border: 0;
- }</string>
+ border: 0;
+  }</string>
           </property>
           <property name="frameShape">
            <enum>QFrame::StyledPanel</enum>
@@ -4902,19 +4352,20 @@ border: 0;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;This is the seller detailed idintifier, contains brief about his company, and info about his services. &lt;/span&gt; &lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;  &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;This is the seller detailed idintifier, contains brief about his company, and info about his services. &lt;/span&gt;  &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;  &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;  &lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;  &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;  &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;  &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;  &lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;This should be no longer than 250 word.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
@@ -4922,9 +4373,9 @@ p, li { white-space: pre-wrap; }
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>520</y>
-            <width>881</width>
-            <height>71</height>
+            <y>410</y>
+            <width>911</width>
+            <height>51</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -4936,9 +4387,9 @@ p, li { white-space: pre-wrap; }
           <widget class="QTextEdit" name="txtEdit_frm3_Comment_0_6">
            <property name="geometry">
             <rect>
-             <x>270</x>
-             <y>10</y>
-             <width>441</width>
+             <x>230</x>
+             <y>0</y>
+             <width>541</width>
              <height>51</height>
             </rect>
            </property>
@@ -4949,11 +4400,11 @@ p, li { white-space: pre-wrap; }
            </property>
            <property name="styleSheet">
             <string notr="true">*{
-background-color: #D7D7D7;
- color: #ffffff;
- border-radius: 25px;
- padding: 8 0 0 10px;
-}</string>
+ background-color: #D7D7D7;
+  color: #ffffff;
+  border-radius: 25px;
+  padding: 5 0 0 10px;
+ }</string>
            </property>
            <property name="placeholderText">
             <string>Leave your comment</string>
@@ -4963,8 +4414,8 @@ background-color: #D7D7D7;
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>10</y>
-             <width>261</width>
+             <y>0</y>
+             <width>221</width>
              <height>51</height>
             </rect>
            </property>
@@ -4975,50 +4426,73 @@ background-color: #D7D7D7;
            </property>
            <property name="styleSheet">
             <string notr="true">*{
-background-color: #D7D7D7;
- color: #ffffff;
- border-radius: 25px;
- padding: 8 0 0 10px;
-}</string>
+ background-color: #D7D7D7;
+  color: #ffffff;
+  border-radius: 25px;
+  padding: 5 0 0 10px;
+ }</string>
            </property>
            <property name="placeholderText">
-            <string>Rate the seller out of 5</string>
+            <string>Leave your rate</string>
            </property>
           </widget>
           <widget class="QPushButton" name="btn_frm3_Submit_0_6">
            <property name="geometry">
             <rect>
-             <x>720</x>
-             <y>20</y>
-             <width>151</width>
+             <x>780</x>
+             <y>10</y>
+             <width>131</width>
              <height>31</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">*{
-background-color: #dead3b;
- color: #ffffff;
- font: 700 14pt &quot;Segoe UI&quot;;
- border-radius: 13px;
-}</string>
+ background-color: #dead3b;
+  color: #ffffff;
+  font: 700 14pt &quot;Segoe UI&quot;;
+  border-radius: 13px;
+ padding: 0 0 2 0 px;
+ }</string>
            </property>
            <property name="text">
             <string>Submit</string>
            </property>
           </widget>
          </widget>
+         <widget class="QLabel" name="lb_ad_0_6">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>410</y>
+            <width>921</width>
+            <height>171</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="Resources.qrc">:/img/assets/img/Ads/SellerInfoView/1.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
          <widget class="QLabel" name="lb_About_0">
           <property name="geometry">
            <rect>
-            <x>10</x>
-            <y>20</y>
+            <x>11</x>
+            <y>1</y>
             <width>201</width>
             <height>31</height>
            </rect>
           </property>
           <property name="styleSheet">
            <string notr="true">color: rgb(40, 128, 174);
- font: 700 14pt &quot;Segoe UI&quot;;</string>
+  font: 700 14pt &quot;Segoe UI&quot;;</string>
           </property>
           <property name="text">
            <string>About the seller:</string>
@@ -5027,32 +4501,63 @@ background-color: #dead3b;
            <set>Qt::AlignCenter</set>
           </property>
          </widget>
-         <widget class="QLabel" name="lb_ad_0_6">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>420</y>
-            <width>881</width>
-            <height>191</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="pixmap">
-           <pixmap resource="Resources.qrc">:/img/assets/img/Ads/Horizontal/ad_3.jpg</pixmap>
-          </property>
-          <property name="scaledContents">
-           <bool>true</bool>
-          </property>
-         </widget>
-         <zorder>txtbrowser_Description_0_6</zorder>
          <zorder>lb_About_0</zorder>
          <zorder>frm3_AddFeedback_0_6</zorder>
+         <zorder>txtbrowser_Description_0_6</zorder>
          <zorder>lb_ad_0_6</zorder>
         </widget>
-        <widget class="QWidget" name="pg_2_feedback_6"/>
         <widget class="QWidget" name="pg_1_avalible_6"/>
+        <widget class="QWidget" name="pg_2_feedback_6">
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>10</y>
+            <width>531</width>
+            <height>33</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <property name="spacing">
+            <number>45</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="label_4">
+             <property name="styleSheet">
+              <string notr="true">font: 700 14pt &quot;Segoe UI&quot;;
+ color: rgb(40, 128, 174);</string>
+             </property>
+             <property name="text">
+              <string>Verified Ratings out of 5:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QProgressBar" name="progressbar">
+             <property name="styleSheet">
+              <string notr="true">*{
+ padding 0 0 0 0px;
+ margin 0 0 0 0px;
+ background-color: rgb(239, 239, 239);
+ border-style: outset;
+ border-width: 0px;
+ border-radius: 7px;                      
+ }
+ QProgressBar::chunk {border-radius: 7px;
+         background-color: rgb(0, 189, 13);
+ }</string>
+             </property>
+             <property name="value">
+              <number>70</number>
+             </property>
+             <property name="textVisible">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
        </widget>
        <widget class="QLabel" name="lb_Logo_6">
         <property name="geometry">
@@ -5073,12 +4578,38 @@ background-color: #dead3b;
          <bool>true</bool>
         </property>
        </widget>
+       <widget class="QPushButton" name="btn_back_6">
+        <property name="geometry">
+         <rect>
+          <x>1120</x>
+          <y>755</y>
+          <width>120</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+ background-color: #ffffff;
+  color: #2880AE;
+  font: 700 10pt &quot;Segoe UI&quot;;
+  border-radius: 12px;
+ border: 2px solid #2880AE;
+ padding: 0 0 0 0 px ; 
+ }</string>
+        </property>
+        <property name="text">
+         <string>Back</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="pg_7_product">
        <property name="styleSheet">
         <string notr="true">*{
-background-color: #D0D0D0;
-}</string>
+ background-color: #D0D0D0;
+ }</string>
        </property>
        <widget class="QLabel" name="lb_logo_7">
         <property name="geometry">
@@ -5116,9 +4647,9 @@ background-color: #D0D0D0;
         </property>
         <property name="styleSheet">
          <string notr="true">*{
-background-color: #2880AE;
-border-radius: 25px;
-}</string>
+ background-color: #2880AE;
+ border-radius: 25px;
+ }</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
@@ -5148,12 +4679,12 @@ border-radius: 25px;
          </property>
          <property name="styleSheet">
           <string notr="true">*{
-color: rgb(208, 208, 208);
-font: 700 14pt &quot;Segoe UI&quot;;
-}
-*:hover{
-	font: 700 16pt &quot;Segoe UI&quot;;
-}</string>
+ color: rgb(208, 208, 208);
+ font: 700 14pt &quot;Segoe UI&quot;;
+ }
+ *:hover{
+         font: 700 16pt &quot;Segoe UI&quot;;
+ }</string>
          </property>
          <property name="text">
           <string>Register</string>
@@ -5181,12 +4712,12 @@ font: 700 14pt &quot;Segoe UI&quot;;
          </property>
          <property name="styleSheet">
           <string notr="true">*{
-color: rgb(208, 208, 208);
-	font: 700 14pt &quot;Segoe UI&quot;;
-}
-*:hover{
-	font: 700 16pt &quot;Segoe UI&quot;;
-}</string>
+ color: rgb(208, 208, 208);
+         font: 700 14pt &quot;Segoe UI&quot;;
+ }
+ *:hover{
+         font: 700 16pt &quot;Segoe UI&quot;;
+ }</string>
          </property>
          <property name="text">
           <string>Home</string>
@@ -5226,12 +4757,12 @@ color: rgb(208, 208, 208);
          </property>
          <property name="styleSheet">
           <string notr="true">*{
-color: rgb(208, 208, 208);
-	font: 700 14pt &quot;Segoe UI&quot;;
-}
-*:hover{
-	font: 700 16pt &quot;Segoe UI&quot;;
-}</string>
+ color: rgb(208, 208, 208);
+         font: 700 14pt &quot;Segoe UI&quot;;
+ }
+ *:hover{
+         font: 700 16pt &quot;Segoe UI&quot;;
+ }</string>
          </property>
          <property name="text">
           <string>Feedback</string>
@@ -5259,12 +4790,12 @@ color: rgb(208, 208, 208);
          </property>
          <property name="styleSheet">
           <string notr="true">*{
-color: rgb(208, 208, 208);
-	font: 700 14pt &quot;Segoe UI&quot;;
-}
-*:hover{
-	font: 700 16pt &quot;Segoe UI&quot;;
-}</string>
+ color: rgb(208, 208, 208);
+         font: 700 14pt &quot;Segoe UI&quot;;
+ }
+ *:hover{
+         font: 700 16pt &quot;Segoe UI&quot;;
+ }</string>
          </property>
          <property name="text">
           <string>Login</string>
@@ -5274,10 +4805,10 @@ color: rgb(208, 208, 208);
        <widget class="QStackedWidget" name="stackedWidget_product_7">
         <property name="geometry">
          <rect>
-          <x>48</x>
-          <y>145</y>
-          <width>1171</width>
-          <height>603</height>
+          <x>30</x>
+          <y>142</y>
+          <width>1211</width>
+          <height>611</height>
          </rect>
         </property>
         <property name="currentIndex">
@@ -5287,17 +4818,17 @@ color: rgb(208, 208, 208);
          <widget class="QLabel" name="lb_ad_0_7">
           <property name="geometry">
            <rect>
-            <x>440</x>
-            <y>467</y>
-            <width>681</width>
-            <height>111</height>
+            <x>432</x>
+            <y>433</y>
+            <width>761</width>
+            <height>141</height>
            </rect>
           </property>
           <property name="text">
            <string/>
           </property>
           <property name="pixmap">
-           <pixmap resource="Resources.qrc">:/img/assets/img/Ads/Horizontal/ad_2.jpg</pixmap>
+           <pixmap>assets/img/Ads/ProductPage/we2.jpg</pixmap>
           </property>
           <property name="scaledContents">
            <bool>true</bool>
@@ -5306,10 +4837,10 @@ color: rgb(208, 208, 208);
          <widget class="QLabel" name="lb_name_0_7">
           <property name="geometry">
            <rect>
-            <x>425</x>
-            <y>30</y>
-            <width>451</width>
-            <height>51</height>
+            <x>410</x>
+            <y>22</y>
+            <width>571</width>
+            <height>61</height>
            </rect>
           </property>
           <property name="font">
@@ -5322,9 +4853,9 @@ color: rgb(208, 208, 208);
           </property>
           <property name="styleSheet">
            <string notr="true">*{
-font: 700 20pt &quot;Segoe UI&quot;;
-padding: 0 0 0 5px;
-}</string>
+ font: 700 20pt &quot;Segoe UI&quot;;
+ padding: 0 0 0 5px;
+ }</string>
           </property>
           <property name="text">
            <string>American Eagle jacket</string>
@@ -5339,7 +4870,7 @@ padding: 0 0 0 5px;
             <x>40</x>
             <y>20</y>
             <width>371</width>
-            <height>521</height>
+            <height>441</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -5355,24 +4886,11 @@ padding: 0 0 0 5px;
            <bool>true</bool>
           </property>
          </widget>
-         <widget class="Line" name="line_0_7">
-          <property name="geometry">
-           <rect>
-            <x>430</x>
-            <y>174</y>
-            <width>521</width>
-            <height>16</height>
-           </rect>
-          </property>
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-         </widget>
          <widget class="QTextBrowser" name="textBrowser_description_0_7">
           <property name="geometry">
            <rect>
             <x>430</x>
-            <y>325</y>
+            <y>210</y>
             <width>751</width>
             <height>111</height>
            </rect>
@@ -5390,15 +4908,16 @@ padding: 0 0 0 5px;
           </property>
           <property name="styleSheet">
            <string notr="true">*{
-font: 16pt &quot;Segoe UI&quot;;
-border: 0;
-}</string>
+ font: 16pt &quot;Segoe UI&quot;;
+ border: 0;
+ }</string>
           </property>
           <property name="html">
            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:16pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Our Model Is Wearing Size LCotton Material Regular FitShort Sleeves Round Neck Solid Pattern Slip On&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="placeholderText">
@@ -5409,7 +4928,7 @@ p, li { white-space: pre-wrap; }
           <property name="geometry">
            <rect>
             <x>40</x>
-            <y>538</y>
+            <y>458</y>
             <width>371</width>
             <height>41</height>
            </rect>
@@ -5424,9 +4943,9 @@ p, li { white-space: pre-wrap; }
           </property>
           <property name="styleSheet">
            <string notr="true">*{
-font: 600 14pt &quot;Segoe UI&quot;;
-border: 3px solid  #2880AE;
-}</string>
+ font: 600 14pt &quot;Segoe UI&quot;;
+ border: 3px solid  #2880AE;
+ }</string>
           </property>
           <property name="text">
            <string>Men's Fashion</string>
@@ -5438,50 +4957,13 @@ border: 3px solid  #2880AE;
          <widget class="QWidget" name="layoutWidget">
           <property name="geometry">
            <rect>
-            <x>960</x>
-            <y>70</y>
-            <width>191</width>
-            <height>91</height>
+            <x>1020</x>
+            <y>350</y>
+            <width>141</width>
+            <height>52</height>
            </rect>
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_5">
-           <item>
-            <widget class="QPushButton" name="btn_addFavorite_0_7">
-             <property name="font">
-              <font>
-               <family>Segoe UI</family>
-               <pointsize>14</pointsize>
-               <italic>false</italic>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="cursor">
-              <cursorShape>PointingHandCursor</cursorShape>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">*{
-/*background-color:#E3BA5A;
-color: rgb(255, 255, 255);
-border-radius: 10px;
-font: 700 14pt &quot;Segoe UI&quot;;*/
-border: 0;
-}</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="icon">
-              <iconset resource="Resources.qrc">
-               <normaloff>:/img/assets/img/icons/icons8-add-to-favorites-96.png</normaloff>:/img/assets/img/icons/icons8-add-to-favorites-96.png</iconset>
-             </property>
-             <property name="iconSize">
-              <size>
-               <width>80</width>
-               <height>80</height>
-              </size>
-             </property>
-            </widget>
-           </item>
            <item>
             <widget class="QPushButton" name="btn_addCart_0_7">
              <property name="font">
@@ -5497,12 +4979,12 @@ border: 0;
              </property>
              <property name="styleSheet">
               <string notr="true">*{
-/*background-color:#E3BA5A;
-color: rgb(255, 255, 255);
-border-radius: 10px;
-font: 700 14pt &quot;Segoe UI&quot;;*/
-border: 0;
-}</string>
+ /*background-color:#E3BA5A;
+ color: rgb(255, 255, 255);
+ border-radius: 10px;
+ font: 700 14pt &quot;Segoe UI&quot;;*/
+ border: 0;
+ }</string>
              </property>
              <property name="text">
               <string/>
@@ -5513,8 +4995,45 @@ border: 0;
              </property>
              <property name="iconSize">
               <size>
-               <width>80</width>
-               <height>80</height>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_addFavorite_0_7">
+             <property name="font">
+              <font>
+               <family>Segoe UI</family>
+               <pointsize>14</pointsize>
+               <italic>false</italic>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">*{
+ /*background-color:#E3BA5A;
+ color: rgb(255, 255, 255);
+ border-radius: 10px;
+ font: 700 14pt &quot;Segoe UI&quot;;*/
+ border: 0;
+ }</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="Resources.qrc">
+               <normaloff>:/img/assets/img/icons/icons8-add-to-favorites-96.png</normaloff>:/img/assets/img/icons/icons8-add-to-favorites-96.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>50</width>
+               <height>50</height>
               </size>
              </property>
             </widget>
@@ -5524,13 +5043,58 @@ border: 0;
          <widget class="QWidget" name="layoutWidget">
           <property name="geometry">
            <rect>
-            <x>430</x>
-            <y>200</y>
-            <width>301</width>
+            <x>420</x>
+            <y>100</y>
+            <width>433</width>
             <height>105</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout">
+           <item row="0" column="1">
+            <widget class="QLabel" name="lb_offer_0_7">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">*{
+ color: #dead3b;
+ }
+ </string>
+             </property>
+             <property name="text">
+              <string>-20%</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="lb_oldPrice_0_7">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+               <bold>false</bold>
+               <strikeout>true</strikeout>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">*{
+ border-radius: 0;
+ }
+ </string>
+             </property>
+             <property name="text">
+              <string>EGP 220.00 </string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
            <item row="1" column="0" colspan="2">
             <widget class="QLabel" name="lb_price_0_7">
              <property name="minimumSize">
@@ -5553,64 +5117,19 @@ border: 0;
              </property>
             </widget>
            </item>
-           <item row="0" column="1">
-            <widget class="QLabel" name="lb_offer_0_7">
-             <property name="font">
-              <font>
-               <pointsize>16</pointsize>
-               <bold>false</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">*{
-color: #dead3b;
-}
-</string>
-             </property>
-             <property name="text">
-              <string>-20%</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="lb_oldPrice_0_7">
-             <property name="font">
-              <font>
-               <pointsize>16</pointsize>
-               <bold>false</bold>
-               <strikeout>true</strikeout>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">*{
-border-radius: 0;
-}
-</string>
-             </property>
-             <property name="text">
-              <string>EGP 220.00 </string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
           </layout>
          </widget>
          <widget class="QWidget" name="layoutWidget">
           <property name="geometry">
            <rect>
-            <x>430</x>
-            <y>100</y>
-            <width>271</width>
-            <height>61</height>
+            <x>70</x>
+            <y>510</y>
+            <width>321</width>
+            <height>65</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_2">
-           <item row="0" column="0">
+           <item row="1" column="0">
             <layout class="QHBoxLayout" name="horizontalLayout_7">
              <item>
               <widget class="QLabel" name="lb_sellerName_0_7">
@@ -5645,11 +5164,11 @@ border-radius: 0;
                </property>
                <property name="styleSheet">
                 <string notr="true">*{
-border: 0;
-}
-*:hover {
-font: 600 12pt &quot;Segoe UI&quot;;
-}</string>
+ border: 0;
+ }
+ *:hover {
+ font: 600 12pt &quot;Segoe UI&quot;;
+ }</string>
                </property>
                <property name="text">
                 <string>Ahmed Mohammed</string>
@@ -5658,7 +5177,7 @@ font: 600 12pt &quot;Segoe UI&quot;;
              </item>
             </layout>
            </item>
-           <item row="1" column="0">
+           <item row="0" column="0">
             <layout class="QHBoxLayout" name="horizontalLayout_3">
              <item>
               <widget class="QLabel" name="lb_rate_0_7">
@@ -5700,16 +5219,16 @@ font: 600 12pt &quot;Segoe UI&quot;;
                </property>
                <property name="styleSheet">
                 <string notr="true">*{
-background-color: #ffffff;
-border-radius: 10px;                      
-}
-QProgressBar::chunk {
-border-radius: 10px;
-	background-color: #00BD0D;
-}</string>
+ background-color: #ffffff;
+ border-radius: 10px;                      
+ }
+ QProgressBar::chunk {
+ border-radius: 10px;
+         background-color: #00BD0D;
+ }</string>
                </property>
                <property name="value">
-                <number>63</number>
+                <number>80</number>
                </property>
                <property name="textVisible">
                 <bool>false</bool>
@@ -5720,11 +5239,11 @@ border-radius: 10px;
            </item>
           </layout>
          </widget>
-         <widget class="QLabel" name="lb_sellerName_0_8">
+         <widget class="QLabel" name="lb_deliver_0_7">
           <property name="geometry">
            <rect>
-            <x>785</x>
-            <y>270</y>
+            <x>770</x>
+            <y>370</y>
             <width>241</width>
             <height>25</height>
            </rect>
@@ -5744,7 +5263,7 @@ border-radius: 10px;
            <string>Delivered on next Monday</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           <set>Qt::AlignCenter</set>
           </property>
          </widget>
          <zorder>layoutWidget</zorder>
@@ -5752,11 +5271,10 @@ border-radius: 10px;
          <zorder>layoutWidget</zorder>
          <zorder>lb_ad_0_7</zorder>
          <zorder>lb_name_0_7</zorder>
-         <zorder>line_0_7</zorder>
          <zorder>textBrowser_description_0_7</zorder>
          <zorder>lb_img_0_7</zorder>
          <zorder>lb_Category_0_7</zorder>
-         <zorder>lb_sellerName_0_8</zorder>
+         <zorder>lb_deliver_0_7</zorder>
         </widget>
         <widget class="QWidget" name="pg_1_feedback_7">
          <widget class="QLabel" name="label_10">
@@ -5789,15 +5307,15 @@ border-radius: 10px;
           </property>
           <property name="styleSheet">
            <string notr="true">*{
-padding 0 0 0 0px;
-margin 0 0 0 0px;
-background-color: rgb(255, 255, 255);
-border-width: 0px;
-border-radius: 7px;                      
-}
-QProgressBar::chunk {border-radius: 7px;
-	background-color: rgb(0, 189, 13);
-}</string>
+ padding 0 0 0 0px;
+ margin 0 0 0 0px;
+ background-color: rgb(255, 255, 255);
+ border-width: 0px;
+ border-radius: 7px;                      
+ }
+ QProgressBar::chunk {border-radius: 7px;
+         background-color: rgb(0, 189, 13);
+ }</string>
           </property>
           <property name="value">
            <number>55</number>
@@ -5817,7 +5335,7 @@ QProgressBar::chunk {border-radius: 7px;
           </property>
           <property name="styleSheet">
            <string notr="true">color: rgb(40, 128, 174);
-font: 14pt &quot;Segoe UI&quot;;</string>
+ font: 14pt &quot;Segoe UI&quot;;</string>
           </property>
           <property name="text">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Average Rating :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -5837,7 +5355,7 @@ font: 14pt &quot;Segoe UI&quot;;</string>
           </property>
           <property name="styleSheet">
            <string notr="true">border-radius: 15px;
-background-color: rgb(208, 208, 208);</string>
+ background-color: rgb(208, 208, 208);</string>
           </property>
           <property name="frameShape">
            <enum>QFrame::StyledPanel</enum>
@@ -5864,11 +5382,11 @@ background-color: rgb(208, 208, 208);</string>
            </property>
            <property name="styleSheet">
             <string notr="true">*{
-background-color: rgb(199, 199, 199);
-border-radius: 16px;
-font: 14pt &quot;Segoe UI&quot;;
-padding: 0 0 0 10px;
-}</string>
+ background-color: rgb(199, 199, 199);
+ border-radius: 16px;
+ font: 14pt &quot;Segoe UI&quot;;
+ padding: 0 0 0 10px;
+ }</string>
            </property>
            <property name="placeholderText">
             <string>Leave Your Comment  </string>
@@ -5885,9 +5403,9 @@ padding: 0 0 0 10px;
            </property>
            <property name="styleSheet">
             <string notr="true">background-color:#E3BA5A;
-color: rgb(255, 255, 255);
-border-radius: 15px;
-font: 700 14pt &quot;Segoe UI&quot;;</string>
+ color: rgb(255, 255, 255);
+ border-radius: 15px;
+ font: 700 14pt &quot;Segoe UI&quot;;</string>
            </property>
            <property name="text">
             <string>Submit</string>
@@ -5904,7 +5422,7 @@ font: 700 14pt &quot;Segoe UI&quot;;</string>
            </property>
            <property name="styleSheet">
             <string notr="true">color: rgb(40, 128, 174);
-font: 700 14pt &quot;Segoe UI&quot;;</string>
+ font: 700 14pt &quot;Segoe UI&quot;;</string>
            </property>
            <property name="text">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Rate the Product&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -5924,7 +5442,7 @@ font: 700 14pt &quot;Segoe UI&quot;;</string>
            </property>
            <property name="styleSheet">
             <string notr="true">font: 700 14pt &quot;Segoe UI&quot;;
-</string>
+ </string>
            </property>
            <item>
             <property name="text">
@@ -5966,8 +5484,8 @@ font: 700 14pt &quot;Segoe UI&quot;;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">*{
-background-color: #2880AE;
-}</string>
+ background-color: #2880AE;
+ }</string>
         </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
@@ -5977,7 +5495,7 @@ background-color: #2880AE;
         <property name="geometry">
          <rect>
           <x>1057</x>
-          <y>747</y>
+          <y>754</y>
           <width>171</width>
           <height>35</height>
          </rect>
@@ -5992,9 +5510,9 @@ background-color: #2880AE;
         </property>
         <property name="styleSheet">
          <string notr="true">background-color:#E3BA5A;
-color: rgb(255, 255, 255);
-border-radius: 10px;
-font: 700 14pt &quot;Segoe UI&quot;;</string>
+ color: rgb(255, 255, 255);
+ border-radius: 10px;
+ font: 700 14pt &quot;Segoe UI&quot;;</string>
         </property>
         <property name="text">
          <string>Back</string>
