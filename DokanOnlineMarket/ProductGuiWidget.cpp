@@ -4,41 +4,37 @@
 #include "HomeGui.h"
 
 
-ProductGuiWidget::ProductGuiWidget(Product *pro, QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::ProductGuiWidget)
+ProductGuiWidget::ProductGuiWidget(Product *pro, string path, QWidget *parent) :
+    QWidget(parent), ui(new Ui::ProductGuiWidget)
 {
     ui->setupUi(this);
 
     Btn_Name = ui->btn_name;
     ui->btn_name->setText(pro->Name.c_str());
+    ui->lb_offer->setText(("-"+to_string(pro->Offer_Percentage)+"%").c_str());
+    ui->lb_oldPrice->setText(to_string(pro->Price).c_str());
+    ui->lb_price->setText(to_string(pro->PriceAfterOffer).c_str());
+    ui->progressBar_rate_0_7->setValue(((pro->FinalRate)/5.0)*100);
 
+    if (pro->Avaliability) ui->lb_availability->setVisible(false);
+    else ui->lb_availability->setVisible(true);
 
+    QImage img;
+    img.load((path+pro->PathOfPhoto).c_str());
+    if (img.height() >= img.width()) img.scaledToHeight(ui->lb_photo->height(), Qt::SmoothTransformation);
+    else img.scaledToWidth(ui->lb_photo->width(), Qt::SmoothTransformation);
+    ui->lb_photo->setPixmap(QPixmap::fromImage(img));
 
-
-//    ui->btn_name->setText(name.c_str());
-//    QImage img;
-//    img.load(path.c_str());
-//    img.scaledToWidth(ui->lb_photo->width(), Qt::SmoothTransformation);
-//    img.scaledToHeight(ui->lb_photo->height(), Qt::SmoothTransformation);
-//    ui->lb_photo->setPixmap(QPixmap::fromImage(img));
-
-
-//     QPixmap pix(path.c_str());
-//     ui->lb_photo->setPixmap(pix);
-//     ui->lb_photo->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-//     QRegion *region = new QRegion(25, 14, ui->lb_photo->width()-50, ui->lb_photo->height()-20, QRegion::Ellipse);
-//     QRegion *region = new QRegion(0, 0, ui->lb_photo->width(), ui->lb_photo->height(), QRegion::Ellipse);
-//     ui->lb_photo->setMask(*region);
-
+    if (pro->Offer_Percentage == 0)
+    {
+        ui->lb_offer->setVisible(false);
+        ui->lb_oldPrice->setVisible(false);
+        ui->lb_price->setMinimumWidth(208);
+    }
 
 
 }
 
-void ProductGuiWidget::try1()
-{
-
-}
 
 ProductGuiWidget::~ProductGuiWidget()
 {

@@ -5,11 +5,18 @@
 #include <QDebug>
 #include <QMessageBox>
 #include <QTimer>
+#include <QDateTime>
+#include <QFrame>
+#include <QSpacerItem>
+#include <QFileDialog>
+#include <string.h>
+#include <cstdlib>
 #include "ProductGuiWidget.h"
 #include "Controller.h"
-#include "product_in_cart.h"
+#include "ProductGuiWidget_2.h"
 #include "CategoryGuiWidget.h"
-
+#include "WalletGuiWidget.h"
+#include "SellerSearchGui.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class HomeGui; }
@@ -35,21 +42,24 @@ private slots:
     void on_btn_frm1_clear1_1_3_clicked();
     void on_btn_frm1_setfilter_1_3_clicked();
     void on_btn_frm1_clear2_1_3_clicked();
-
+    void on_btn_frm3_EnterSeller_3_clicked();
 
     // Omar
-    void on_btn_back_4_clicked();
     void on_btn_frm2_fav_4_clicked();
     void on_btn_frm2_Cart_4_clicked();
     void on_btn_frm2_Home_4_clicked();
+    void on_btn_edit_4_clicked();
 
 
     // Karim
     void on_btn_frm1_Home_7_clicked();
     void on_btn_frm1_Feedaback_7_clicked();
-    void on_btn_back_7_clicked();
     void on_btn_sellerName_0_7_clicked();
     void on_btn_addCart_0_7_clicked();
+    void on_btn_addFavorite_0_7_clicked();
+    void on_btn_Submit_1_7_clicked();
+    void on_btn_AddRate_1_7_clicked();
+
 
     // Aya
     void on_btn_frm2_Home_5_clicked();
@@ -57,6 +67,12 @@ private slots:
     void on_btn_frm2_Wallet_5_clicked();
     void on_btn_frm2_Feedback_5_clicked();
     void on_btn_frm1_EditProfile_5_clicked();
+    void on_btn_done_4_5_clicked();
+    void on_btn_search_5_clicked();
+    void on_btn_AddProduct_1_5_clicked();
+    void on_btn_addPhoto_5_5_clicked();
+    void on_btn_done_5_5_clicked();
+
 
 
     // Bassant
@@ -65,38 +81,56 @@ private slots:
     void on_btn_frm2_Home_6_clicked();
     void on_btn_frm2_avaliable_6_clicked();
     void on_btn_frm2_Feedback_6_clicked();
-    void on_btn_back_6_clicked();
+
+
+
+
+
+
+
 
 
 
 
 public:
-    void Connection();
-    void SwitchAd();
-    void clearLayout(QLayout *layout);
+    void Connection(); // All Pages
+    void SwitchAd(); // All Pages
+    void clearLayout(QLayout *layout); // All Pages
+    void GoToProductProfile(int id, int page); // All Pages
+    void AddFeeedBackLabels(QLayout *ly, QFrame *f, string color, vector<string> v); // Bassant + Aya + Karim
+    void AddProductToLists(QLayout *ly, QFrame *f, string color, unordered_map<int, Product*> &list, string container, int PageNum); // Omar + Aya
+    void CheckSeller(); // Hossam + Karim
+    void BackToLastPage(); // Bassabt + Aya + Omar
+    void BackToHome(); // Bassant + Hossam + Omar + Karim
+    void GoToHome(); // Hossam + Omar + Aya
+    void login(); // Hossam + Karim
+    void SignUp(); // Hossam + Karim
+
+
 
     // Hosam
-    void GoToHome();
-    void login();
-    void SignUp();
     void SwitchAd_Home();
     void GoToCategoryPage(vector<Product *> &pro, string s);
-    void GoToProductProfile(int id);
     void SetHomePage();
+
 
 
     // Omar
     void SetCustomerProfile();
     void SwitchAd_CustomerPage();
+    void RemoveFromList(int id, string container);
+
 
     // karim
-    void SetProductPage();
     void SwitchAd_ProductPage();
+    void SetProductPage();
 
 
     // Aya
     void SetSellerProfile();
     void SwitchAd_SellerProfile();
+    void EditProduct(Product *pro);
+
 
 
     // Bassant
@@ -107,18 +141,18 @@ public:
 
 public:
     Ui::HomeGui *ui;
+
     Controller *users;
 
-    string CategoryName;
-    bool IsSeller;
     QTimer *time1;
-    int IndexOfAdHome=1, IndexOfAdSellerInfoView=1, IndexOfAdSellerProfile=1, IndexOfProductads=1, IndexOfAdCustomerProfile=1;
 
+    string CategoryName, ImgPath;
+    bool IsSeller = false, IsEditProduct=false;
+    int IndexOfAdHome=1, IndexOfAdSellerInfoView=1, IndexOfAdSellerProfile=1, IndexOfProductads=1, IndexOfAdCustomerProfile=1;
     CategoryGuiWidget *categoryItem;
     ProductGuiWidget *productItem;
-    product_in_cart *crt;
-
-
+    ProductGuiWidget_2 *crt;
+    WalletGuiWidget *walletItem;
 
 };
 #endif // HOMEGUI_H

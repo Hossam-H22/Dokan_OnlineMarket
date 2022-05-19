@@ -21,31 +21,102 @@ Model::Model(string s)
     p4->Name = "product 2";
     p5->Name = "product 5";
     p6->Name = "product 6";
+    p6->Avaliability = 0;
     p1->ID = 100;
     p2->ID = 101;
     p3->ID = 102;
     p4->ID = 103;
     p5->ID = 104;
     p6->ID = 105;
-    ProductArr.push_back(p1);
-    ProductArr.push_back(p2);
-    ProductArr.push_back(p3);
-    ProductArr.push_back(p4);
-    ProductArr.push_back(p5);
-    ProductArr.push_back(p6);
+    p1->PriceAfterOffer = 10;
+    p2->PriceAfterOffer = 15;
+    p3->PriceAfterOffer = 7;
+    p4->PriceAfterOffer = 20;
+    p5->PriceAfterOffer = 3;
+    p1->Seller_mail="11";
+    p2->Seller_mail="11";
+    p3->Seller_mail="11";
+    p4->Seller_mail="11";
+    p5->Seller_mail="11";
+    p6->Seller_mail="11";
+    CountProduct = 106;
+    p1->Comments.push_back("testttttt");
+    p1->Comments.push_back("testttttt");
+    p1->Comments.push_back("testttttt");
+    p1->Comments.push_back("testttttt");
+    p1->Comments.push_back("testttttt");
+    p1->Comments.push_back("testttttt");
+    p1->Comments.push_back("testttttt");
+    p1->Comments.push_back("testttttt");
+    p1->Comments.push_back("testttttt");
+    p1->Comments.push_back("testttttt");
+    p1->Comments.push_back("testttttt");
+    p1->Comments.push_back("testttttt");
+    p1->CalculateRate(2.5);
+    p1->PathOfPhoto = "100.jpg";
+    p2->PathOfPhoto = "100.jpg";
+    p3->PathOfPhoto = "100.jpg";
+    p4->PathOfPhoto = "100.jpg";
+    p5->PathOfPhoto = "100.jpg";
+    p6->PathOfPhoto = "100.jpg";
+//    ProductArr.push_back(p1);
+//    ProductArr.push_back(p2);
+//    ProductArr.push_back(p3);
+//    ProductArr.push_back(p4);
+//    ProductArr.push_back(p5);
+//    ProductArr.push_back(p6);
 
-//    CategoryArr[p1.Category].push_back(new Product(p1));
-//    CategoryArr[p2.Category].push_back(new Product(p2));
-//    CategoryArr[p3.Category].push_back(new Product(p3));
-//    CategoryArr[p4.Category].push_back(new Product(p4));
-//    CategoryArr[p5.Category].push_back(new Product(p5));
-    CategoryArr[p1->Category].push_back(ProductArr[0]);
-    CategoryArr[p2->Category].push_back(ProductArr[1]);
-    CategoryArr[p3->Category].push_back(ProductArr[2]);
-    CategoryArr[p4->Category].push_back(ProductArr[3]);
-    CategoryArr[p5->Category].push_back(ProductArr[4]);
-    CategoryArr[p6->Category].push_back(ProductArr[5]);
-    ProductArr[1]->Name = "test";
+
+    ProductArr2[p1->ID] = p1;
+    ProductArr2[p2->ID] = p2;
+    ProductArr2[p3->ID] = p3;
+    ProductArr2[p4->ID] = p4;
+    ProductArr2[p5->ID] = p5;
+    ProductArr2[p6->ID] = p6;
+
+
+    CategoryArr[p1->Category].push_back(ProductArr2[p1->ID]);
+    CategoryArr[p2->Category].push_back(ProductArr2[p2->ID]);
+    CategoryArr[p3->Category].push_back(ProductArr2[p3->ID]);
+    CategoryArr[p4->Category].push_back(ProductArr2[p4->ID]);
+    CategoryArr[p5->Category].push_back(ProductArr2[p5->ID]);
+    CategoryArr[p6->Category].push_back(ProductArr2[p6->ID]);
+    ProductArr2[p2->ID]->Name = "test";
+
+
+
+
+
+    Seller s1(1000, "h", "o", "00000", "11", "11", "0");
+    SellerArr["11"]=s1;
+    SellerArr["11"].SelledProducts[ProductArr2[p1->ID]->ID] = ProductArr2[p1->ID];
+    SellerArr["11"].SelledProducts[ProductArr2[p2->ID]->ID] = ProductArr2[p2->ID];
+    SellerArr["11"].SelledProducts[ProductArr2[p3->ID]->ID] = ProductArr2[p3->ID];
+    SellerArr["11"].SelledProducts[ProductArr2[p4->ID]->ID] = ProductArr2[p4->ID];
+    SellerArr["11"].SelledProducts[ProductArr2[p5->ID]->ID] = ProductArr2[p5->ID];
+    SellerArr["11"].SelledProducts[ProductArr2[p6->ID]->ID] = ProductArr2[p6->ID];
+
+
+
+
+    SellerArr["11"].AddToWallet(ProductArr2[p6->ID]);
+    SellerArr["11"].AddToWallet(ProductArr2[p2->ID]);
+    SellerArr["11"].AddToWallet(ProductArr2[p3->ID]);
+    SellerArr["11"].AddToWallet(ProductArr2[p5->ID]);
+
+
+
+
+
+
+    Customer c1(1000, "HH", "BB", "0010101", "male", "11", "11");
+    CustomerArr["11"]=c1;
+    CustomerArr["11"].Favorite[ProductArr2[p6->ID]->ID] = ProductArr2[p6->ID];
+    CustomerArr["11"].Favorite[ProductArr2[p2->ID]->ID] = ProductArr2[p2->ID];
+
+    CustomerArr["11"].My_Cart.AddProduct(ProductArr2[p1->ID]);
+    CustomerArr["11"].My_Cart.AddProduct(ProductArr2[p3->ID]);
+    CustomerArr["11"].My_Cart.AddProduct(ProductArr2[p4->ID]);
     //*******************************************************************
 
 

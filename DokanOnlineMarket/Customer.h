@@ -5,6 +5,7 @@
 #include <iostream>
 #include<algorithm>
 #include <vector>
+#include <unordered_map>
 #include"Product.h"
 #include "Cart.h"
 
@@ -14,21 +15,20 @@ class Customer
 {
 public:
     int ID;
-    string  FirstName, SecondName, PhoneNumber, Gender, Email, Password, PathPhoto, Interested, Address;
+    string  FirstName, SecondName, PhoneNumber, Gender, Email, Password, PathPhoto, Address;
     bool ProfileCompleted;
-    vector<Product*> Favorite;
-//    vector<string> Address;
+    unordered_map<int, Product*> Favorite;
     Cart My_Cart ;
 
 
     Customer(void);
     Customer(int ID, string FirstName, string SecondName, string PhoneNumber, string Gender, string Email,
-             string Password, string Address, string Interested, string PathPhoto, bool ProfileCompleted);
+             string Password, string Address, string PathPhoto, bool ProfileCompleted);
 
     Customer(int ID, string FirstName, string SecondName, string PhoneNumber, string Gender, string Email, string Password);
     ~Customer(void);
     void IsCompletedProfile();
-    Product* Search(string);
+    void RemoveProductFromFavorite(int id);
 
 };
 

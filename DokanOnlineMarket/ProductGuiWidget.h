@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QPushButton>
+#include <QImage>
 #include <iostream>
 #include "Product.h"
 
@@ -16,17 +17,15 @@ class ProductGuiWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit ProductGuiWidget(Product *pro = nullptr, QWidget *parent = nullptr);
+    explicit ProductGuiWidget(Product *pro, string path, QWidget *parent = nullptr);
     ~ProductGuiWidget();
 
 
 public:
     Ui::ProductGuiWidget *ui;
     Product *pro;
-
     QPushButton *Btn_Name;
 
-    void try1();
 };
 
 #endif // PRODUCTGUIWIDGET_H

@@ -1,7 +1,8 @@
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 
-#include<iostream>
+#include <QImage>
+#include <iostream>
 #include <string>
 #include <vector>
 #include <map>
@@ -31,14 +32,19 @@ public:
     void RegisterSeller(string FirstName, string SecondName, string Phone, string Email, string Password, string Gender);
     void RegisterCustomer(string FirstName, string SecondName, string PhoneNumber, string Gender, string Email, string Password);
 
-    bool CkeckNumber(string Number);
+
     void AddProduct(string Name, float Price, int Quantity, string Description, string Category, int Offer_Percentage, int NoOfDeliveryDays,
                     string PathOfPhoto, string Seller_mail);
-    void EditProduct(int ID, string Name, float Price, int Quantity, string Description, string Category, int Offer_Percentage, int NoOfDeliveryDays,
-                    string PathOfPhoto, string Seller_mail);
+//    void EditProduct(int ID, string Name, float Price, int Quantity, string Description, string Category, int Offer_Percentage, int NoOfDeliveryDays,
+//                    string PathOfPhoto, string Seller_mail);
+    void RemoveProduct(int ID);
 
+
+    bool CkeckNumber(string Number);
     void Sort(string type, vector<Product*> &p);
     void Search(string Name, string Category, vector<Product*> pro);
+    void ClearSatck();
+    void ReloadData();
 
 
 };
@@ -50,17 +56,34 @@ class CompareName {
       return (a->Name < b->Name);
     }
 };
-class ComparePrice {
+class ComparePriceUp {
   public:
     bool operator() (Product *a, Product *b) {
       return (a->PriceAfterOffer < b->PriceAfterOffer);
     }
 };
-class CompareRate {
+class ComparePriceDown {
+  public:
+    bool operator() (Product *a, Product *b) {
+      return (a->PriceAfterOffer > b->PriceAfterOffer);
+    }
+};
+class CompareRateUp {
   public:
     bool operator() (Product *a, Product *b) {
       return (a->FinalRate < b->FinalRate);
     }
 };
+class CompareRateDown {
+  public:
+    bool operator() (Product *a, Product *b) {
+      return (a->FinalRate > b->FinalRate);
+    }
+};
 
 #endif // CONTROLLER_H
+
+
+
+
+

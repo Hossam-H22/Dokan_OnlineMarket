@@ -23,7 +23,6 @@
         <file>assets/img/icons/icons8-chevron-left-90.png</file>
         <file>assets/img/icons/icons8-chevron-right-90.png</file>
         <file>assets/img/icons/icons8-small-business-96.png</file>
-        <file>assets/img/icons/icons8-remove-from-cart-64.png</file>
         <file>assets/img/icons/icons8-add-to-cart-64.png</file>
         <file>assets/img/icons/icons8-add-to-favorites-96.png</file>
         <file>assets/img/icons/icons8-back-96.png</file>
@@ -59,5 +58,14 @@
         <file>assets/img/Ads/ProductPage/1.png</file>
         <file>assets/img/Ads/ProductPage/2.png</file>
         <file>assets/img/Ads/ProductPage/3.png</file>
+        <file>assets/img/icons/icons8-verified-badge-96.png</file>
+        <file>assets/img/icons/icons8-remove-96.png</file>
+        <file>assets/img/icons/icons8-remove-from-cart-64.png</file>
+        <file>assets/img/icons/icons8-edit-64.png</file>
+        <file>assets/img/icons/icons8-search-96.png</file>
+        <file>assets/img/icons/icons8-add-image-96.png</file>
+        <file>assets/img/icons/icons8-down-96.png</file>
+        <file>assets/img/icons/icons8-up-96.png</file>
+        <file>assets/img/icons/avatar-profile-icon.jpg</file>
     </qresource>
 </RCC>

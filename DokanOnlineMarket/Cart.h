@@ -2,6 +2,7 @@
 #define CART_H
 #include <iostream>
 #include <vector>
+#include <unordered_map>
 #include "Product.h"
 
 using namespace std;
@@ -10,11 +11,10 @@ class Cart
 {
 public:
     double TotalPrice;
-    vector<Product*> AddedProducts;
+    unordered_map<int, Product*> AddedProducts;
 
     Cart(void);
     ~Cart(void);
-    double DisplayPrice();
     void AddProduct(Product*);
     void RemoveProduct(int);
 };

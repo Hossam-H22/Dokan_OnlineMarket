@@ -10,12 +10,12 @@ Seller::Seller(void)
     this->Email = "0";
     this->Password = "0";
     this->Gender = "0";
-    this->Address = "0";
-    this->Description = "0";
+    this->Address = "No Address";
+    this->Description = "No Description";
     this->Wallet = 0;
     this->NoOfVoters = 0;
     this->Total_Rate = 0;
-    this->Path_photo = "0";
+    this->Path_photo = ":/img/assets/img/icons/avatar-profile-icon.jpg";
     this->ProfileCompleted = 0;
 }
 Seller::~Seller(void) {}
@@ -37,6 +37,7 @@ Seller::Seller(int Id, string FirstName, string SecondName, string Phone, string
     this->Total_Rate = Total_Rate;
     this->Path_photo = photo;
     this->ProfileCompleted = ProfileCompleted;
+    CalculateRate();
 }
 
 Seller::Seller(int Id, string FirstName, string SecondName, string Phone, string Email, string Password, string Gender)
@@ -48,13 +49,14 @@ Seller::Seller(int Id, string FirstName, string SecondName, string Phone, string
     this->Email = Email;
     this->Password = Password;
     this->Gender = Gender;
-    this->Address = "0";
-    this->Description = "0";
+    this->Address = "No Address";
+    this->Description = "No Description";
     this->Wallet = 0;
     this->NoOfVoters = 0;
     this->Total_Rate = 0;
-    this->Path_photo = "";
+    this->Path_photo = ":/img/assets/img/icons/avatar-profile-icon.jpg";
     this->ProfileCompleted = 0;
+    CalculateRate();
 }
 
 void Seller::CalculateRate(float UserRate)
@@ -64,7 +66,8 @@ void Seller::CalculateRate(float UserRate)
         Total_Rate += UserRate;
         NoOfVoters++;
     }
-    FinalRate = Total_Rate / (double)NoOfVoters;
+    if (NoOfVoters==0) FinalRate=5;
+    else FinalRate = Total_Rate / (double)NoOfVoters;
 }
 
 void Seller::IsCompletedProfile(){
@@ -73,4 +76,25 @@ void Seller::IsCompletedProfile(){
         ProfileCompleted = false;
     else
         ProfileCompleted = true;
+}
+void Seller::AddToWallet(Product *pro)
+{
+    Wallet_History.push_back({pro->ID, {pro->Name, pro->PriceAfterOffer}});
+    Wallet += pro->PriceAfterOffer;
+}
+
+void Seller::RemoveProduct(int id)
+{
+    if (SelledProducts[id] == nullptr) return;
+    SelledProducts.erase(id);
+
+//    unordered_map<int, Product*>::iterator it;
+//    for (it=SelledProducts.begin() ; it!=SelledProducts.end() ; it++)
+//    {
+//        if (it->first > id)
+//        {
+//            SelledProducts[it->second->ID-1] = it->second;
+//            SelledProducts[it->first] = nullptr;
+//        }
+//    }
 }

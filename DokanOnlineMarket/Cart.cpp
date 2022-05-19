@@ -8,20 +8,27 @@ Cart::Cart(void)
 
 Cart::~Cart(void) {}
 
-double Cart::DisplayPrice()
-{
-    return TotalPrice;
-}
 
 void Cart::AddProduct(Product* p)
 {
     TotalPrice += p->Price;
-    AddedProducts.push_back(p);
+    AddedProducts[p->ID] = p;
 }
 
-void Cart::RemoveProduct(int pos)
+void Cart::RemoveProduct(int id)
 {
-    TotalPrice -= AddedProducts[pos]->Price;
-    AddedProducts.erase(AddedProducts.begin() + pos);
+    if (AddedProducts[id] == nullptr) return;
+
+    TotalPrice -= AddedProducts[id]->Price;
+    AddedProducts.erase(id);
+//    unordered_map<int, Product*>::iterator it;
+//    for (it=AddedProducts.begin() ; it!=AddedProducts.end() ; it++)
+//    {
+//        if (it->first > id)
+//        {
+//            AddedProducts[it->second->ID-1] = it->second;
+//            AddedProducts[it->first] = nullptr;
+//        }
+//    }
 }
 

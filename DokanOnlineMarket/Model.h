@@ -5,6 +5,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <stack>
 //#include <map>
 #include <unordered_map>
 
@@ -23,11 +24,11 @@ using namespace std;
 class Model
 {
 public:
-
     unordered_map<string, Seller> SellerArr;
     unordered_map<string, Customer> CustomerArr;
     unordered_map<string, vector<Product*>> CategoryArr;
-    vector<Product*> ProductArr;
+    unordered_map<int, Product*> ProductArr2;
+//    vector<Product*> ProductArr;
     vector<Product*> ProductArrView;
     string CategoryName[14] = {
         "Mobiles, Tablets & Accessories",
@@ -45,6 +46,24 @@ public:
         "Books",
         "Automotive"
     };
+    string months[12] = {
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    };
+    int NumOfDaysIMonth [12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+
+
+    stack<pair<int, int>> BackToPage;
 
     int CountSeller = 1000, CountCustomer = 1000, CountProduct = 100;
     string PathOfFile;

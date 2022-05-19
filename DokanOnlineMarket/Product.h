@@ -2,15 +2,17 @@
 #define PRODUCT_H
 #include <iostream>
 #include <vector>
+#include <QImage>
 using namespace std;
 
 class Product
 {
 public:
     int ID, Quantity, Offer_Percentage, NoOfDeliveryDays;
-    int Zero, One, Two, Three, Four, Five;
+    int Zero, One, Two, Three, Four, Five, NoVoters;
     float Price, PriceAfterOffer, FinalRate;
     bool Avaliability;
+    QImage img;
     string Name, Category, Seller_mail, PathOfPhoto, Description;
     vector<string> Comments;
 

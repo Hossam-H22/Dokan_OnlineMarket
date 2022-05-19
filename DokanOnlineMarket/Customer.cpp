@@ -10,16 +10,15 @@ Customer::Customer()
     this->Gender = "0";
     this->Email = "0";
     this->Password = "0";
-    this->Address = "0";
-    this->Interested = "0";
-    this->PathPhoto = "0";
+    this->Address = "No Address";
+    this->PathPhoto = ":/img/assets/img/icons/avatar-profile-icon.jpg";
     this->ProfileCompleted = 0;
 }
 
 Customer::~Customer() {}
 
 Customer::Customer(int ID, string FirstName, string SecondName, string PhoneNumber, string Gender, string Email,
-                   string Password, string Address, string Interested, string PathPhoto, bool ProfileCompleted)
+                   string Password, string Address, string PathPhoto, bool ProfileCompleted)
 {
     this->ID = ID;
     this->FirstName = FirstName;
@@ -29,7 +28,6 @@ Customer::Customer(int ID, string FirstName, string SecondName, string PhoneNumb
     this->Email = Email;
     this->Password = Password;
     this->Address = Address;
-    this->Interested = Interested;
     this->PathPhoto = PathPhoto;
     this->ProfileCompleted = ProfileCompleted;
 }
@@ -43,21 +41,29 @@ Customer::Customer(int ID, string FirstName, string SecondName, string PhoneNumb
     this->Gender = Gender;
     this->Email = Email;
     this->Password = Password;
-    this->Address = "0";
-    this->Interested = "0";
-    this->PathPhoto = "0";
+    this->Address = "No Address";
+    this->PathPhoto = ":/img/assets/img/icons/avatar-profile-icon.jpg";
     this->ProfileCompleted = 0;
 }
 
-void Customer::IsCompletedProfile(){
-
-    if (PathPhoto=="" || Interested=="" || Address.empty())
-        ProfileCompleted = false;
-    else
-        ProfileCompleted = true;
-}
-
-Product* Customer::Search(string name)
+void Customer::IsCompletedProfile()
 {
-return nullptr;
+    if (PathPhoto=="" || Address.empty()) ProfileCompleted = false;
+    else ProfileCompleted = true;
+}
+void Customer::RemoveProductFromFavorite(int id)
+{
+    if (Favorite[id] == nullptr) return;
+
+    Favorite.erase(id);
+
+//    unordered_map<int, Product*>::iterator it;
+//    for (it=Favorite.begin() ; it!=Favorite.end() ; it++)
+//    {
+//        if (it->first > id)
+//        {
+//            Favorite[it->second->ID-1] = it->second;
+//            Favorite[it->first] = nullptr;
+//        }
+//    }
 }

@@ -16,31 +16,20 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
         main.cpp
-        HomeGui.cpp
-        HomeGui.h
-        HomeGui.ui
-        Seller.cpp
-        Seller.h
-        Product.h
-        Product.cpp
-        Cart.h
-        Cart.cpp
-        Customer.h
-        Customer.cpp
-        Controller.h
-        Controller.cpp
+        HomeGui.cpp HomeGui.h HomeGui.ui
+        Seller.cpp Seller.h
+        Product.h Product.cpp
+        Cart.h Cart.cpp
+        Customer.h Customer.cpp
+        Controller.h Controller.cpp
         Resources.qrc
-        ProductGuiWidget.h
-        ProductGuiWidget.cpp
-        ProductGuiWidget.ui
-        Model.h
-        Model.cpp
-        product_in_cart.h
-        product_in_cart.cpp
-        product_in_cart.ui
-        CategoryGuiWidget.h
-        CategoryGuiWidget.cpp
-        CategoryGuiWidget.ui
+        ProductGuiWidget.h ProductGuiWidget.cpp ProductGuiWidget.ui
+        Model.h Model.cpp
+        CategoryGuiWidget.h CategoryGuiWidget.cpp CategoryGuiWidget.ui
+        ProductGuiWidget_2.h ProductGuiWidget_2.cpp ProductGuiWidget_2.ui
+        WalletGuiWidget.h WalletGuiWidget.cpp WalletGuiWidget.ui
+        SellerSearchGui.h SellerSearchGui.cpp SellerSearchGui.ui
+        ProductInSearchGuiWidget.h ProductInSearchGuiWidget.cpp ProductInSearchGuiWidget.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

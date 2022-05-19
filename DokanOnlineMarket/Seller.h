@@ -2,6 +2,7 @@
 #define SELLER_H
 #include <iostream>
 #include <vector>
+#include <unordered_map>
 #include "Product.h"
 using namespace std;
 
@@ -13,7 +14,8 @@ public:
     float Wallet, FinalRate, Total_Rate;
     bool ProfileCompleted;
     vector<string> Comments;
-    vector<Product*> SelledProducts, Wallet_History;
+    unordered_map<int, Product*> SelledProducts;
+    vector<pair<int, pair<string, float>>> Wallet_History;
 
     Seller(void);
     Seller(int Id, string FirstName, string SecondName, string Phone, string Email, string Password, string Gender, string Address,
@@ -23,6 +25,8 @@ public:
     ~Seller(void);
     void CalculateRate(float = -1);
     void IsCompletedProfile();
+    void AddToWallet(Product *pro);
+    void RemoveProduct(int id);
 
 };
 
