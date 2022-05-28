@@ -13,7 +13,7 @@ Product::Product()
     this->NoOfDeliveryDays = 0;
     this->Description = "";
     this->PathOfPhoto = "";
-    this->img.load(this->PathOfPhoto.c_str());
+//    this->img.load(this->PathOfPhoto.c_str());
     this->Zero = 0;
     this->One = 0;
     this->Two = 0;
@@ -27,7 +27,7 @@ Product::Product()
 }
 Product::~Product() {}
 
-Product::Product(int ID, string Name, float Price, int Quantity, string Description, string Category, int Offer_Percentage, int NoOfDeliveryDays, string PathOfPhoto,
+Product::Product(int ID, string Name, float Price, int Quantity, string Description, string Category, int Offer_Percentage, int NoOfDeliveryDays,
                  int Zero, int One, int Two, int Three, int Four, int Five, bool Avaliability, string Seller_mail)
 {
     this->ID = ID;
@@ -39,7 +39,7 @@ Product::Product(int ID, string Name, float Price, int Quantity, string Descript
     this->NoOfDeliveryDays = NoOfDeliveryDays;
     this->Description = Description;
     this->PathOfPhoto = PathOfPhoto;
-    this->img.load(this->PathOfPhoto.c_str());
+//    this->img.load(this->PathOfPhoto.c_str());
     this->Zero = Zero;
     this->One = One;
     this->Two = Two;
@@ -52,8 +52,7 @@ Product::Product(int ID, string Name, float Price, int Quantity, string Descript
     CalculateRate();
 }
 
-Product::Product(int ID, string Name, float Price, int Quantity, string Description, string Category, int Offer_Percentage, int NoOfDeliveryDays,
-                 string PathOfPhoto, string Seller_mail)
+Product::Product(int ID, string Name, float Price, int Quantity, string Description, string Category, int Offer_Percentage, int NoOfDeliveryDays, string Seller_mail)
 {
     this->ID = ID;
     this->Name = Name;
@@ -63,8 +62,8 @@ Product::Product(int ID, string Name, float Price, int Quantity, string Descript
     this->Offer_Percentage = Offer_Percentage;
     this->NoOfDeliveryDays = NoOfDeliveryDays;
     this->Description = Description;
-    this->PathOfPhoto = PathOfPhoto;
-    this->img.load(this->PathOfPhoto.c_str());
+    this->PathOfPhoto = "";
+//    this->img.load(this->PathOfPhoto.c_str());
     this->Zero = 0;
     this->One = 0;
     this->Two = 0;

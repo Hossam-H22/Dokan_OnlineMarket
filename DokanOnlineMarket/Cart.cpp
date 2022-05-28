@@ -9,26 +9,34 @@ Cart::Cart(void)
 Cart::~Cart(void) {}
 
 
-void Cart::AddProduct(Product* p)
+void Cart::AddProduct(Product* p, int quantity)
 {
-    TotalPrice += p->Price;
-    AddedProducts[p->ID] = p;
+    AddedProducts[p->ID] = {p, quantity};
 }
 
-void Cart::RemoveProduct(int id)
+
+
+void Cart::RemoveProduct(int id, int Check)
 {
-    if (AddedProducts[id] == nullptr) return;
 
-    TotalPrice -= AddedProducts[id]->Price;
-    AddedProducts.erase(id);
-//    unordered_map<int, Product*>::iterator it;
-//    for (it=AddedProducts.begin() ; it!=AddedProducts.end() ; it++)
-//    {
-//        if (it->first > id)
-//        {
-//            AddedProducts[it->second->ID-1] = it->second;
-//            AddedProducts[it->first] = nullptr;
-//        }
-//    }
+    if (Check != -1)
+    {
+        if (AddedProducts[id].second == 0) return;
+        else if (AddedProducts[id].first->Avaliability)
+        {
+            Product *pp = AddedProducts[id].first;
+//            AddedProducts[id] = {pp, min(AddedProducts[id].second, AddedProducts[id].first->Quantity)};
+            AddProduct(pp, min(AddedProducts[id].second, AddedProducts[id].first->Quantity));
+            qDebug() << "it set with min 00000000000000000000000000000000";
+        }
+        else
+        {
+            AddedProducts.erase(id);
+        }
+    }
+    else
+    {
+        AddedProducts.erase(id);
+    }
+
 }
-

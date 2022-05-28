@@ -30,6 +30,9 @@ set(PROJECT_SOURCES
         WalletGuiWidget.h WalletGuiWidget.cpp WalletGuiWidget.ui
         SellerSearchGui.h SellerSearchGui.cpp SellerSearchGui.ui
         ProductInSearchGuiWidget.h ProductInSearchGuiWidget.cpp ProductInSearchGuiWidget.ui
+        ErrorPage.h ErrorPage.cpp ErrorPage.ui
+        DoneShoppingGui.h DoneShoppingGui.cpp DoneShoppingGui.ui
+        TermsAndConditions.h TermsAndConditions.cpp TermsAndConditions.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

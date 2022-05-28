@@ -15,7 +15,7 @@ class ProductGuiWidget_2 : public QWidget
     Q_OBJECT
 
 public:
-    explicit ProductGuiWidget_2(Product *p, string path, string container, string color,QWidget *parent = nullptr);
+    explicit ProductGuiWidget_2(Product *p, string path, string container, string color, int quantity=1, QWidget *parent = nullptr);
     ~ProductGuiWidget_2();
 
 public:

@@ -42,10 +42,10 @@ public:
 
     bool CkeckNumber(string Number);
     void Sort(string type, vector<Product*> &p);
-    void Search(string Name, string Category, vector<Product*> pro);
+    void Search(string Name, vector<Product*> pro);
     void ClearSatck();
     void ReloadData();
-
+    string GetDate(int num);
 
 };
 

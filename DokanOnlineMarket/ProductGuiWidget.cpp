@@ -12,8 +12,8 @@ ProductGuiWidget::ProductGuiWidget(Product *pro, string path, QWidget *parent) :
     Btn_Name = ui->btn_name;
     ui->btn_name->setText(pro->Name.c_str());
     ui->lb_offer->setText(("-"+to_string(pro->Offer_Percentage)+"%").c_str());
-    ui->lb_oldPrice->setText(to_string(pro->Price).c_str());
-    ui->lb_price->setText(to_string(pro->PriceAfterOffer).c_str());
+    ui->lb_oldPrice->setText(QString::number(pro->Price, 'f', 2)+" EGP");
+    ui->lb_price->setText(QString::number(pro->PriceAfterOffer, 'f', 2)+" EGP");
     ui->progressBar_rate_0_7->setValue(((pro->FinalRate)/5.0)*100);
 
     if (pro->Avaliability) ui->lb_availability->setVisible(false);

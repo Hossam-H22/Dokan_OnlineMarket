@@ -1,7 +1,7 @@
 #include "ProductGuiWidget_2.h"
 #include "ui_ProductGuiWidget_2.h"
 
-ProductGuiWidget_2::ProductGuiWidget_2(Product *p, string path, string container, string color, QWidget *parent) :
+ProductGuiWidget_2::ProductGuiWidget_2(Product *p, string path, string container, string color, int quantity, QWidget *parent) :
     QWidget(parent), ui(new Ui::ProductGuiWidget_2)
 {
     ui->setupUi(this);
@@ -9,8 +9,8 @@ ProductGuiWidget_2::ProductGuiWidget_2(Product *p, string path, string container
     ui->frame->setStyleSheet(("background-color: "+color+"; border-radius: 20px; color: #ffffff;").c_str());
     ui->btn_name->setText(p->Name.c_str());
     ui->lb_offer->setText(("-"+to_string(p->Offer_Percentage)+"%").c_str());
-    ui->lb_Price->setText((to_string(p->Price)+"EGP").c_str());
-    ui->lb_offerPrice->setText(("Price : "+to_string(p->PriceAfterOffer)+" EGP").c_str());
+    ui->lb_Price->setText(QString::number(p->Price, 'f', 2)+"EGP");
+    ui->lb_offerPrice->setText("Price : "+QString::number(p->PriceAfterOffer, 'f', 2)+" EGP");
 
     if (p->Avaliability) ui->lb_availability->setVisible(false);
     else ui->lb_availability->setVisible(true);
@@ -34,6 +34,10 @@ ProductGuiWidget_2::ProductGuiWidget_2(Product *p, string path, string container
     this->Btn_action = ui->btn_action;
     this->Btn_action2 = ui->btn_action_2;
 
+
+    ui->label->setText(("x "+to_string(quantity)).c_str());
+    ui->label->setVisible(true);
+
     if (container == "Cart")
     {
         QIcon ico(":/img/assets/img/icons/icons8-remove-from-cart-64.png");
@@ -43,6 +47,7 @@ ProductGuiWidget_2::ProductGuiWidget_2(Product *p, string path, string container
     {
         QIcon ico(":/img/assets/img/icons/icons8-remove-96.png");
         ui->btn_action->setIcon(ico);
+        ui->label->setVisible(false);
     }
     else if (container=="Available")
     {
@@ -50,10 +55,11 @@ ProductGuiWidget_2::ProductGuiWidget_2(Product *p, string path, string container
 
         QIcon ico(":/img/assets/img/icons/icons8-remove-96.png");
         ui->btn_action->setIcon(ico);
+        ui->label->setText(("x "+to_string(p->Quantity)).c_str());
     }
 
 
-    ui->label->setText(to_string(p->ID).c_str());
+
 }
 
 ProductGuiWidget_2::~ProductGuiWidget_2()

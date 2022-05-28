@@ -2,8 +2,7 @@
 #include "ui_ProductInSearchGuiWidget.h"
 
 ProductInSearchGuiWidget::ProductInSearchGuiWidget(Product *p,  QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::ProductInSearchGuiWidget)
+    QWidget(parent), ui(new Ui::ProductInSearchGuiWidget)
 {
     ui->setupUi(this);
 

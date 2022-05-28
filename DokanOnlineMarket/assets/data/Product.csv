@@ -1,5 +1,6 @@
-0,product 1,0,0,0,Mobiles, Tablets & Accessories,0,0,0,0,0,0,0,0,0,0,0
-0,product 2,0,0,0,Mobiles, Tablets & Accessories,0,0,0,0,0,0,0,0,0,0,0
-0,product 3,0,0,0,Mobiles, Tablets & Accessories,0,0,0,0,0,0,0,0,0,0,0
-0,product 4,0,0,0,Mobiles, Tablets & Accessories,0,0,0,0,0,0,0,0,0,0,0
-0,product 5,0,0,0,Mobiles, Tablets & Accessories,0,0,0,0,0,0,0,0,0,0,0
+100,product 1,20,3,,Mobiles & Tablets & Accessories,50,6,0,0,0,1,0,0,1,11
+101,test,0,5,,Mobiles & Tablets & Accessories,0,0,0,0,0,0,0,0,1,11
+102,product 4,0,5,,Mobiles & Tablets & Accessories,0,0,0,0,0,0,0,0,1,11
+103,product 2,0,5,,Mobiles & Tablets & Accessories,0,0,0,0,0,0,0,0,1,11
+104,product 5,0,5,,Mobiles & Tablets & Accessories,0,0,0,0,0,0,0,0,1,11
+105,product 6,0,0,,Computer & Office Supplies,0,0,0,0,0,0,0,0,0,11

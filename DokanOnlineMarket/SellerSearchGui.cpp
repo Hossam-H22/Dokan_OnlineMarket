@@ -26,23 +26,23 @@ void SellerSearchGui::clearLayout(QLayout *layout)
 
 void SellerSearchGui::on_btn_search_clicked()
 {
-//    clearLayout(ui->verticalLayout_2);
-//    ui->parentFrame->setMinimumHeight(320);
-//    int count = 0;
-//    string search_input = ui->SearchInput->text().toStdString();
+    clearLayout(ui->verticalLayout_2);
+    ui->parentFrame->setMinimumHeight(320);
+    int count = 0;
+    string search_input = ui->SearchInput->text().toStdString();
 
-//    if (search_input.empty()) return;
+    if (search_input.empty()) return;
 
-//    for(int i= 0 ;i<users->data->ProductArr.size();i++)
-//    {
-//       if(users->data->ProductArr[i]->Name.find(search_input) !=-1)
-//        {
-//            count++;
-//            ui->parentFrame->setMinimumHeight(80*count);
-//            product_Search = new ProductInSearchGuiWidget(users->data->ProductArr[i]);
-//            ui->verticalLayout_2->addWidget(product_Search);
-//        }
-//    }
+    for(auto product: users->data->ProductArr2)
+    {
+       if(product.second->Name.find(search_input) !=-1)
+        {
+            count++;
+            ui->parentFrame->setMinimumHeight(80*count);
+            product_Search = new ProductInSearchGuiWidget(product.second);
+            ui->verticalLayout_2->addWidget(product_Search);
+        }
+    }
 
 
 

@@ -10,18 +10,21 @@ Seller::Seller(void)
     this->Email = "0";
     this->Password = "0";
     this->Gender = "0";
-    this->Address = "No Address";
-    this->Description = "No Description";
+    this->Address = "";
+    this->Description = "";
     this->Wallet = 0;
     this->NoOfVoters = 0;
     this->Total_Rate = 0;
-    this->Path_photo = ":/img/assets/img/icons/avatar-profile-icon.jpg";
+    this->Path_photo = "";
     this->ProfileCompleted = 0;
 }
-Seller::~Seller(void) {}
+Seller::~Seller(void)
+{
+
+}
 
 Seller::Seller(int Id, string FirstName, string SecondName, string Phone, string Email, string Password, string Gender, string Address,
-               string Description, float Wallet, int NoOfVoters, float Total_Rate, string photo, bool ProfileCompleted)
+               string Description, int NoOfVoters, float Total_Rate, bool ProfileCompleted)
 {
     this->ID = Id;
     this->FirstName = FirstName;
@@ -32,10 +35,10 @@ Seller::Seller(int Id, string FirstName, string SecondName, string Phone, string
     this->Gender = Gender;
     this->Address = Address;
     this->Description = Description;
-    this->Wallet = Wallet;
+    this->Wallet = 0;
     this->NoOfVoters = NoOfVoters;
     this->Total_Rate = Total_Rate;
-    this->Path_photo = photo;
+    this->Path_photo = "";
     this->ProfileCompleted = ProfileCompleted;
     CalculateRate();
 }
@@ -49,12 +52,12 @@ Seller::Seller(int Id, string FirstName, string SecondName, string Phone, string
     this->Email = Email;
     this->Password = Password;
     this->Gender = Gender;
-    this->Address = "No Address";
-    this->Description = "No Description";
+    this->Address = "";
+    this->Description = "";
     this->Wallet = 0;
     this->NoOfVoters = 0;
     this->Total_Rate = 0;
-    this->Path_photo = ":/img/assets/img/icons/avatar-profile-icon.jpg";
+    this->Path_photo = "";
     this->ProfileCompleted = 0;
     CalculateRate();
 }
@@ -77,24 +80,20 @@ void Seller::IsCompletedProfile(){
     else
         ProfileCompleted = true;
 }
-void Seller::AddToWallet(Product *pro)
+void Seller::AddToWallet(Product *pro, int quantity)
 {
-    Wallet_History.push_back({pro->ID, {pro->Name, pro->PriceAfterOffer}});
+    WalletData a;
+    a.id = pro->ID;
+    a.name = pro->Name;
+    a.price = pro->PriceAfterOffer;
+    a.date = QDate::currentDate().toString("dd/MM/yyyy").toStdString();
+    a.quantity = quantity;
+    Wallet_History2.push_back(a);
     Wallet += pro->PriceAfterOffer;
 }
 
 void Seller::RemoveProduct(int id)
 {
-    if (SelledProducts[id] == nullptr) return;
+//    if (SelledProducts[id] == nullptr) return;
     SelledProducts.erase(id);
-
-//    unordered_map<int, Product*>::iterator it;
-//    for (it=SelledProducts.begin() ; it!=SelledProducts.end() ; it++)
-//    {
-//        if (it->first > id)
-//        {
-//            SelledProducts[it->second->ID-1] = it->second;
-//            SelledProducts[it->first] = nullptr;
-//        }
-//    }
 }

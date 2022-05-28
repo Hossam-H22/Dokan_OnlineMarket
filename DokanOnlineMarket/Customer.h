@@ -23,7 +23,7 @@ public:
 
     Customer(void);
     Customer(int ID, string FirstName, string SecondName, string PhoneNumber, string Gender, string Email,
-             string Password, string Address, string PathPhoto, bool ProfileCompleted);
+             string Password, string Address, bool ProfileCompleted);
 
     Customer(int ID, string FirstName, string SecondName, string PhoneNumber, string Gender, string Email, string Password);
     ~Customer(void);

@@ -6,7 +6,10 @@ Controller::Controller(Model *data)
     this->data = data;
 }
 
-Controller::~Controller() {}
+Controller::~Controller()
+{
+
+}
 
 void Controller::LogSeller(string Email, string Password)
 {
@@ -19,7 +22,7 @@ void Controller::LogSeller(string Email, string Password)
 }
 void Controller::LogCustomer(string Email, string Password)
 {
-    if (data->CustomerArr[Email].Email==Email && data->CustomerArr[Email].Password == Password)
+    if (data->CustomerArr[Email].Email == Email && data->CustomerArr[Email].Password == Password)
     {
         c = &data->CustomerArr[Email];
         return;
@@ -43,27 +46,16 @@ void Controller::RegisterCustomer(string FirstName, string SecondName, string Ph
 void Controller::AddProduct(string Name, float Price, int Quantity, string Description, string Category, int Offer_Percentage,
                             int NoOfDeliveryDays, string PathOfPhoto, string Seller_mail)
 {
-    Product *New_Product = new Product(data->CountProduct++, Name, Price, Quantity, Description, Category, Offer_Percentage, NoOfDeliveryDays, PathOfPhoto, Seller_mail);
+    Product *New_Product = new Product(data->CountProduct++, Name, Price, Quantity, Description, Category, Offer_Percentage, NoOfDeliveryDays, Seller_mail);
+    New_Product->PathOfPhoto = PathOfPhoto;
     New_Product->CalculatePrice();
-//    data->ProductArr.push_back(New_Product);
     data->ProductArr2[New_Product->ID]=New_Product;
-//    data->SellerArr[New_Product->Seller_mail].SelledProducts[data->CountProduct-101] = data->ProductArr[data->CountProduct-101];
-    data->SellerArr[New_Product->Seller_mail].SelledProducts[data->CountProduct-101] = data->ProductArr2[data->CountProduct-1];
-//    data->CategoryArr[New_Product->Category].push_back(data->ProductArr[data->CountProduct-101]);
-    data->CategoryArr[New_Product->Category].push_back(data->ProductArr2[data->CountProduct-1]);
-
-
+    data->SellerArr[New_Product->Seller_mail].SelledProducts[New_Product->ID] = data->ProductArr2[New_Product->ID];
+    data->CategoryArr[New_Product->Category].push_back(data->ProductArr2[New_Product->ID]);
 }
-//void Controller::EditProduct(int ID, string Name, float Price, int Quantity, string Description, string Category, int Offer_Percentage, int NoOfDeliveryDays,
-//                string PathOfPhoto, string Seller_mail)
-//{
 
-//
-//}
 void Controller::RemoveProduct(int ID)
 {
-
-
     s->RemoveProduct(ID); // delete from seller
 
     unordered_map<string, Customer>::iterator it;
@@ -74,16 +66,6 @@ void Controller::RemoveProduct(int ID)
     }
 
     data->ProductArr2.erase(ID);
-
-//    for (int i=0 ; i< data->CategoryArr[data->ProductArr[ID-100]->Category].size() ; i++)  // delete Product From category list
-//    {
-//        if (data->CategoryArr[data->ProductArr[ID-100]->Category][i]->ID == ID)
-//        {
-//            data->CategoryArr[data->ProductArr[ID-100]->Category].erase(data->CategoryArr[data->ProductArr[ID-100]->Category].begin() + i);
-//            break;
-//        }
-//    }
-
 }
 
 bool Controller::CkeckNumber(string Number)
@@ -108,7 +90,7 @@ void Controller::Sort(string type, vector<Product*> &p)
         sort(p.begin(), p.end(), CompareRateDown());
 
 }
-void Controller::Search(string Name, string Category, vector<Product*> pro)
+void Controller::Search(string Name, vector<Product*> pro)
 {
     data->ProductArrView.clear();
     for (int i=0 ; i< pro.size() ; i++)
@@ -128,7 +110,6 @@ void Controller::ClearSatck()
     }
 }
 
-
 void Controller::ReloadData()
 {
     for (int i=0 ; i<14 ; i++)
@@ -142,4 +123,22 @@ void Controller::ReloadData()
     }
 }
 
+string Controller::GetDate(int num)
+{
+    string date = QDate::currentDate().toString("dd:MM").toStdString();
+    string day1 = "", month1="";
+    day1+=date[0];
+    day1+=date[1];
+    month1+=date[3];
+    month1+=date[4];
+    int day=stoi(day1), month=stoi(month1);
+    day += num;
+    if (day > data->NumOfDaysIMonth[month-1])
+    {
+        day-=data->NumOfDaysIMonth[month-1];
+        if (month==12) month=1;
+        else month++;
+    }
 
+    return to_string(day) +" "+ data->months[month-1];
+}
