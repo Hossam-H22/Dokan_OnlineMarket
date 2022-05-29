@@ -21,7 +21,7 @@ public:
     Cart(void);
     ~Cart(void);
     void AddProduct(Product* p, int quantity);
-    void RemoveProduct(int id, int Check = -1);
+    void RemoveProduct(int id);
 };
 
 #endif // CART_H

@@ -162,6 +162,7 @@ void HomeGui::CheckSeller()  // Hossam + Karim
         ui->frm_register_1->setGeometry(530, 620, 230, 45);
         ui->frm_register_1->setVisible(true);
         ui->frm_login_2->setVisible(true);
+        ui->frm_quantityOfProduct_7->setVisible(false);
     }
     else
     {
@@ -176,6 +177,7 @@ void HomeGui::CheckSeller()  // Hossam + Karim
         ui->btn_back_1->setGeometry(540, 610, 210, 40);
         ui->frm_register_1->setVisible(false);
         ui->frm_login_2->setVisible(false);
+        ui->frm_quantityOfProduct_7->setVisible(true);
     }
 }
 void HomeGui::BackToLastPage() // Bassant + Aya + Omar
@@ -191,7 +193,8 @@ void HomeGui::BackToLastPage() // Bassant + Aya + Omar
 }
 void HomeGui::BackToHome() // Bassant + Hossam + Omar + Karim
 {
-    ui->stackedWidget_main->setCurrentIndex(3);
+    if (IsSeller) ui->stackedWidget_main->setCurrentIndex(5);
+    else ui->stackedWidget_main->setCurrentIndex(3);
     users->ClearSatck();   // clear back stack
     users->p = nullptr;
 
@@ -516,6 +519,14 @@ void HomeGui::on_btn_sign_2_clicked()
     {
         users->RegisterSeller(fname, lname, phone, mail, pass, gender);
         SetSellerProfile();
+
+        ui->btn2_frm1_login_3->setText("Log out");
+        ui->btn1_frm1_signUp_3->setText(users->s->FirstName.c_str());
+
+        ui->btn_frm1_Login_7->setText("Log out");
+        ui->btn_frm1_Register_7->setText(users->s->FirstName.c_str());
+
+
         ui->stackedWidget_main->setCurrentIndex(5);
     }
     else
@@ -838,7 +849,8 @@ void HomeGui::on_btn_checkOut_1_4_clicked() // *********************************
         for(auto cust: users->data->CustomerArr)
         {
             if (cust.second.ID == users->c->ID) continue;
-            cust.second.My_Cart.RemoveProduct(it.first, 1);
+            if (cust.second.My_Cart.AddedProducts[it.first].second > it.second.first->Quantity)
+                cust.second.My_Cart.RemoveProduct(it.first);
         }
     }
     users->c->My_Cart.AddedProducts.clear();
@@ -1206,6 +1218,9 @@ void HomeGui::on_btn_done_4_5_clicked()
         return;
     }
 
+    replace( description.begin(), description.end(), ',', '.');
+    replace( description.begin(), description.end(), '\n', '.');
+
     users->s->FirstName = fname;
     users->s->SecondName = lname;
     users->s->Phone = phone;
@@ -1327,6 +1342,8 @@ void HomeGui::on_btn_done_5_5_clicked()
         QMessageBox::warning(this, "Warning !", "Please enter offer percentage between ( 0 ~ 100 ) !");
         return;
     }
+    replace( description.begin(), description.end(), ',', '.');
+    replace( description.begin(), description.end(), '\n', '.');
     //  -----------------------------------------
 
 
@@ -1522,7 +1539,6 @@ void HomeGui::SwitchAd_SetSellerViewPage() // Swicht Ads
     ui->lb_ad_0_6->setPixmap(pix);
     IndexOfAdSellerInfoView++;
 }
-
 
 
 

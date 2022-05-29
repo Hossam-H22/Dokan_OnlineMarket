@@ -9,27 +9,12 @@ Model::Model(string s)
 }
 Model::Model()
 {
-//    Get_Data();
+    Get_Data();
 }
 Model::~Model()
 {
 
 }
-
-
-//void Model::test()
-//{
-//    QSqlDatabase mydb = QSqlDatabase::addDatabase("QSQLITE");
-//    mydb.setDatabaseName("E:/test.sqlite");
-//    if (mydb.open()) qDebug() << "Opennnnnn";
-//    else qDebug() << "Neverrrrr";
-//}
-
-
-
-
-
-
 
 
 
@@ -229,8 +214,9 @@ void Model::Get_Seller_Data()
         CountSeller = max(ID, CountSeller);
     }
     file.close();
-    file.remove();
+//    file.remove();
 
+    CountSeller++;
 }
 
 /**
@@ -257,7 +243,7 @@ void Model::Get_SellerComments_Data()
         SellerArr[Seller_mail].Comments.push_back(Comment);
     }
     file.close();
-    file.remove();
+//    file.remove();
 }
 
 /**
@@ -290,7 +276,7 @@ void Model::Get_SellerWalletHistory_Data()
         SellerArr[Seller_mail].Wallet_History2.push_back(new_data);
     }
     file.close();
-    file.remove();
+//    file.remove();
 }
 
 /**
@@ -344,7 +330,9 @@ void Model::Get_Product_Data()
         CountProduct = max(ID,CountProduct);
     }
     file.close();
-    file.remove();
+//    file.remove();
+
+    CountProduct++;
 }
 
 /**
@@ -372,7 +360,7 @@ void Model::Get_ProductComments_Data()
         ProductArr2[Product_ID]->Comments.push_back(Comment);
     }
     file.close();
-    file.remove();
+//    file.remove();
 }
 
 /**
@@ -408,9 +396,12 @@ void Model::Get_Customer_Data()
         Customer c(ID, FirstName, SecondName, PhoneNumber, Gender, Email, Password, Address, ProfileCompleted);
         if (ProfileCompleted) c.PathPhoto = to_string(ID)+".jpg";
         CustomerArr[Email] = c;
+        CountCustomer = max(CountCustomer, c.ID);
     }
     file.close();
-    file.remove();
+//    file.remove();
+
+    CountCustomer++;
 }
 
 /**
@@ -439,7 +430,7 @@ void Model::Get_CustomerFavorite_Data()
         CustomerArr[Customer_mail].Favorite[Product_ID] = ProductArr2[Product_ID];
     }
     file.close();
-    file.remove();
+//    file.remove();
 }
 
 /**
@@ -469,7 +460,7 @@ void Model::Get_CustomerCartProduct_Data()
         CustomerArr[Customer_mail].My_Cart.AddProduct(ProductArr2[Product_ID], quantity);
     }
     file.close();
-    file.remove();
+//    file.remove();
 }
 
 

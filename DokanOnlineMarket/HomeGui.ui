@@ -53,7 +53,7 @@ background-color: #2880AE;
 }</string>
       </property>
       <property name="currentIndex">
-       <number>4</number>
+       <number>6</number>
       </property>
       <widget class="QWidget" name="pg_0_Start">
        <property name="styleSheet">
@@ -5362,20 +5362,6 @@ padding: 10px 20px 10px 20px;
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="lb_frm1_ID_5">
-            <property name="styleSheet">
-             <string notr="true">color: rgb(255, 255, 255);
-  font: 700 14pt &quot;Segoe UI&quot;;</string>
-            </property>
-            <property name="text">
-             <string>ID</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item>
            <widget class="QLabel" name="lb_frm1_phone_5">
             <property name="styleSheet">
              <string notr="true">color: rgb(255, 255, 255);
@@ -5495,6 +5481,35 @@ padding: 10px 20px 10px 20px;
          </property>
          <property name="scaledContents">
           <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lb_frm1_ID_5">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>230</y>
+           <width>101</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>9</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">*{
+color: #ffffff;
+}</string>
+         </property>
+         <property name="text">
+          <string>ID</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </widget>
@@ -5917,20 +5932,6 @@ backgroung-color: rgba(0,0,0,0);
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="lb_frm1_ID_6">
-            <property name="styleSheet">
-             <string notr="true">color: rgb(255, 255, 255);
-  font: 700 14pt &quot;Segoe UI&quot;;</string>
-            </property>
-            <property name="text">
-             <string>ID</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item>
            <widget class="QLabel" name="lb_frm1_phone_6">
             <property name="styleSheet">
              <string notr="true">color: rgb(255, 255, 255);
@@ -5984,11 +5985,33 @@ backgroung-color: rgba(0,0,0,0);
           <string>Add Rate</string>
          </property>
         </widget>
+        <widget class="QLabel" name="lb_frm1_ID_6">
+         <property name="geometry">
+          <rect>
+           <x>195</x>
+           <y>234</y>
+           <width>111</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">*{
+color: #ffffff;
+}</string>
+         </property>
+         <property name="text">
+          <string>ID</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
         <zorder>layoutWidget_2</zorder>
         <zorder>lb_frm1_img_6</zorder>
         <zorder>lb_frm1_Copyrights2_6</zorder>
         <zorder>lb_frm1_Copyrights1_6</zorder>
         <zorder>btn_frm1_AddRate_6</zorder>
+        <zorder>lb_frm1_ID_6</zorder>
        </widget>
        <widget class="QFrame" name="frm2_Statusbar_6">
         <property name="geometry">
@@ -6977,8 +7000,8 @@ backgroung-color: rgba(0,0,0,0);
            <rect>
             <x>390</x>
             <y>300</y>
-            <width>501</width>
-            <height>141</height>
+            <width>551</width>
+            <height>251</height>
            </rect>
           </property>
           <property name="font">
@@ -6994,9 +7017,18 @@ backgroung-color: rgba(0,0,0,0);
           </property>
           <property name="styleSheet">
            <string notr="true">*{
- font: 16pt &quot;Segoe UI&quot;;
+font: 16pt &quot;Segoe UI&quot;;
  border: 0;
- }</string>
+ }
+ QScrollBar:vertical {
+ max-width: 12px;
+ background-color: #transparent;
+ }
+ QScrollBar::handle:vertical {
+ background-color: #8e8e8e;
+ border-radius: 6px;
+ }
+ </string>
           </property>
           <property name="html">
            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -7301,113 +7333,6 @@ background-color: rgba(0,0,0,0);
            <set>Qt::AlignCenter</set>
           </property>
          </widget>
-         <widget class="QWidget" name="layoutWidget">
-          <property name="geometry">
-           <rect>
-            <x>80</x>
-            <y>450</y>
-            <width>71</width>
-            <height>51</height>
-           </rect>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_21">
-           <item>
-            <widget class="QPushButton" name="btn_plus_0_7">
-             <property name="maximumSize">
-              <size>
-               <width>25</width>
-               <height>27</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>16</pointsize>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="cursor">
-              <cursorShape>PointingHandCursor</cursorShape>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">*{
-/*border: 0;*/
-background-color: #000000;
-color: #ffffff;
-padding: 0 0 5px 0;
-border-radius: 0px;
-}</string>
-             </property>
-             <property name="text">
-              <string>+</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="lb_NumOfProduct_0_7">
-             <property name="minimumSize">
-              <size>
-               <width>20</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>30</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>16</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>1</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btn_minus_0_7">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>25</width>
-               <height>30</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>18</pointsize>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="cursor">
-              <cursorShape>PointingHandCursor</cursorShape>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">*{
-/*border: 0;*/
-background-color: #000000;
-color: #ffffff;
-padding: 0 0 5px 0;
-border-radius: 0px;
-}</string>
-             </property>
-             <property name="text">
-              <string>-</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
          <widget class="QLabel" name="lb_NotEnough_0_7">
           <property name="geometry">
            <rect>
@@ -7557,7 +7482,129 @@ color: #ff0000;
            <bool>true</bool>
           </property>
          </widget>
-         <zorder>layoutWidget</zorder>
+         <widget class="QFrame" name="frm_quantityOfProduct_7">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>450</y>
+            <width>91</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QWidget" name="layoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>71</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_21">
+            <item>
+             <widget class="QPushButton" name="btn_plus_0_7">
+              <property name="maximumSize">
+               <size>
+                <width>25</width>
+                <height>27</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>16</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">*{
+/*border: 0;*/
+background-color: #000000;
+color: #ffffff;
+padding: 0 0 5px 0;
+border-radius: 0px;
+}</string>
+              </property>
+              <property name="text">
+               <string>+</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="lb_NumOfProduct_0_7">
+              <property name="minimumSize">
+               <size>
+                <width>20</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>30</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>16</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>1</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_minus_0_7">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>25</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>18</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">*{
+/*border: 0;*/
+background-color: #000000;
+color: #ffffff;
+padding: 0 0 5px 0;
+border-radius: 0px;
+}</string>
+              </property>
+              <property name="text">
+               <string>-</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
          <zorder>layoutWidget</zorder>
          <zorder>layoutWidget</zorder>
          <zorder>lb_name_0_7</zorder>
@@ -7570,6 +7617,7 @@ color: #ff0000;
          <zorder>lb_ad_0_7</zorder>
          <zorder>layoutWidget</zorder>
          <zorder>lb_done_0_7</zorder>
+         <zorder>frm_quantityOfProduct_7</zorder>
         </widget>
         <widget class="QWidget" name="pg_1_feedback_7">
          <widget class="QLabel" name="label_10">
