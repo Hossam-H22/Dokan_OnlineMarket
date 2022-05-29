@@ -53,7 +53,7 @@ background-color: #2880AE;
 }</string>
       </property>
       <property name="currentIndex">
-       <number>6</number>
+       <number>7</number>
       </property>
       <widget class="QWidget" name="pg_0_Start">
        <property name="styleSheet">
@@ -3651,7 +3651,7 @@ backgroung-color: rgba(0,0,0,0);
          </rect>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>5</number>
         </property>
         <widget class="QWidget" name="pg_0_Home_5">
          <widget class="QLabel" name="lb_About_0_5">
@@ -6999,9 +6999,9 @@ backgroung-color: rgba(0,0,0,0);
           <property name="geometry">
            <rect>
             <x>390</x>
-            <y>300</y>
+            <y>280</y>
             <width>551</width>
-            <height>251</height>
+            <height>281</height>
            </rect>
           </property>
           <property name="font">

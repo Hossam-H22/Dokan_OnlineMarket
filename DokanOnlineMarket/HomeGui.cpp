@@ -10,7 +10,7 @@ HomeGui::HomeGui(Controller *users, QWidget *parent)
     IsSeller = false;
     ui->stackedWidget_main->setCurrentIndex(0);
 
-
+    HideItems();
     Connection();
     SetHomePage();
 }
@@ -210,6 +210,7 @@ void HomeGui::BackToHome() // Bassant + Hossam + Omar + Karim
 void HomeGui::GoToHome() // Hossam + Omar + Aya
 {
     BackToHome();
+    ui->stackedWidget_main->setCurrentIndex(3);
 
     users->c = nullptr;
     users->s = nullptr;
@@ -375,7 +376,7 @@ void HomeGui::GoToCategoryPage(vector<Product*> &pro, string s)
         for(int j=0 ; j<4 ; j++)
         {
             if (count >= pro.size()) break;
-            if (pro[count]->ID == 0 /*|| !pro[count]->Avaliability*/) continue;
+            if (pro[count]->ID == 0) continue;
             else
             {
                 productItem = new ProductGuiWidget(pro[count], users->data->PathOfFile+"img/Products/");
@@ -821,7 +822,7 @@ void HomeGui::RemoveFromList(int id, string container)
     }
 //    QMessageBox::information(this, "Successful operation",("Product successfully removed from "+container+" !").c_str());
 }
-void HomeGui::on_btn_checkOut_1_4_clicked() // **********************************************************
+void HomeGui::on_btn_checkOut_1_4_clicked()
 {
     users->c->IsCompletedProfile();
     if (!users->c->ProfileCompleted)
@@ -846,11 +847,25 @@ void HomeGui::on_btn_checkOut_1_4_clicked() // *********************************
         }
         users->data->SellerArr[it.second.first->Seller_mail].AddToWallet(it.second.first, it.second.second);
 
-        for(auto cust: users->data->CustomerArr)
+        unordered_map<string, Customer>::iterator del;
+        for(del=users->data->CustomerArr.begin() ;del!=users->data->CustomerArr.end(); del++)
         {
-            if (cust.second.ID == users->c->ID) continue;
-            if (cust.second.My_Cart.AddedProducts[it.first].second > it.second.first->Quantity)
-                cust.second.My_Cart.RemoveProduct(it.first);
+
+            if (del->second.ID == users->c->ID) continue;
+            if (del->second.My_Cart.AddedProducts[it.first].second > it.second.first->Quantity)
+            {
+                if (it.second.first->Avaliability)
+                {
+                    del->second.My_Cart.AddedProducts[it.first].second = it.second.first->Quantity;
+                }
+                else
+                {
+                    qDebug() << it.second.first->Name.c_str() << "\n";
+                    del->second.My_Cart.RemoveProduct(it.first);
+                }
+
+            }
+
         }
     }
     users->c->My_Cart.AddedProducts.clear();
@@ -1357,6 +1372,7 @@ void HomeGui::on_btn_done_5_5_clicked()
         users->p->NoOfDeliveryDays = stoi(delivery);
         users->p->Offer_Percentage = stoi(offer);
         users->p->Description = description;
+        users->p->Category = category;
         users->p->CalculatePrice();
         users->p->PathOfPhoto = to_string(users->p->ID)+".jpg";
         if (users->p->Quantity > 0) users->p->Avaliability=1;

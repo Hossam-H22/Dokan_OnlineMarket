@@ -61,13 +61,12 @@ void Controller::RemoveProduct(int ID)
     unordered_map<string, Customer>::iterator it;
     for (it=data->CustomerArr.begin() ; it!=data->CustomerArr.end() ; it++)
     {
-        it->second.RemoveProductFromFavorite(ID); // dalete from Favorite in each customer
-        it->second.My_Cart.RemoveProduct(ID); // dalete from Cart in each customer
+        it->second.RemoveProductFromFavorite(ID); // delete from Favorite in each customer
+        it->second.My_Cart.RemoveProduct(ID); // delete from Cart in each customer
     }
 
-    data->ProductArr2.erase(ID);
+    data->ProductArr2.erase(ID); // delete from all products
 }
-
 bool Controller::CkeckNumber(string Number)
 {
     for (int i=0 ; i<Number.size() ; i++)
@@ -101,7 +100,6 @@ void Controller::Search(string Name, vector<Product*> pro)
         }
     }
 }
-
 void Controller::ClearSatck()
 {
     while (!data->BackToPage.empty())
@@ -109,12 +107,11 @@ void Controller::ClearSatck()
         data->BackToPage.pop();
     }
 }
-
 void Controller::ReloadData()
 {
     for (int i=0 ; i<14 ; i++)
     {
-        data->CategoryArr[data->CategoryName[0]].clear();
+        data->CategoryArr[data->CategoryName[i]].clear();
     }
 
     for (auto& it : data->ProductArr2)
@@ -122,7 +119,6 @@ void Controller::ReloadData()
         data->CategoryArr[it.second->Category].push_back(it.second);
     }
 }
-
 string Controller::GetDate(int num)
 {
     string date = QDate::currentDate().toString("dd:MM").toStdString();
