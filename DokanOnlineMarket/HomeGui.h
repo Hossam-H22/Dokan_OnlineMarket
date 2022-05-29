@@ -119,16 +119,20 @@ public:
     void HideItems();
     void EyePassword();
 
+
     // Hosam
     void SwitchAd_Home();
     void GoToCategoryPage(vector<Product *> &pro, string s);
     void SetHomePage();
     void ShowErrorPage();
 
+
     // Omar
     void SetCustomerProfile();
     void SwitchAd_CustomerPage();
     void RemoveFromList(int id, string container);
+
+
 
     // karim
     void SwitchAd_ProductPage();
@@ -139,7 +143,7 @@ public:
     void SetSellerProfile();
     void SwitchAd_SellerProfile();
     void EditProduct(Product *pro);
-
+    void DeleteProductForEver(int id, QLayout *ly);
 
 
     // Bassant

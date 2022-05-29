@@ -6,6 +6,7 @@ SellerSearchGui::SellerSearchGui(Controller *user, QWidget *parent) :
 {
     ui->setupUi(this);
     this->users = user;
+    ui->lb_NoProduct->setVisible(false);
 }
 
 void SellerSearchGui::clearLayout(QLayout *layout)
@@ -26,11 +27,13 @@ void SellerSearchGui::clearLayout(QLayout *layout)
 
 void SellerSearchGui::on_btn_search_clicked()
 {
+    ui->lb_NoProduct->setVisible(false);
     clearLayout(ui->verticalLayout_2);
     ui->parentFrame->setMinimumHeight(320);
     int count = 0;
     string search_input = ui->SearchInput->text().toStdString();
 
+    bool NotFound = true;
     if (search_input.empty()) return;
 
     for(auto product: users->data->ProductArr2)
@@ -41,13 +44,13 @@ void SellerSearchGui::on_btn_search_clicked()
             ui->parentFrame->setMinimumHeight(80*count);
             product_Search = new ProductInSearchGuiWidget(product.second);
             ui->verticalLayout_2->addWidget(product_Search);
+
+            NotFound = false;
         }
     }
 
+    if (NotFound) ui->lb_NoProduct->setVisible(true);
 
-
-//    QSpacerItem *space = new QSpacerItem(20, 40, QSizePolicy::Expanding, QSizePolicy::Expanding);
-//    ui->verticalLayout_2->addItem(space);
 }
 
 SellerSearchGui::~SellerSearchGui()

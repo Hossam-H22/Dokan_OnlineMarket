@@ -130,17 +130,13 @@ void HomeGui::AddProductToLists(QLayout *ly, QFrame *f, string color, unordered_
         else
         {
             crt = new ProductGuiWidget_2(it->second, users->data->PathOfFile+"img/Products/", container, color, 1);
-            connect(crt->Btn_name, &QPushButton::clicked, this, [this, list, it, PageNum](){GoToProductProfile(it->second->ID, PageNum);});
+            connect(crt->Btn_name, &QPushButton::clicked, this, [this, it, PageNum](){GoToProductProfile(it->second->ID, PageNum);});
             if (container=="Favorite")
                 connect(crt->Btn_action, &QPushButton::clicked, this, [this, it, container](){RemoveFromList(it->second->ID, container);});
             else if (container=="Available")
             {
-                connect(crt->Btn_action, &QPushButton::clicked, this, [this, container, it, ly](){
-                    clearLayout(ly);
-                    users->RemoveProduct(it->second->ID);
-                    on_btn_frm2_Products_5_clicked();
-                });
-                connect(crt->Btn_action2, &QPushButton::clicked, this, [this, list, it](){ EditProduct(it->second); });
+                connect(crt->Btn_action, &QPushButton::clicked, this, [this, it, ly](){DeleteProductForEver(it->second->ID, ly);});
+                connect(crt->Btn_action2, &QPushButton::clicked, this, [this, it](){EditProduct(it->second); });
             }
 
             f->setMinimumHeight(212*count);
@@ -148,8 +144,6 @@ void HomeGui::AddProductToLists(QLayout *ly, QFrame *f, string color, unordered_
             count++;
         }
     }
-//    QSpacerItem *space = new QSpacerItem(20, 40, QSizePolicy::Expanding, QSizePolicy::Expanding);
-//    ly->addItem(space);
 
 }
 void HomeGui::CheckSeller()  // Hossam + Karim
@@ -286,15 +280,54 @@ void HomeGui::SignUp() // Hossam + Karim
 
     }
 }
+void HomeGui::EyePassword()
+{
+    if (eye_password)
+    {
+        ui->lineEdit_password_2->setEchoMode(QLineEdit::Normal);
+        ui->lineEdit_password_1->setEchoMode(QLineEdit::Normal);
+        ui->lineEdit_pass_3_4->setEchoMode(QLineEdit::Normal);
+        ui->lineEdit_pass_4_5->setEchoMode(QLineEdit::Normal);
+        QIcon ico(":/img/assets/img/icons/icons8-open-eye-64.png");
+        ui->btn_eye_1->setIcon(ico);
+        ui->btn_eye_2->setIcon(ico);
+        ui->btn_eye_3_4->setIcon(ico);
+    }
+    else
+    {
+        ui->lineEdit_password_2->setEchoMode(QLineEdit::Password);
+        ui->lineEdit_password_1->setEchoMode(QLineEdit::Password);
+        ui->lineEdit_pass_3_4->setEchoMode(QLineEdit::Password);
+        ui->lineEdit_pass_4_5->setEchoMode(QLineEdit::Password);
+        QIcon ico(":/img/assets/img/icons/icons8-closed-eye-100.png");
+        ui->btn_eye_1->setIcon(ico);
+        ui->btn_eye_2->setIcon(ico);
+        ui->btn_eye_3_4->setIcon(ico);
+    }
+
+    eye_password = !eye_password;
+}
 void HomeGui::HideItems()
 {
     ui->lb_NotEnough_0_7->setVisible(false);
     ui->lb_deliver_0_7->setVisible(true);
     ui->lb_done_0_7->setVisible(false);
     ui->lb_errorCheckout_1_4->setVisible(false);
+    ui->lb_wrongLogin_1->setVisible(false);
+    ui->lb_validMail_2->setVisible(false);
+    ui->lb_passCount_2->setVisible(false);
+    ui->lb_validPhone_2->setVisible(false);
+    ui->lb_fieldEmpty_fname_2->setVisible(false);
+    ui->lb_fieldEmpty_lname_2->setVisible(false);
+    ui->lb_fieldEmpty_mail_2->setVisible(false);
+    ui->lb_fieldEmpty_pass_2->setVisible(false);
+    ui->lb_fieldEmpty_phone_2->setVisible(false);
+    ui->lb_fieldEmpty_gender_2->setVisible(false);
+    ui->lb_validaionRight_0_6->setVisible(false);
+    ui->lb_validaionWrong_0_6->setVisible(false);
+    ui->lb_validaionRight_0_7->setVisible(false);
+    ui->lb_validaionWrong_0_7->setVisible(false);
 }
-
-
 
 
 
@@ -369,7 +402,7 @@ void HomeGui::on_btn_login_1_clicked()
     {
         users->LogSeller(email, password);
         if (users->s == nullptr || users->s->ID == 0)
-            QMessageBox::warning(this, "Attention please !", "Invalid email or password  !");
+            ui->lb_wrongLogin_1->setVisible(true);
         else
         {
             SetSellerProfile();
@@ -387,7 +420,7 @@ void HomeGui::on_btn_login_1_clicked()
     {
         users->LogCustomer(email, password);
         if (users->c == nullptr || users->c->ID == 0)
-            QMessageBox::warning(this, "Attention please !", "Invalid email or password  !");
+            ui->lb_wrongLogin_1->setVisible(true);
         else
         {
             ui->btn2_frm1_login_3->setText("Log out");                      // Home page
@@ -410,6 +443,7 @@ void HomeGui::on_btn_login_1_clicked()
 }
 void HomeGui::on_btn_sign_2_clicked()
 {
+    // -->  take data from user
     string fname, lname, phone, mail, pass, gender;
     fname = ui->lineEdit_FisrtName_2->text().toStdString();
     lname = ui->lineEdit_LastName_2->text().toStdString();
@@ -418,22 +452,66 @@ void HomeGui::on_btn_sign_2_clicked()
     pass = ui->lineEdit_password_2->text().toStdString();
     if (ui->radioButton_femail_2->isChecked()) gender = "Female";
     if (ui->radioButton_mail_2->isChecked()) gender = "Male";
+    //*************************************************************************
 
-    if (fname.empty() || lname.empty() || phone.empty() || mail.empty() || pass.empty() || gender.empty())
+
+
+    // --> Check Validation of data
+    if (fname.empty())
     {
-        QMessageBox::warning(this, "Warning !", "There is an empty field !");
+        ui->lb_fieldEmpty_fname_2->setVisible(true);
+        return;
+    }
+    if (lname.empty())
+    {
+        ui->lb_fieldEmpty_lname_2->setVisible(true);
+        return;
+    }
+    if (mail.empty())
+    {
+        ui->lb_fieldEmpty_mail_2->setVisible(true);
+        return;
+    }
+    if (mail.find('@') == -1 || mail.size()<5)
+    {
+        ui->lb_validMail_2->setVisible(true);
+        return;
+    }
+    if (pass.empty())
+    {
+        ui->lb_fieldEmpty_pass_2->setVisible(true);
+        return;
+    }
+    if (pass.size()<8 || pass.size()>14)
+    {
+        ui->lb_passCount_2->setVisible(true);
+        return;
+    }
+    if (phone.empty())
+    {
+        ui->lb_fieldEmpty_phone_2->setVisible(true);
+        return;
+    }
+    if (!users->CkeckNumber(phone) || phone.size()<6)
+    {
+        ui->lb_validPhone_2->setVisible(true);
+        return;
+    }
+    if (gender.empty())
+    {
+        ui->lb_fieldEmpty_gender_2->setVisible(true);
         return;
     }
     transform(fname.begin(), fname.end(), fname.begin(), ::tolower);
     transform(lname.begin(), lname.end(), lname.begin(), ::tolower);
     fname[0]-=32;
     lname[0]-=32;
-    if (!users->CkeckNumber(phone))
-    {
-        QMessageBox::warning(this, "Warning !", "Invalid data  !");
-        return;
-    }
+    // **************************************************************************
 
+
+
+
+    // save data in my data structure
     if (IsSeller)
     {
         users->RegisterSeller(fname, lname, phone, mail, pass, gender);
@@ -449,7 +527,6 @@ void HomeGui::on_btn_sign_2_clicked()
         ui->btn_frm1_Login_7->setText("Log out");
         ui->btn_frm1_Register_7->setText(users->c->FirstName.c_str());
 
-
         if (users->data->BackToPage.top().first==3) BackToHome();
         else
         {
@@ -457,13 +534,17 @@ void HomeGui::on_btn_sign_2_clicked()
             users->data->BackToPage.pop();
         }
     }
+    //*************************************************************************
 
+
+    // --> Clear fields
     ui->lineEdit_FisrtName_2->setText("");
     ui->lineEdit_LastName_2->setText("");
     ui->lineEdit_username_2->setText("");
     ui->lineEdit_password_2->setText("");
     ui->lineEdit_phone_2->setText("");
     ui->radioButton_frm1_rubbish_2->setChecked(true);
+    //*************************************************************************
 }
 void HomeGui::on_btn_frm3_EnterSeller_3_clicked()
 {
@@ -528,33 +609,7 @@ void HomeGui::on_btn_frm1_back_1_3_clicked()
     ui->radioButton_frm1_rubbish_1_3->setChecked(true);
     CategoryName.clear();
 }
-void HomeGui::EyePassword()
-{
-    if (eye_password)
-    {
-        ui->lineEdit_password_2->setEchoMode(QLineEdit::Normal);
-        ui->lineEdit_password_1->setEchoMode(QLineEdit::Normal);
-        ui->lineEdit_pass_3_4->setEchoMode(QLineEdit::Normal);
-        ui->lineEdit_pass_4_5->setEchoMode(QLineEdit::Normal);
-        QIcon ico(":/img/assets/img/icons/icons8-open-eye-64.png");
-        ui->btn_eye_1->setIcon(ico);
-        ui->btn_eye_2->setIcon(ico);
-        ui->btn_eye_3_4->setIcon(ico);
-    }
-    else
-    {
-        ui->lineEdit_password_2->setEchoMode(QLineEdit::Password);
-        ui->lineEdit_password_1->setEchoMode(QLineEdit::Password);
-        ui->lineEdit_pass_3_4->setEchoMode(QLineEdit::Password);
-        ui->lineEdit_pass_4_5->setEchoMode(QLineEdit::Password);
-        QIcon ico(":/img/assets/img/icons/icons8-closed-eye-100.png");
-        ui->btn_eye_1->setIcon(ico);
-        ui->btn_eye_2->setIcon(ico);
-        ui->btn_eye_3_4->setIcon(ico);
-    }
 
-    eye_password = !eye_password;
-}
 
 
 
@@ -946,6 +1001,9 @@ void HomeGui::on_btn_AddRate_1_7_clicked()
         QMessageBox::information(this, "",  "Please Login first ");
         return;
     }
+
+    HideItems();
+
     ui->frm1_AddFeedback_1_7->setVisible(true);
 }
 void HomeGui::on_btn_Submit_1_7_clicked()
@@ -967,16 +1025,22 @@ void HomeGui::on_btn_Submit_1_7_clicked()
                     users->p->Comments.push_back(ui->lineEdit_frm1_comment_1_7->text().toStdString());
                     Comment=true;
                 }
-                if (Comment == true)
-                    QMessageBox::information(this, "Successful operation","Your Rate and Comment have been successfully recorded !");
-                else if (Comment == false)
-                    QMessageBox::information(this, "Successful operation",  "Your Rate has been successfully recorded !");
+                if (Comment)
+                {
+                    ui->lb_validaionRight_0_7->setText("Your Rate and Comment have been successfully recorded");
+                    ui->lb_validaionRight_0_7->setVisible(true);
+                }
+                else if (!Comment)
+                {
+                    ui->lb_validaionRight_0_7->setText("Your Rate has been successfully recorded");
+                    ui->lb_validaionRight_0_7->setVisible(true);
+                }
             }
-            else QMessageBox::critical(this, "Operation failed", "Your Rate has NOT been recorded, please enter a number between 0 and 5");
+            else ui->lb_validaionWrong_0_6->setVisible(true);
         }
-        else QMessageBox::critical(this, "Operation failed", "Your Rate has NOT been recorded, please enter a number between 0 and 5");
+        else ui->lb_validaionWrong_0_6->setVisible(true);
     }
-    else QMessageBox::critical(this, "Operation failed", "Your Rate has NOT been recorded you must add rate (0 ~ 5) !");
+    else ui->lb_validaionWrong_0_6->setVisible(true);
 
     ui->txtEdit_frm1_Rate_1_7->setText("");
     ui->lineEdit_frm1_comment_1_7->setText("");
@@ -1313,6 +1377,15 @@ void HomeGui::on_btn_done_5_5_clicked()
 
     on_btn_frm2_Home_5_clicked();
 }
+void HomeGui::DeleteProductForEver(int id, QLayout *ly)
+{
+    QMessageBox::StandardButton reply = QMessageBox::question(this, "", "Are you sure you want remove product ?");
+    if (reply == QMessageBox::No) return;
+
+    clearLayout(ly);
+    users->RemoveProduct(id);
+    on_btn_frm2_Products_5_clicked();
+}
 void HomeGui::SwitchAd_SellerProfile() // Swicht Ads
 {
     if(IndexOfAdSellerProfile>4) IndexOfAdSellerProfile=1;
@@ -1394,6 +1467,9 @@ void HomeGui::on_btn_frm1_AddRate_6_clicked()
         QMessageBox::information(this, "",  "Please Login first ");
         return;
     }
+
+    HideItems();
+
     ui->stackedWidget_SellerView_6->setCurrentIndex(0);
     ui->txtbrowser_Description_0_6->setFixedHeight(265);
     ui->frm3_AddFeedback_0_6->setGeometry(0, 340, 911, 71);
@@ -1417,16 +1493,22 @@ void HomeGui::on_btn_frm3_Submit_0_6_clicked()
                      users->s->Comments.push_back(ui->txtEdit_frm3_Comment_0_6->toPlainText().toStdString());
                     Comment=true;
                 }
-                if (Comment == true)
-                    QMessageBox::information(this, "Successful operation","Your Rate and Comment have been successfully recorded !");
-                else if (Comment == false)
-                    QMessageBox::information(this, "Successful operation",  "Your Rate has been successfully recorded !");
+                if (Comment)
+                {
+                    ui->lb_validaionRight_0_6->setText("Your Rate and Comment have been successfully recorded");
+                    ui->lb_validaionRight_0_6->setVisible(true);
+                }
+                else if (!Comment)
+                {
+                    ui->lb_validaionRight_0_6->setText("Your Rate has been successfully recorded");
+                    ui->lb_validaionRight_0_6->setVisible(true);
+                }
             }
-            else QMessageBox::critical(this, "Operation failed", "Your Rate has NOT been recorded, please enter a number between 0 and 5");
+            else ui->lb_validaionWrong_0_6->setVisible(true);
         }
-        else QMessageBox::critical(this, "Operation failed", "Your Rate has NOT been recorded, please enter a number between 0 and 5");
+        else ui->lb_validaionWrong_0_6->setVisible(true);
     }
-    else QMessageBox::critical(this, "Operation failed", "Your Rate has NOT been recorded you must add rate (0 ~ 5) !");
+    else ui->lb_validaionWrong_0_6->setVisible(true);
 
 
     ui->txtEdit_frm3_Rate_0_6->setText("");
@@ -1440,9 +1522,6 @@ void HomeGui::SwitchAd_SetSellerViewPage() // Swicht Ads
     ui->lb_ad_0_6->setPixmap(pix);
     IndexOfAdSellerInfoView++;
 }
-
-
-
 
 
 

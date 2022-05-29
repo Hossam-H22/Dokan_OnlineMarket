@@ -53,7 +53,7 @@ background-color: #2880AE;
 }</string>
       </property>
       <property name="currentIndex">
-       <number>7</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="pg_0_Start">
        <property name="styleSheet">
@@ -490,6 +490,34 @@ border: 0;
          </size>
         </property>
        </widget>
+       <widget class="QLabel" name="lb_wrongLogin_1">
+        <property name="geometry">
+         <rect>
+          <x>494</x>
+          <y>522</y>
+          <width>301</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+color: #b30000;
+background-color: rgba(0,0,0,0);
+}</string>
+        </property>
+        <property name="text">
+         <string>Wrong Email or Password</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
        <zorder>lb_logo_1</zorder>
        <zorder>btn_login_1</zorder>
        <zorder>btn_back_1</zorder>
@@ -498,6 +526,7 @@ border: 0;
        <zorder>lb_welcome_1</zorder>
        <zorder>frm_register_1</zorder>
        <zorder>btn_eye_1</zorder>
+       <zorder>lb_wrongLogin_1</zorder>
       </widget>
       <widget class="QWidget" name="pg_2_register">
        <property name="styleSheet">
@@ -774,7 +803,7 @@ padding: 0 0 0 30px;
         <property name="geometry">
          <rect>
           <x>410</x>
-          <y>565</y>
+          <y>575</y>
           <width>89</width>
           <height>21</height>
          </rect>
@@ -797,7 +826,7 @@ color: #374049
         <property name="geometry">
          <rect>
           <x>410</x>
-          <y>596</y>
+          <y>602</y>
           <width>89</width>
           <height>21</height>
          </rect>
@@ -820,7 +849,7 @@ color: #374049
         <property name="geometry">
          <rect>
           <x>520</x>
-          <y>570</y>
+          <y>580</y>
           <width>371</width>
           <height>45</height>
          </rect>
@@ -953,6 +982,258 @@ border: 0;
           <width>50</width>
           <height>40</height>
          </size>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lb_validMail_2">
+        <property name="geometry">
+         <rect>
+          <x>347</x>
+          <y>475</y>
+          <width>301</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+color: #b30000;
+background-color: rgba(0,0,0,0);
+}</string>
+        </property>
+        <property name="text">
+         <string>Please enter vaild Email</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lb_fieldEmpty_fname_2">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>333</y>
+          <width>221</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+color: #b30000;
+background-color: rgba(0,0,0,0);
+}</string>
+        </property>
+        <property name="text">
+         <string>This field is empty</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lb_passCount_2">
+        <property name="geometry">
+         <rect>
+          <x>370</x>
+          <y>544</y>
+          <width>301</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+color: #b30000;
+background-color: rgba(0,0,0,0);
+}</string>
+        </property>
+        <property name="text">
+         <string>Please password (8 ~ 14) letter</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lb_fieldEmpty_lname_2">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>402</y>
+          <width>221</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+color: #b30000;
+background-color: rgba(0,0,0,0);
+}</string>
+        </property>
+        <property name="text">
+         <string>This field is empty</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lb_fieldEmpty_mail_2">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>475</y>
+          <width>221</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+color: #b30000;
+background-color: rgba(0,0,0,0);
+}</string>
+        </property>
+        <property name="text">
+         <string>This field is empty</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lb_fieldEmpty_pass_2">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>543</y>
+          <width>221</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+color: #b30000;
+background-color: rgba(0,0,0,0);
+}</string>
+        </property>
+        <property name="text">
+         <string>This field is empty</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lb_fieldEmpty_phone_2">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>624</y>
+          <width>171</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+color: #b30000;
+background-color: rgba(0,0,0,0);
+}</string>
+        </property>
+        <property name="text">
+         <string>This field is empty</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lb_validPhone_2">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>622</y>
+          <width>221</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+color: #b30000;
+background-color: rgba(0,0,0,0);
+}</string>
+        </property>
+        <property name="text">
+         <string>Please enter a vaild number</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lb_fieldEmpty_gender_2">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>620</y>
+          <width>171</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+color: #b30000;
+background-color: rgba(0,0,0,0);
+}</string>
+        </property>
+        <property name="text">
+         <string>This field is empty</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </widget>
@@ -1437,7 +1718,7 @@ font: 600 9pt &quot;Segoe UI&quot;;
          </rect>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="pg_0_categories_3">
          <widget class="QScrollArea" name="scrollArea_category_0_3">
@@ -2238,7 +2519,7 @@ color: #a6a6a6;
          <string notr="true">border-color: rgb(255, 255, 255);</string>
         </property>
         <property name="currentIndex">
-         <number>3</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="pg_0_Home_4">
          <property name="styleSheet">
@@ -2470,16 +2751,16 @@ font: 800 13pt &quot;Segoe UI&quot;;
          <widget class="QLabel" name="lb_errorCheckout_1_4">
           <property name="geometry">
            <rect>
-            <x>610</x>
+            <x>580</x>
             <y>480</y>
-            <width>271</width>
+            <width>301</width>
             <height>31</height>
            </rect>
           </property>
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
-            <bold>true</bold>
+            <pointsize>14</pointsize>
+            <bold>false</bold>
            </font>
           </property>
           <property name="styleSheet">
@@ -2490,6 +2771,9 @@ background-color: rgba(0,0,0,0);
           </property>
           <property name="text">
            <string>Please complete your profile first</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
           </property>
          </widget>
         </widget>
@@ -6018,10 +6302,66 @@ p, li { white-space: pre-wrap; }
            <set>Qt::AlignCenter</set>
           </property>
          </widget>
+         <widget class="QLabel" name="lb_validaionWrong_0_6">
+          <property name="geometry">
+           <rect>
+            <x>210</x>
+            <y>366</y>
+            <width>531</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">*{
+color: #ff0000;
+
+}</string>
+          </property>
+          <property name="text">
+           <string>Your Rate has NOT been recorded you must add rate (0 ~ 5)</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lb_validaionRight_0_6">
+          <property name="geometry">
+           <rect>
+            <x>210</x>
+            <y>366</y>
+            <width>531</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">*{
+color: #2ab11b;
+
+}</string>
+          </property>
+          <property name="text">
+           <string>Your Rate has NOT been recorded you must add rate (0 ~ 5)</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
          <zorder>lb_About_0</zorder>
          <zorder>frm3_AddFeedback_0_6</zorder>
          <zorder>txtbrowser_Description_0_6</zorder>
          <zorder>lb_ad_0_6</zorder>
+         <zorder>lb_validaionWrong_0_6</zorder>
+         <zorder>lb_validaionRight_0_6</zorder>
         </widget>
         <widget class="QWidget" name="pg_1_avalible_6">
          <widget class="QScrollArea" name="scrollArea_cart_1_5">
@@ -7968,6 +8308,60 @@ backgroung-color: rgba(0,0,0,0);
           <width>200</width>
           <height>55</height>
          </size>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lb_validaionRight_0_7">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>720</y>
+          <width>500</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+color: #2ab11b;
+
+}</string>
+        </property>
+        <property name="text">
+         <string>Your Rate has NOT been recorded you must add rate (0 ~ 5)</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lb_validaionWrong_0_7">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>720</y>
+          <width>500</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+color: #ff0000;
+
+}</string>
+        </property>
+        <property name="text">
+         <string>Your Rate has NOT been recorded you must add rate (0 ~ 5)</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </widget>
