@@ -109,5 +109,5 @@ void Product::CalculateRate(float UserRate)
 void Product::CalculatePrice()
 {
     if (Offer_Percentage == 0) PriceAfterOffer = Price;
-    else PriceAfterOffer = (Price*Offer_Percentage)/100.0;
+    else PriceAfterOffer = Price - (Price*Offer_Percentage)/100.0;
 }

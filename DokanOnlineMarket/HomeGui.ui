@@ -53,7 +53,7 @@ background-color: #2880AE;
 }</string>
       </property>
       <property name="currentIndex">
-       <number>7</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="pg_0_Start">
        <property name="styleSheet">
@@ -1541,7 +1541,7 @@ letter-spacing: 0.5px;
            <x>50</x>
            <y>10</y>
            <width>1171</width>
-           <height>65</height>
+           <height>61</height>
           </rect>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -1706,6 +1706,60 @@ font: 600 9pt &quot;Segoe UI&quot;;
            </layout>
           </item>
          </layout>
+        </widget>
+        <widget class="QLabel" name="lb_version_2">
+         <property name="geometry">
+          <rect>
+           <x>1240</x>
+           <y>70</y>
+           <width>91</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">*{
+color: #ffffff;
+}</string>
+         </property>
+         <property name="text">
+          <string>V 1.0.0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lb_version_3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>60</y>
+           <width>65</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">*{
+color: #8e8e8e;
+}</string>
+         </property>
+         <property name="text">
+          <string>V 1.0.0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
         </widget>
        </widget>
        <widget class="QStackedWidget" name="stackedWidget_Content_3">

@@ -1173,7 +1173,7 @@ void HomeGui::on_btn_frm2_Feedback_5_clicked()
 
     int x = (users->s->FinalRate/5.0)*100;
     if (users->s->NoOfVoters==0) x=0;
-    ui->lb_rate_3_5->setText(to_string(x).c_str());
+    ui->lb_rate_3_5->setText("("+QString::number(users->s->FinalRate, 'f', 1)+")");
     ui->progressbar_rate_3_5->setValue(x);
 
     ui->stackedWidget_SellerProfile_5->setCurrentIndex(3);
