@@ -42,7 +42,7 @@ void SellerSearchGui::on_btn_search_clicked()
         {
             count++;
             ui->parentFrame->setMinimumHeight(80*count);
-            product_Search = new ProductInSearchGuiWidget(product.second);
+            product_Search = new ProductInSearchGuiWidget(product.second, users->data->PathOfFile);
             ui->verticalLayout_2->addWidget(product_Search);
 
             NotFound = false;

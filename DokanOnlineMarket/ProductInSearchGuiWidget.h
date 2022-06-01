@@ -13,7 +13,7 @@ class ProductInSearchGuiWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit ProductInSearchGuiWidget(Product *p = nullptr, QWidget *parent = nullptr);
+    explicit ProductInSearchGuiWidget(Product *p, string path, QWidget *parent = nullptr);
     ~ProductInSearchGuiWidget();
 
 private:

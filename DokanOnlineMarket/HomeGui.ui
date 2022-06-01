@@ -7458,30 +7458,6 @@ color: #ff0000;
            </item>
           </layout>
          </widget>
-         <widget class="QLabel" name="lb_done_0_7">
-          <property name="geometry">
-           <rect>
-            <x>410</x>
-            <y>130</y>
-            <width>350</width>
-            <height>350</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">*{
-	background-color: rgba(255, 255, 255, 0);
-}</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="pixmap">
-           <pixmap resource="Resources.qrc">:/img/assets/img/icons/icons8-done-512.png</pixmap>
-          </property>
-          <property name="scaledContents">
-           <bool>true</bool>
-          </property>
-         </widget>
          <widget class="QFrame" name="frm_quantityOfProduct_7">
           <property name="geometry">
            <rect>
@@ -7605,6 +7581,30 @@ border-radius: 0px;
            </layout>
           </widget>
          </widget>
+         <widget class="QLabel" name="lb_done_0_7">
+          <property name="geometry">
+           <rect>
+            <x>410</x>
+            <y>130</y>
+            <width>350</width>
+            <height>350</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">*{
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="Resources.qrc">:/img/assets/img/icons/icons8-done-512.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
          <zorder>layoutWidget</zorder>
          <zorder>layoutWidget</zorder>
          <zorder>lb_name_0_7</zorder>
@@ -7616,8 +7616,8 @@ border-radius: 0px;
          <zorder>lb_availability_0_7</zorder>
          <zorder>lb_ad_0_7</zorder>
          <zorder>layoutWidget</zorder>
-         <zorder>lb_done_0_7</zorder>
          <zorder>frm_quantityOfProduct_7</zorder>
+         <zorder>lb_done_0_7</zorder>
         </widget>
         <widget class="QWidget" name="pg_1_feedback_7">
          <widget class="QLabel" name="label_10">

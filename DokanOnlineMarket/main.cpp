@@ -6,28 +6,15 @@
 #include <QDebug>
 #include <QDir>
 
-struct WalletData{
-    int id;
-    string name;
-    float price;
-    string date;
-    int quantity;
-};
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-
     string path =  QCoreApplication::applicationFilePath().toStdString();
 //    string s =  QDir::currentPath().toStdString();
-
     path.erase(path.end()-85, path.end());
     path += "/DokanOnlineMarket/assets/";
-//    qDebug() << s1;
-
-
-
 
 
 

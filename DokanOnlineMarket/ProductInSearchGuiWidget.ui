@@ -45,7 +45,7 @@ border-color :#ffffff;
    <widget class="QLabel" name="lb_offerPrice">
     <property name="geometry">
      <rect>
-      <x>80</x>
+      <x>100</x>
       <y>40</y>
       <width>151</width>
       <height>21</height>

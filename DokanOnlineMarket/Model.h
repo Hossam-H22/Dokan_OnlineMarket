@@ -6,16 +6,12 @@
 #include <string>
 #include <vector>
 #include <stack>
-//#include <map>
 #include <unordered_map>
 
 #include <QDir>
 #include <QDebug>
 #include <QFile>
 #include <QCoreApplication>
-//#include <QtSql/QtSql>
-//#include <QtSql/QSqlDatabase>
-//#include <QFileInfo>
 
 #include "Seller.h"
 #include "Customer.h"
@@ -123,7 +119,7 @@ public:
 
     void start();
 
-//    void test();
+
 
 
 

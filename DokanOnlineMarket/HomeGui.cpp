@@ -21,7 +21,8 @@ HomeGui::~HomeGui()
 }
 
 
-void HomeGui::Connection() // All Pages
+//   -------->  All  <-----------
+void HomeGui::Connection()
 {
     time1 = new QTimer(this);
     time1->start(10000);
@@ -71,7 +72,7 @@ void HomeGui::Connection() // All Pages
     connect(ui->btn_eye_4_5, &QPushButton::clicked, this, &HomeGui::EyePassword);
 
 }
-void HomeGui::SwitchAd() // All Pages
+void HomeGui::SwitchAd()
 {
     SwitchAd_Home();
     SwitchAd_SetSellerViewPage();
@@ -79,7 +80,7 @@ void HomeGui::SwitchAd() // All Pages
     SwitchAd_ProductPage();
     SwitchAd_CustomerPage();
 }
-void HomeGui::clearLayout(QLayout *layout) // All Pages
+void HomeGui::clearLayout(QLayout *layout)
 {
     if (layout == NULL) return;
     QLayoutItem *item;
@@ -94,13 +95,13 @@ void HomeGui::clearLayout(QLayout *layout) // All Pages
         delete item;
     }
 }
-void HomeGui::GoToProductProfile(int id, int page) // All Pages
+void HomeGui::GoToProductProfile(int id, int page)
 {
     users->p = users->data->ProductArr2[id];
     users->data->BackToPage.push({page, id}); //last Page
     on_btn_frm1_Home_7_clicked();
 }
-void HomeGui::AddFeeedBackLabels(QLayout *ly, QFrame *f, string color, vector<string> v) // Bassant + Aya + Karim
+void HomeGui::AddFeeedBackLabels(QLayout *ly, QFrame *f, string color, vector<string> v)
 {
     clearLayout(ly);
     f->setMinimumHeight(430);
@@ -118,7 +119,7 @@ void HomeGui::AddFeeedBackLabels(QLayout *ly, QFrame *f, string color, vector<st
     QSpacerItem *space = new QSpacerItem(20, 40, QSizePolicy::Expanding, QSizePolicy::Expanding);
     ly->addItem(space);
 }
-void HomeGui::AddProductToLists(QLayout *ly, QFrame *f, string color, unordered_map<int, Product*> &list, string container, int PageNum) // Omar + Aya
+void HomeGui::AddProductToLists(QLayout *ly, QFrame *f, string color, unordered_map<int, Product*> &list, string container, int PageNum)
 {
     unordered_map<int, Product*>::iterator it;
     clearLayout(ly);
@@ -146,7 +147,7 @@ void HomeGui::AddProductToLists(QLayout *ly, QFrame *f, string color, unordered_
     }
 
 }
-void HomeGui::CheckSeller()  // Hossam + Karim
+void HomeGui::CheckSeller()
 {
     if(IsSeller)
     {
@@ -167,7 +168,7 @@ void HomeGui::CheckSeller()  // Hossam + Karim
     else
     {
         ui->btn_sellerName_0_7->setVisible(true);
-        ui->lb_sellerName_0_7->setVisible(false);
+        ui->lb_sellerName_0_7->setVisible(true);
         ui->btn_addCart_0_7->setVisible(true);
         ui->btn_addFavorite_0_7->setVisible(true);
         ui->btn_AddRate_1_7->setVisible(true);
@@ -180,7 +181,7 @@ void HomeGui::CheckSeller()  // Hossam + Karim
         ui->frm_quantityOfProduct_7->setVisible(true);
     }
 }
-void HomeGui::BackToLastPage() // Bassant + Aya + Omar
+void HomeGui::BackToLastPage()
 {
     if (users->data->BackToPage.top().first==3) BackToHome();
     else
@@ -191,7 +192,7 @@ void HomeGui::BackToLastPage() // Bassant + Aya + Omar
         SetProductPage();
     }
 }
-void HomeGui::BackToHome() // Bassant + Hossam + Omar + Karim
+void HomeGui::BackToHome()
 {
     if (IsSeller) ui->stackedWidget_main->setCurrentIndex(5);
     else ui->stackedWidget_main->setCurrentIndex(3);
@@ -207,7 +208,7 @@ void HomeGui::BackToHome() // Bassant + Hossam + Omar + Karim
         GoToCategoryPage(users->data->CategoryArr[CategoryName], CategoryName);
     }
 }
-void HomeGui::GoToHome() // Hossam + Omar + Aya
+void HomeGui::GoToHome()
 {
     BackToHome();
     ui->stackedWidget_main->setCurrentIndex(3);
@@ -239,7 +240,7 @@ void HomeGui::GoToHome() // Hossam + Omar + Aya
     IsSeller = false;
 
 }
-void HomeGui::login() // Hossam + Karim
+void HomeGui::login()
 {
     eye_password=0;
     EyePassword();
@@ -251,7 +252,7 @@ void HomeGui::login() // Hossam + Karim
     if (users->p == nullptr) users->data->BackToPage.push({3, 100});
     else users->data->BackToPage.push({7, users->p->ID});
 }
-void HomeGui::SignUp() // Hossam + Karim
+void HomeGui::SignUp()
 {
     eye_password=0;
     EyePassword();
@@ -335,7 +336,7 @@ void HomeGui::HideItems()
 
 
 
-//   -------->  Hosam  <-----------
+//   -------->  Home Page  <-----------
 void HomeGui::SetHomePage()
 {
     clearLayout(ui->horizontalLayout_8);
@@ -352,8 +353,6 @@ void HomeGui::SetHomePage()
 
     ui->radioButton_frm1_rubbish_1_3->setVisible(false);
     ui->radioButton_frm1_rubbish_2->setVisible(false);
-
-    ui->lineEdit_password_2->setEchoMode(QLineEdit::Password);
 
     ui->stackedWidget_Content_3->setCurrentIndex(0);
 
@@ -625,7 +624,7 @@ void HomeGui::on_btn_frm1_back_1_3_clicked()
 
 
 
-//   -------->  Omar  <-----------
+//   -------->  Customer  <-----------
 void HomeGui::SetCustomerProfile()
 {
     ui->lb_frm1_name_4->setText((users->c->FirstName + " " + users->c->SecondName).c_str());
@@ -882,7 +881,7 @@ void HomeGui::SwitchAd_CustomerPage() // Swicht Ads
 
 
 
-//   -------->  Karim  <-----------
+//   -------->  Prodact Page  <-----------
 void HomeGui::SetProductPage()
 {
     ui->lb_name_0_7->setText(users->p->Name.c_str());
@@ -1095,7 +1094,7 @@ void HomeGui::SwitchAd_ProductPage() // Swicht Ads
 
 
 
-//   -------->  Aya  <-----------
+//   -------->  Seller Profile  <-----------
 void HomeGui::SetSellerProfile()
 {
     ui->lb_frm1_Name_5->setText((users->s->FirstName + " " + users->s->SecondName).c_str());
@@ -1431,7 +1430,7 @@ void HomeGui::SwitchAd_SellerProfile() // Swicht Ads
 
 
 
-//   -------->  Bassant  <-----------
+//   -------->  Seller View  <-----------
 void HomeGui::SetSellerViewPage()
 {
     ui->lb_frm1_Name_6->setText((users->s->FirstName + " " + users->s->SecondName).c_str());
