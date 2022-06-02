@@ -1,0 +1,76 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>assets/img/Offer Home/offer_1.jpg</file>
+        <file>assets/img/Offer Home/offer_2.jpg</file>
+        <file>assets/img/Offer Home/offer_3.jpg</file>
+        <file>assets/img/Offer Home/offer_4.jpg</file>
+        <file>assets/img/Offer Home/offer_5.jpg</file>
+        <file>assets/img/Offer Home/offer_6.jpg</file>
+        <file>assets/img/Offer Home/offer_7.jpg</file>
+        <file>assets/img/Offer Home/offer_8.jpg</file>
+        <file>assets/img/logo-black.png</file>
+        <file>assets/img/logo-blue.png</file>
+        <file>assets/img/logo-white.png</file>
+        <file>assets/img/logo-Yellow.png</file>
+        <file>assets/img/Products/100.jpg</file>
+        <file>assets/img/icons/icons8-chevron-left-90.png</file>
+        <file>assets/img/icons/icons8-chevron-right-90.png</file>
+        <file>assets/img/icons/icons8-small-business-96.png</file>
+        <file>assets/img/icons/icons8-add-to-cart-64.png</file>
+        <file>assets/img/icons/icons8-add-to-favorites-96.png</file>
+        <file>assets/img/icons/icons8-back-96.png</file>
+        <file>assets/img/icons/icons8-add-product-96.png</file>
+        <file>assets/img/icons/icons8-circled-user-female-skin-type-7-96.png</file>
+        <file>assets/img/icons/icons8-circled-user-male-skin-type-7-96.png</file>
+        <file>assets/img/categories/1.png</file>
+        <file>assets/img/categories/2.png</file>
+        <file>assets/img/categories/3.png</file>
+        <file>assets/img/categories/4.png</file>
+        <file>assets/img/categories/5.png</file>
+        <file>assets/img/categories/6.png</file>
+        <file>assets/img/categories/7.png</file>
+        <file>assets/img/categories/8.png</file>
+        <file>assets/img/categories/9.png</file>
+        <file>assets/img/categories/10.png</file>
+        <file>assets/img/categories/11.png</file>
+        <file>assets/img/categories/12.png</file>
+        <file>assets/img/categories/13.png</file>
+        <file>assets/img/categories/14.png</file>
+        <file>assets/img/Ads/SellerInfoView/1.png</file>
+        <file>assets/img/Ads/SellerInfoView/2.png</file>
+        <file>assets/img/Ads/SellerInfoView/3.png</file>
+        <file>assets/img/Ads/SellerProfile/1.png</file>
+        <file>assets/img/Ads/SellerProfile/2.png</file>
+        <file>assets/img/Ads/SellerProfile/3.png</file>
+        <file>assets/img/Ads/SellerProfile/4.png</file>
+        <file>assets/img/Ads/CustomerPage/1.png</file>
+        <file>assets/img/Ads/CustomerPage/2.png</file>
+        <file>assets/img/Ads/CustomerPage/3.png</file>
+        <file>assets/img/Ads/CustomerPage/4.png</file>
+        <file>assets/img/Ads/CustomerPage/5.png</file>
+        <file>assets/img/Ads/ProductPage/1.png</file>
+        <file>assets/img/Ads/ProductPage/2.png</file>
+        <file>assets/img/Ads/ProductPage/3.png</file>
+        <file>assets/img/icons/icons8-verified-badge-96.png</file>
+        <file>assets/img/icons/icons8-remove-96.png</file>
+        <file>assets/img/icons/icons8-remove-from-cart-64.png</file>
+        <file>assets/img/icons/icons8-edit-64.png</file>
+        <file>assets/img/icons/icons8-search-96.png</file>
+        <file>assets/img/icons/icons8-add-image-96.png</file>
+        <file>assets/img/icons/icons8-down-96.png</file>
+        <file>assets/img/icons/icons8-up-96.png</file>
+        <file>assets/img/icons/avatar-profile-icon.jpg</file>
+        <file>assets/img/icons/Error.png</file>
+        <file>assets/img/icons/icons8-closed-eye-100.png</file>
+        <file>assets/img/icons/icons8-open-eye-64.png</file>
+        <file>assets/img/icons/shopping cart shopping bag.png</file>
+        <file>assets/img/icons/icons8-ok-512.png</file>
+        <file>assets/img/logo.png</file>
+        <file>assets/img/icons/icons8-done-512.png</file>
+        <file>assets/img/Ads/ProductPage/4.png</file>
+        <file>assets/img/Ads/ProductPage/5.png</file>
+        <file>assets/img/icons/out-of-stock.png</file>
+        <file>assets/img/icons/out-of-stock-icon-1.png</file>
+        <file>assets/img/icons/icons8-ok-hand-emoji-96.png</file>
+    </qresource>
+</RCC>
