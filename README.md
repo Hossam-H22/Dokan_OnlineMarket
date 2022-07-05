@@ -1,10 +1,14 @@
 # Dokan Online Market
 
+<br>
 > ## Description
 An online marketplace is an e-commerce platform that links sellers with customers ander control of Admin, whish seller can offer products and Every customer can browse or add products to his cart, display the total cost (receipt) for the customer.
 To facilitate the search process, the products are divided into categories.
 
-
+<details>
+  <summary>:zap: Dimo Video</summary>
+  https://youtu.be/807t0Bq-L1E
+</details>
 
 <br>
 
@@ -46,8 +50,8 @@ To facilitate the search process, the products are divided into categories.
 <br>
 
 > ## Versions of app
-    - v 1.0.0
-    - v 1.1.0
+    - V 1.0.0
+    - V 1.1.0
         a. admin page that can dalete any customer, seler, product.
         b. any user can type comments for admin.
 
