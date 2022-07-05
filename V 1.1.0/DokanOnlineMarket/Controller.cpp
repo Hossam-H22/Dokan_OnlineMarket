@@ -138,7 +138,11 @@ bool Controller::CkeckNumber(string Number)
     return true;
 }
 
-
+/**
+ * @brief Controller::Sort
+ * @param type ->> kind of sort
+ * @param p ->> list of products who will sort
+ */
 void Controller::Sort(string type, vector<Product*> &p)
 {
     if (type == "Name")
@@ -154,6 +158,11 @@ void Controller::Sort(string type, vector<Product*> &p)
 
 }
 
+/**
+ * @brief Controller::Search
+ * @param Name ->> name that will search with it
+ * @param pro ->> list of products that search in
+ */
 void Controller::Search(string Name, vector<Product*> pro)
 {
     data->ProductArrView.clear();
@@ -166,6 +175,10 @@ void Controller::Search(string Name, vector<Product*> pro)
     }
 }
 
+/**
+ * @brief Controller::ClearSatck
+ * clear stack that hold lasts pages number
+ */
 void Controller::ClearSatck()
 {
     while (!data->BackToPage.empty())
@@ -174,6 +187,10 @@ void Controller::ClearSatck()
     }
 }
 
+/**
+ * @brief Controller::ReloadData
+ * clear list of products of each category and refill it again after changed
+ */
 void Controller::ReloadData()
 {
     for (int i=0 ; i<14 ; i++)
@@ -187,6 +204,11 @@ void Controller::ReloadData()
     }
 }
 
+/**
+ * @brief Controller::GetDate
+ * @param num ->> number of days
+ * @return ->> date of day after custem number of days (num) sent to function
+ */
 string Controller::GetDate(int num)
 {
     string date = QDate::currentDate().toString("dd:MM").toStdString();
@@ -207,7 +229,11 @@ string Controller::GetDate(int num)
     return to_string(day) +" "+ data->months[month-1];
 }
 
-
+/**
+ * @brief Controller::Remove_Customer
+ * @param mail ->> mail of customer that want to delete it for ever
+ * clear this customer cart and his favorite list then remove this customer for ever
+ */
 void Controller::Remove_Customer(string mail)
 {
     data->CustomerArr[mail].My_Cart.AddedProducts.clear();
@@ -215,6 +241,12 @@ void Controller::Remove_Customer(string mail)
     data->CustomerArr.erase(mail);
 }
 
+/**
+ * @brief Controller::Remove_Seller
+ * @param mail ->> mail of seller that want to delete it for ever
+ * clear all products this seller sell and delete each product from cart or
+ * favorite list if exist thin delete this seller for ever
+ */
 void Controller::Remove_Seller(string mail)
 {
     for (auto it: data->SellerArr[mail].SelledProducts)

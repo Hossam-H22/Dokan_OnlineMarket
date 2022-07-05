@@ -3,7 +3,12 @@
 #include <QPainter>
 #include "HomeGui.h"
 
-
+/**
+ * @brief ProductGuiWidget::ProductGuiWidget
+ * @param pro ->> pointer of product
+ * @param path ->> path of files in computer
+ * make widget of product and set labels with product information
+ */
 ProductGuiWidget::ProductGuiWidget(Product *pro, string path, QWidget *parent) :
     QWidget(parent), ui(new Ui::ProductGuiWidget)
 {

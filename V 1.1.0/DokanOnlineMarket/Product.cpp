@@ -73,6 +73,11 @@ Product::Product(int ID, string Name, float Price, int Quantity, string Descript
     CalculateRate();
 }
 
+/**
+ * @brief Product::CalculateRate
+ * @param UserRate ->> rate that user added
+ * calculate rate after user add new rate
+ */
 void Product::CalculateRate(float UserRate)
 {
     if (UserRate !=-1)
@@ -103,6 +108,10 @@ void Product::CalculateRate(float UserRate)
     if (NoVoters!=0) FinalRate = (double)(One+(2*Two)+(3*Three)+(4*Four)+(5*Five)) / (double)(NoVoters);
 }
 
+/**
+ * @brief Product::CalculatePrice
+ * calulate price after offer
+ */
 void Product::CalculatePrice()
 {
     if (Offer_Percentage == 0) PriceAfterOffer = Price;

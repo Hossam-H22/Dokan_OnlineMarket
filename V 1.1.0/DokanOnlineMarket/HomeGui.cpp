@@ -22,14 +22,13 @@ HomeGui::~HomeGui()
 
 
 //   -------->  All  <-----------
+
+/**
+ * @brief HomeGui::Connection
+ * connect each buttun with his function
+ */
 void HomeGui::Connection()
 {
-    time1 = new QTimer(this);
-    time1->start(10000);
-
-    time2 = new QTimer(this);
-    time2->start(4000);
-
     connect(ui->btn_start_0, &QPushButton::clicked, this, &HomeGui::GoToHome);
     connect(ui->btn_back_1, &QPushButton::clicked, this, &HomeGui::GoToHome);
     connect(ui->btn_back_2, &QPushButton::clicked, this, &HomeGui::GoToHome);
@@ -48,6 +47,10 @@ void HomeGui::Connection()
     connect(ui->btn_back_6, &QPushButton::clicked, this, &HomeGui::BackToLastPage);
 
     // Timers
+    time1 = new QTimer(this);
+    time1->start(10000);
+    time2 = new QTimer(this);
+    time2->start(4000);
     connect(time1, &QTimer::timeout, this, &HomeGui::SwitchAd);
     connect(time2, &QTimer::timeout, this, &HomeGui::HideItems);
 
@@ -56,7 +59,7 @@ void HomeGui::Connection()
     connect(ui->btn2_frm2_3, &QPushButton::clicked, this, &HomeGui::ShowErrorPage);
     connect(ui->btn3_frm2_3, &QPushButton::clicked, this, &HomeGui::ShowErrorPage);
     connect(ui->btn4_frm2_3, &QPushButton::clicked, this, &HomeGui::ShowErrorPage);
-//    connect(ui->btn_frm3_ContactUs_3, &QPushButton::clicked, this, &HomeGui::ShowErrorPage);
+
 
     // Back to Home
     connect(ui->btn_logo_3, &QPushButton::clicked, this, &HomeGui::BackToHome);
@@ -70,11 +73,12 @@ void HomeGui::Connection()
     connect(ui->btn_eye_2, &QPushButton::clicked, this, &HomeGui::EyePassword);
     connect(ui->btn_eye_3_4, &QPushButton::clicked, this, &HomeGui::EyePassword);
     connect(ui->btn_eye_4_5, &QPushButton::clicked, this, &HomeGui::EyePassword);
-
-    // Admin
-//    connect(ui->btn_back_8, &QPushButton::clicked, this, &HomeGui::GoToHome);
-
 }
+
+/**
+ * @brief HomeGui::SwitchAd
+ * Call All funtions that switch ad in each page
+ */
 void HomeGui::SwitchAd()
 {
     SwitchAd_Home();
@@ -83,6 +87,12 @@ void HomeGui::SwitchAd()
     SwitchAd_ProductPage();
     SwitchAd_CustomerPage();
 }
+
+/**
+ * @brief HomeGui::clearLayout
+ * @param layout ->> the layout that will remove
+ * clear any layout from any items or widgets and make it empty
+ */
 void HomeGui::clearLayout(QLayout *layout)
 {
     if (layout == NULL) return;
@@ -98,12 +108,30 @@ void HomeGui::clearLayout(QLayout *layout)
         delete item;
     }
 }
+
+/**
+ * @brief HomeGui::GoToProductProfile
+ * @param id ->> id of product i will go to
+ * @param page ->> number of page where i came from
+ *
+ * this funcion record the page i came from to save it so when i need to go back i can to go to the last page
+ */
 void HomeGui::GoToProductProfile(int id, int page)
 {
     users->p = users->data->ProductArr2[id];
     users->data->BackToPage.push({page, id}); //last Page
     on_btn_frm1_Home_7_clicked();
 }
+
+/**
+ * @brief HomeGui::AddFeeedBackLabels
+ * @param ly ->>layout where push comments
+ * @param f ->> frame that hold layout
+ * @param color ->> backgroung color of comment
+ * @param v -> vector of comments data
+ *
+ * this function take group of comment and put every comment in label with custom style and push it in layout
+ */
 void HomeGui::AddFeeedBackLabels(QLayout *ly, QFrame *f, string color, vector<string> v)
 {
     clearLayout(ly);
@@ -122,6 +150,18 @@ void HomeGui::AddFeeedBackLabels(QLayout *ly, QFrame *f, string color, vector<st
     QSpacerItem *space = new QSpacerItem(20, 40, QSizePolicy::Expanding, QSizePolicy::Expanding);
     ly->addItem(space);
 }
+
+/**
+ * @brief HomeGui::AddProductToLists
+ * @param ly ->> the layout the pushed in
+ * @param f ->> frame that hold layout
+ * @param color ->> background color of product
+ * @param list ->> list of products which it will push
+ * @param container ->> name of the place it will pushed in
+ * @param PageNum ->> number of currunt page
+ * this function take a list of product and name of place where it will push this creat a product widget with
+ * product data and connectt his buttons with his functions this push it in the layout
+ */
 void HomeGui::AddProductToLists(QLayout *ly, QFrame *f, string color, unordered_map<int, Product*> &list, string container, int PageNum)
 {
     unordered_map<int, Product*>::iterator it;
@@ -153,6 +193,14 @@ void HomeGui::AddProductToLists(QLayout *ly, QFrame *f, string color, unordered_
     }
 
 }
+
+/**
+ * @brief HomeGui::DeleteProductForEver
+ * @param id ->> product id
+ * @param ly ->> currunt layout
+ * this function check if want to delete product for ever and i do it call another
+ * function where will delete it from evey where it can be found in
+ */
 void HomeGui::DeleteProductForEver(int id, QLayout *ly)
 {
     QMessageBox::StandardButton reply = QMessageBox::question(this, "", "Are you sure you want remove product ?");
@@ -163,6 +211,11 @@ void HomeGui::DeleteProductForEver(int id, QLayout *ly)
     if (users->s == nullptr) on_btn_Products_clicked();
     else on_btn_frm2_Products_5_clicked();
 }
+
+/**
+ * @brief HomeGui::CheckSeller
+ * check if current user is seller or not to configuration the window for seller or ordinary user
+ */
 void HomeGui::CheckSeller()
 {
     if(IsSeller)
@@ -197,6 +250,11 @@ void HomeGui::CheckSeller()
         ui->frm_quantityOfProduct_7->setVisible(true);
     }
 }
+
+/**
+ * @brief HomeGui::BackToLastPage
+ * it raturn you back to the last page you where in
+ */
 void HomeGui::BackToLastPage()
 {
     if (users->data->BackToPage.top().first==3) BackToHome();
@@ -208,6 +266,11 @@ void HomeGui::BackToLastPage()
         SetProductPage();
     }
 }
+
+/**
+ * @brief HomeGui::BackToHome
+ * back the user to home window , reload data in each datastucture after changed and clear the back system (stack)
+ */
 void HomeGui::BackToHome()
 {
     if (IsSeller) ui->stackedWidget_main->setCurrentIndex(5);
@@ -224,6 +287,11 @@ void HomeGui::BackToHome()
         GoToCategoryPage(users->data->CategoryArr[CategoryName], CategoryName);
     }
 }
+
+/**
+ * @brief HomeGui::GoToHome
+ * it call when log out to configration the program to any user
+ */
 void HomeGui::GoToHome()
 {
     BackToHome();
@@ -256,6 +324,12 @@ void HomeGui::GoToHome()
     IsSeller = false;
 
 }
+
+/**
+ * @brief HomeGui::login
+ * it call when push on login button from any where and save the last page to back
+ * for it if needed thin take him to login page
+ */
 void HomeGui::login()
 {
     eye_password=0;
@@ -268,6 +342,15 @@ void HomeGui::login()
     if (users->p == nullptr) users->data->BackToPage.push({3, 100});
     else users->data->BackToPage.push({7, users->p->ID});
 }
+
+/**
+ * @brief HomeGui::SignUp
+ * it call when push on Sign up button from any where and save the last page to back for it if needed.
+ *
+ * if there is user curruntly login so it will take him to his
+ * profile and if not it will take him to sign up page
+ *
+ */
 void HomeGui::SignUp()
 {
     eye_password=0;
@@ -301,6 +384,11 @@ void HomeGui::SignUp()
 
     }
 }
+
+/**
+ * @brief HomeGui::EyePassword
+ * hide or show text in password label depend on currunt stat and change eye image with it
+ */
 void HomeGui::EyePassword()
 {
     if (eye_password)
@@ -328,6 +416,11 @@ void HomeGui::EyePassword()
 
     eye_password = !eye_password;
 }
+
+/**
+ * @brief HomeGui::HideItems
+ * some items hide dependent on spicific timer
+ */
 void HomeGui::HideItems()
 {
     ui->lb_NotEnough_0_7->setVisible(false);
@@ -352,7 +445,18 @@ void HomeGui::HideItems()
 
 
 
+
+
+
+
+
+
 //   -------->  Home Page  <-----------
+
+/**
+ * @brief HomeGui::SetHomePage
+ * set up home page and push category item in it
+ */
 void HomeGui::SetHomePage()
 {
     clearLayout(ui->horizontalLayout_8);
@@ -373,6 +477,16 @@ void HomeGui::SetHomePage()
     ui->stackedWidget_Content_3->setCurrentIndex(0);
 
 }
+
+/**
+ * @brief HomeGui::GoToCategoryPage
+ * @param pro ->> list of product
+ * @param s ->> categoru name
+ *
+ * go to specific category and view products in it
+ *
+ * make each product as a widget and connect buttons to his functions this push it to category layout
+ */
 void HomeGui::GoToCategoryPage(vector<Product*> &pro, string s)
 {
     users->data->ProductArrView = pro;
@@ -404,6 +518,13 @@ void HomeGui::GoToCategoryPage(vector<Product*> &pro, string s)
     }
     ui->stackedWidget_Content_3->setCurrentIndex(1);
 }
+
+/**
+ * @brief HomeGui::SwitchAd_Home
+ * switch between ads
+ *
+ * this function called after each timer
+ */
 void HomeGui::SwitchAd_Home() // Swicht Ads
 {
     if (IndexOfAdHome > 8) IndexOfAdHome=1;
@@ -412,6 +533,14 @@ void HomeGui::SwitchAd_Home() // Swicht Ads
     ui->lb_offer_0_3->setPixmap(pix);
     IndexOfAdHome++;
 }
+
+/**
+ * @brief HomeGui::on_btn_login_1_clicked
+ * connected with login button in login page
+ *
+ * check if i customer or seller or admin and check if email & password right
+ * then make a pointer to user who login
+ */
 void HomeGui::on_btn_login_1_clicked()
 {
     string email, password;
@@ -466,6 +595,14 @@ void HomeGui::on_btn_login_1_clicked()
     ui->lineEdit_password_1->setText("");
 
 }
+
+/**
+ * @brief HomeGui::on_btn_sign_2_clicked
+ * connected with sign up button in sign up page
+ *
+ * Check Validation of data then save data in my data structure then Clear fields (labels) then
+ * make a pointer to point on user
+ */
 void HomeGui::on_btn_sign_2_clicked()
 {
     // -->  take data from user
@@ -579,24 +716,44 @@ void HomeGui::on_btn_sign_2_clicked()
     ui->radioButton_frm1_rubbish_2->setChecked(true);
     //*************************************************************************
 }
+
+/**
+ * @brief HomeGui::on_btn_frm3_EnterSeller_3_clicked
+ * connect to log seller button with this function and call sign up function
+ */
 void HomeGui::on_btn_frm3_EnterSeller_3_clicked()
 {
     GoToHome();
     IsSeller = true;
     SignUp();
 }
+
+/**
+ * @brief HomeGui::on_btn_frm3_policy_3_clicked
+ * open terms&conition window
+ */
 void HomeGui::on_btn_frm3_policy_3_clicked()
 {
     TermsAndConditions terms;
     terms.setModal(true);
     terms.exec();
 }
+
+/**
+ * @brief HomeGui::on_btn_frm3_policy_3_clicked
+ * open errorPage window for buttons is not working
+ */
 void HomeGui::ShowErrorPage()
 {
     ErrorPage error;
     error.setModal(true);
     error.exec();
 }
+
+/**
+ * @brief HomeGui::on_btn_frm1_search_1_3_clicked
+ * take input from user and call function to search it then set filter on the result of search
+ */
 void HomeGui::on_btn_frm1_search_1_3_clicked()
 {
     string name = ui->lineEdit_frm1_search_1_3->text().toStdString();
@@ -607,6 +764,11 @@ void HomeGui::on_btn_frm1_search_1_3_clicked()
 
     on_btn_frm1_setfilter_1_3_clicked();
 }
+
+/**
+ * @brief HomeGui::on_btn_frm1_clear1_1_3_clicked
+ * clear search label and show all product again
+ */
 void HomeGui::on_btn_frm1_clear1_1_3_clicked()
 {
     ui->lineEdit_frm1_search_1_3->clear();
@@ -614,6 +776,12 @@ void HomeGui::on_btn_frm1_clear1_1_3_clicked()
 
     on_btn_frm1_setfilter_1_3_clicked();
 }
+
+/**
+ * @brief HomeGui::on_btn_frm1_setfilter_1_3_clicked
+ * set filter that choose in which thing we will sort at it
+ * then send list of product and kind of sotring to function to sort
+ */
 void HomeGui::on_btn_frm1_setfilter_1_3_clicked()
 {
     string filter;
@@ -629,12 +797,22 @@ void HomeGui::on_btn_frm1_setfilter_1_3_clicked()
     if (go) users->Sort(filter, users->data->ProductArrView);
     GoToCategoryPage(users->data->ProductArrView, CategoryName);
 }
+
+/**
+ * @brief HomeGui::on_btn_frm1_clear2_1_3_clicked
+ * clear filter and return product with ordinary order
+ */
 void HomeGui::on_btn_frm1_clear2_1_3_clicked()
 {
     ui->radioButton_frm1_rubbish_1_3->setChecked(true);
     users->data->ProductArrView = users->data->CategoryArr[CategoryName];
     on_btn_frm1_search_1_3_clicked();
 }
+
+/**
+ * @brief HomeGui::on_btn_frm1_back_1_3_clicked
+ * back to categorys page
+ */
 void HomeGui::on_btn_frm1_back_1_3_clicked()
 {
     ui->stackedWidget_Content_3->setCurrentIndex(0);
@@ -642,6 +820,11 @@ void HomeGui::on_btn_frm1_back_1_3_clicked()
     ui->radioButton_frm1_rubbish_1_3->setChecked(true);
     CategoryName.clear();
 }
+
+/**
+ * @brief HomeGui::on_btn_frm3_ContactUs_3_clicked
+ * open contact us window
+ */
 void HomeGui::on_btn_frm3_ContactUs_3_clicked()
 {
     ContactToUsGui contact(users);
@@ -651,7 +834,20 @@ void HomeGui::on_btn_frm3_ContactUs_3_clicked()
 
 
 
+
+
+
+
+
+
+
+
+
 //   -------->  Customer Profile  <-----------
+/**
+ * @brief HomeGui::SetCustomerProfile
+ * set customer page each label with his right info about customer
+ */
 void HomeGui::SetCustomerProfile()
 {
     ui->lb_frm1_name_4->setText((users->c->FirstName + " " + users->c->SecondName).c_str());
@@ -682,6 +878,11 @@ void HomeGui::SetCustomerProfile()
 
     on_btn_frm2_Home_4_clicked();
 }
+/**
+ * @brief HomeGui::on_btn_frm2_Home_4_clicked
+ * gogto home page in customer page
+ * and show randon 3 products as a recommended products
+ */
 void HomeGui::on_btn_frm2_Home_4_clicked() // Home
 {
     clearLayout(ui->horizontalLayout_16);
@@ -707,13 +908,13 @@ void HomeGui::on_btn_frm2_Home_4_clicked() // Home
         ui->horizontalLayout_16->addWidget(productItem);
     }
 
-
-
-
-
-
     ui->stackedWidget_cust_4->setCurrentIndex(0);
 }
+
+/**
+ * @brief HomeGui::on_btn_frm2_fav_4_clicked
+ * go to favorite page in customer page which show favorite products in this customer
+ */
 void HomeGui::on_btn_frm2_fav_4_clicked() // Favorite
 {
     if (!users->c->Favorite.empty()) ui->lb_NoProduct_2_4->setVisible(false);
@@ -722,6 +923,10 @@ void HomeGui::on_btn_frm2_fav_4_clicked() // Favorite
     AddProductToLists(ui->verticalLayout_28, ui->frm_scroll_2_4, "#0c3d5a", users->c->Favorite, "Favorite", 4);
     ui->stackedWidget_cust_4->setCurrentIndex(2);
 }
+/**
+ * @brief HomeGui::on_btn_frm2_fav_4_clicked
+ * go to cart page in customer page which show products this customer want to buy and calculate the total price
+ */
 void HomeGui::on_btn_frm2_Cart_4_clicked() // Cart
 {
     users->c->My_Cart.TotalPrice = 0;
@@ -767,6 +972,13 @@ void HomeGui::on_btn_frm2_Cart_4_clicked() // Cart
 
     ui->stackedWidget_cust_4->setCurrentIndex(1);
 }
+
+/**
+ * @brief HomeGui::on_btn_edit_4_clicked
+ * edit customer info
+ *
+ * set all textbox with customer info which make the user can edit his data
+ */
 void HomeGui::on_btn_edit_4_clicked()
 {
     eye_password=0;
@@ -788,6 +1000,12 @@ void HomeGui::on_btn_edit_4_clicked()
 
     ui->stackedWidget_cust_4->setCurrentIndex(3);
 }
+
+/**
+ * @brief HomeGui::on_btn_addPhoto_3_4_clicked
+ * open file dialog to choose photo and make it with filter to choose imags with spicifec extention
+ * and set hight & width
+ */
 void HomeGui::on_btn_addPhoto_3_4_clicked()
 {
     ImgPath = (QFileDialog::getOpenFileName(this, tr("Choose "), "", tr("Image(*.jpg *.jpeg)"))).toStdString();
@@ -800,6 +1018,11 @@ void HomeGui::on_btn_addPhoto_3_4_clicked()
 
     ui->lb_ImgOfCustomer_3_4->setPixmap(QPixmap::fromImage(img));
 }
+
+/**
+ * @brief HomeGui::on_btn_done_3_4_clicked
+ * take data from textbox and reset cutomer data after changed
+ */
 void HomeGui::on_btn_done_3_4_clicked()
 {
     string fname, lname, phone, address, pass;
@@ -831,6 +1054,14 @@ void HomeGui::on_btn_done_3_4_clicked()
     SetCustomerProfile();
     on_btn_frm2_Home_4_clicked();
 }
+
+/**
+ * @brief HomeGui::RemoveFromList
+ * @param id ->> product id
+ * @param container ->> list name
+ *
+ * check if the user sure want to remove product and send id to function to remove it
+ */
 void HomeGui::RemoveFromList(int id, string container)
 {
     QMessageBox::StandardButton reply = QMessageBox::question(this, "",("Are you sure you want remove product from "+container+" ?").c_str());
@@ -848,6 +1079,13 @@ void HomeGui::RemoveFromList(int id, string container)
     }
 //    QMessageBox::information(this, "Successful operation",("Product successfully removed from "+container+" !").c_str());
 }
+
+/**
+ * @brief HomeGui::on_btn_checkOut_1_4_clicked
+ * open window of check out that show total price , number of days of dilevary and address of order ,
+ * then add each product to his seller wallet and check if this product quantity finished
+ * so remove it for ever then clear all product from cart
+ */
 void HomeGui::on_btn_checkOut_1_4_clicked()
 {
     users->c->IsCompletedProfile();
@@ -897,6 +1135,13 @@ void HomeGui::on_btn_checkOut_1_4_clicked()
     users->c->My_Cart.AddedProducts.clear();
     on_btn_frm2_Cart_4_clicked();
 }
+
+/**
+ * @brief HomeGui::SwitchAd_CustomerPage
+ * switch between ads
+ *
+ * this function called after each timer
+ */
 void HomeGui::SwitchAd_CustomerPage() // Swicht Ads
 {
     if (IndexOfAdCustomerProfile > 5) IndexOfAdCustomerProfile=1;
@@ -908,7 +1153,17 @@ void HomeGui::SwitchAd_CustomerPage() // Swicht Ads
 
 
 
+
+
+
+
+
+
 //   -------->  Prodact Page  <-----------
+/**
+ * @brief HomeGui::SetProductPage
+ * set product information to each label
+ */
 void HomeGui::SetProductPage()
 {
     ui->lb_ID_7->setText(("ID :  "+to_string(users->p->ID)).c_str());
@@ -964,12 +1219,22 @@ void HomeGui::SetProductPage()
     CheckSeller();
     ui->stackedWidget_product_7->setCurrentIndex(0);
 }
+
+/**
+ * @brief HomeGui::on_btn_frm1_Home_7_clicked
+ * go to home page in product page
+ */
 void HomeGui::on_btn_frm1_Home_7_clicked()  // SetProductPage
 {
     SetProductPage();
     ui->stackedWidget_main->setCurrentIndex(7);
     ui->lb_NotEnough_0_7->setVisible(false);
 }
+
+/**
+ * @brief HomeGui::on_btn_frm1_Feedaback_7_clicked
+ * call finction that push label of comments then set label and progressbar with rate percentage
+ */
 void HomeGui::on_btn_frm1_Feedaback_7_clicked()
 {
     if (users->p->Comments.empty()) ui->lb_NoFeedBack_1_7->setVisible(true);
@@ -1014,12 +1279,22 @@ void HomeGui::on_btn_frm1_Feedaback_7_clicked()
 
     ui->stackedWidget_product_7->setCurrentIndex(1);
 }
+
+/**
+ * @brief HomeGui::on_btn_sellerName_0_7_clicked
+ * set pointer on seller that sell this product , save currunt page to stack back and go to seller veiw page
+ */
 void HomeGui::on_btn_sellerName_0_7_clicked()
 {
     users->s = &users->data->SellerArr[users->p->Seller_mail];
     users->data->BackToPage.push({7, users->p->ID});
     SetSellerViewPage();
 }
+
+/**
+ * @brief HomeGui::on_btn_addCart_0_7_clicked
+ * check if he login or not then add the product to cart
+ */
 void HomeGui::on_btn_addCart_0_7_clicked()
 {
     ui->lb_NotEnough_0_7->setVisible(false);
@@ -1038,8 +1313,12 @@ void HomeGui::on_btn_addCart_0_7_clicked()
         ui->lb_deliver_0_7->setVisible(false);
         ui->lb_NotEnough_0_7->setVisible(true);
     }
-
 }
+
+/**
+ * @brief HomeGui::on_btn_addFavorite_0_7_clicked
+ * check if he login or not then add the product to favorite list
+ */
 void HomeGui::on_btn_addFavorite_0_7_clicked()
 {
     if (ui->btn_frm1_Login_7->text() == "Log in")
@@ -1050,6 +1329,11 @@ void HomeGui::on_btn_addFavorite_0_7_clicked()
     users->c->Favorite[users->p->ID] = users->p;
     ui->lb_done_0_7->setVisible(true);
 }
+
+/**
+ * @brief HomeGui::on_btn_AddRate_1_7_clicked
+ * show fram of rate
+ */
 void HomeGui::on_btn_AddRate_1_7_clicked()
 {
     if (ui->btn_frm1_Login_7->text() == "Log in")
@@ -1062,6 +1346,11 @@ void HomeGui::on_btn_AddRate_1_7_clicked()
 
     ui->frm1_AddFeedback_1_7->setVisible(true);
 }
+
+/**
+ * @brief HomeGui::on_btn_Submit_1_7_clicked
+ * take input from users and check validation then record the rate
+ */
 void HomeGui::on_btn_Submit_1_7_clicked()
 {
     ui->frm1_AddFeedback_1_7->setVisible(false);
@@ -1102,17 +1391,34 @@ void HomeGui::on_btn_Submit_1_7_clicked()
     ui->lineEdit_frm1_comment_1_7->setText("");
     on_btn_frm1_Feedaback_7_clicked();
 }
+
+/**
+ * @brief HomeGui::on_btn_plus_0_7_clicked
+ * increase number of product
+ */
 void HomeGui::on_btn_plus_0_7_clicked()
 {
     NumberOfProductForOrder++;
     ui->lb_NumOfProduct_0_7->setText(to_string(NumberOfProductForOrder).c_str());
 }
+
+/**
+ * @brief HomeGui::on_btn_minus_0_7_clicked
+ * decrease number of product
+ */
 void HomeGui::on_btn_minus_0_7_clicked()
 {
     NumberOfProductForOrder--;
     if (NumberOfProductForOrder<1) NumberOfProductForOrder=1;
     ui->lb_NumOfProduct_0_7->setText(to_string(NumberOfProductForOrder).c_str());
 }
+
+/**
+ * @brief HomeGui::SwitchAd_ProductPage
+ * switch between ads
+ *
+ * this function called after each timer
+ */
 void HomeGui::SwitchAd_ProductPage() // Swicht Ads
 {
     if (IndexOfProductads > 5) IndexOfProductads=1;
@@ -1124,7 +1430,18 @@ void HomeGui::SwitchAd_ProductPage() // Swicht Ads
 
 
 
+
+
+
+
+
+
 //   -------->  Seller Profile  <-----------
+
+/**
+ * @brief HomeGui::SetSellerProfile
+ * set labels of page with seller information
+ */
 void HomeGui::SetSellerProfile()
 {
     ui->lb_frm1_Name_5->setText((users->s->FirstName + " " + users->s->SecondName).c_str());
@@ -1147,6 +1464,11 @@ void HomeGui::SetSellerProfile()
     on_btn_frm2_Home_5_clicked();
     ui->stackedWidget_main->setCurrentIndex(5);
 }
+
+/**
+ * @brief HomeGui::on_btn_frm2_Home_5_clicked
+ * go to home page in seller page
+ */
 void HomeGui::on_btn_frm2_Home_5_clicked()
 {
     if (users->s->ProfileCompleted)
@@ -1163,6 +1485,11 @@ void HomeGui::on_btn_frm2_Home_5_clicked()
 
     ui->stackedWidget_SellerProfile_5->setCurrentIndex(0);
 }
+
+/**
+ * @brief HomeGui::on_btn_frm2_Products_5_clicked
+ * go to product page in seller page
+ */
 void HomeGui::on_btn_frm2_Products_5_clicked()
 {
     if (!users->s->SelledProducts.empty()) ui->lb_NoProduct_1_5->setVisible(false);
@@ -1171,6 +1498,11 @@ void HomeGui::on_btn_frm2_Products_5_clicked()
     AddProductToLists(ui->verticalLayout_30, ui->frm_scroll_1_5, "#2880AE", users->s->SelledProducts, "Available", 5);
     ui->stackedWidget_SellerProfile_5->setCurrentIndex(1);
 }
+
+/**
+ * @brief HomeGui::on_btn_frm2_Wallet_5_clicked
+ * go to wallet history page in seller page then push wallet history details to layout and calculate total profit
+ */
 void HomeGui::on_btn_frm2_Wallet_5_clicked()
 {
     if (users->s->Wallet_History2.empty()) ui->lb_NoProduct_2_5->setVisible(true);
@@ -1196,6 +1528,11 @@ void HomeGui::on_btn_frm2_Wallet_5_clicked()
 
     ui->stackedWidget_SellerProfile_5->setCurrentIndex(2);
 }
+
+/**
+ * @brief HomeGui::on_btn_frm2_Feedback_5_clicked
+ * go to feedback page in seller page then call function that push comments and set label with rate
+ */
 void HomeGui::on_btn_frm2_Feedback_5_clicked()
 {
     if (users->s->Comments.empty()) ui->lb_NoFeedBack_2_5->setVisible(true);
@@ -1210,6 +1547,11 @@ void HomeGui::on_btn_frm2_Feedback_5_clicked()
 
     ui->stackedWidget_SellerProfile_5->setCurrentIndex(3);
 }
+
+/**
+ * @brief HomeGui::on_btn_frm1_EditProfile_5_clicked
+ * go to edite profile page in seller page then set all textbox with all data of seller
+ */
 void HomeGui::on_btn_frm1_EditProfile_5_clicked()
 {
     eye_password=0;
@@ -1233,6 +1575,11 @@ void HomeGui::on_btn_frm1_EditProfile_5_clicked()
 
     ui->stackedWidget_SellerProfile_5->setCurrentIndex(4);
 }
+
+/**
+ * @brief HomeGui::on_btn_addPhotoProfile_4_5_clicked
+ * open file dialog to choose photo
+ */
 void HomeGui::on_btn_addPhotoProfile_4_5_clicked()
 {
     ImgPath = (QFileDialog::getOpenFileName(this, tr("Choose "), "", tr("Image(*.jpg *.jpeg)"))).toStdString();
@@ -1244,6 +1591,11 @@ void HomeGui::on_btn_addPhotoProfile_4_5_clicked()
 
     ui->lb_ImgOfSeller_4_5->setPixmap(QPixmap::fromImage(img));
 }
+
+/**
+ * @brief HomeGui::on_btn_done_4_5_clicked
+ * take data from labels then check validation of data then save it
+ */
 void HomeGui::on_btn_done_4_5_clicked()
 {
     string fname, lname, phone, address, pass, description;
@@ -1281,12 +1633,24 @@ void HomeGui::on_btn_done_4_5_clicked()
 
     SetSellerProfile();
 }
+
+/**
+ * @brief HomeGui::on_btn_search_5_clicked
+ * open search window
+ */
 void HomeGui::on_btn_search_5_clicked()
 {
     SellerSearchGui search(users);
     search.setModal(true);
     search.exec();
 }
+
+/**
+ * @brief HomeGui::EditProduct
+ * @param pro ->> product who will edit
+ *
+ * set all textbox with data of product
+ */
 void HomeGui::EditProduct(Product *pro)
 {
     users->p = pro;
@@ -1312,6 +1676,11 @@ void HomeGui::EditProduct(Product *pro)
 
     ui->stackedWidget_SellerProfile_5->setCurrentIndex(5);
 }
+
+/**
+ * @brief HomeGui::on_btn_AddProduct_1_5_clicked
+ * go to edit product page in seller page then clear all fields
+ */
 void HomeGui::on_btn_AddProduct_1_5_clicked()
 {
     IsEditProduct=false;
@@ -1334,6 +1703,11 @@ void HomeGui::on_btn_AddProduct_1_5_clicked()
     ui->stackedWidget_SellerProfile_5->setCurrentIndex(5);
 
 }
+
+/**
+ * @brief HomeGui::on_btn_addPhotoProduct_5_5_clicked
+ * open file dialog to add photo
+ */
 void HomeGui::on_btn_addPhotoProduct_5_5_clicked()
 {
     int id;
@@ -1347,6 +1721,12 @@ void HomeGui::on_btn_addPhotoProduct_5_5_clicked()
     else img=img.scaledToWidth(ui->lb_ImgOfProduct_5->width(), Qt::SmoothTransformation);
     ui->lb_ImgOfProduct_5->setPixmap(QPixmap::fromImage(img));
 }
+
+/**
+ * @brief HomeGui::on_btn_done_5_5_clicked
+ * take data from textbox then check validation of data then save it then clear
+ * all fields then call function that go to home page in seller page
+ */
 void HomeGui::on_btn_done_5_5_clicked()
 {
     // --------->> Take data from User <<--------------
@@ -1445,6 +1825,13 @@ void HomeGui::on_btn_done_5_5_clicked()
 
     on_btn_frm2_Home_5_clicked();
 }
+
+/**
+ * @brief HomeGui::SwitchAd_SellerProfile
+ * switch between ads
+ *
+ * this function called after each timer
+ */
 void HomeGui::SwitchAd_SellerProfile() // Swicht Ads
 {
     if(IndexOfAdSellerProfile>4) IndexOfAdSellerProfile=1;
@@ -1457,7 +1844,20 @@ void HomeGui::SwitchAd_SellerProfile() // Swicht Ads
 
 
 
+
+
+
+
+
+
+
+
 //   -------->  Seller View  <-----------
+
+/**
+ * @brief HomeGui::SetSellerViewPage
+ * set all data of seller in labels
+ */
 void HomeGui::SetSellerViewPage()
 {
     ui->lb_frm1_Name_6->setText((users->s->FirstName + " " + users->s->SecondName).c_str());
@@ -1480,10 +1880,21 @@ void HomeGui::SetSellerViewPage()
     ui->stackedWidget_main->setCurrentIndex(6);
     on_btn_frm2_Home_6_clicked();
 }
+
+/**
+ * @brief HomeGui::on_btn_frm2_Home_6_clicked
+ * go to home page in seller view page
+ */
 void HomeGui::on_btn_frm2_Home_6_clicked()
 {
     ui->stackedWidget_SellerView_6->setCurrentIndex(0);
 }
+
+/**
+ * @brief HomeGui::on_btn_frm2_avaliable_6_clicked
+ * go to avalible page in seller view page then make each product as widget
+ * then connect buttons with there functions then add it to layout
+ */
 void HomeGui::on_btn_frm2_avaliable_6_clicked()
 {
     clearLayout(ui->gridLayout_7);
@@ -1506,6 +1917,11 @@ void HomeGui::on_btn_frm2_avaliable_6_clicked()
 
     ui->stackedWidget_SellerView_6->setCurrentIndex(1);
 }
+
+/**
+ * @brief HomeGui::on_btn_frm2_Feedback_6_clicked
+ * check if there feedback or not then call function that push comments
+ */
 void HomeGui::on_btn_frm2_Feedback_6_clicked()
 {
     if (users->s->Comments.empty()) ui->lb_NoFeedBack_2_6->setVisible(true);
@@ -1521,6 +1937,11 @@ void HomeGui::on_btn_frm2_Feedback_6_clicked()
     ui->lb_rate_2_6->setText("( "+QString::number(users->s->FinalRate, 'f', 1)+" )");
     ui->stackedWidget_SellerView_6->setCurrentIndex(2);
 }
+
+/**
+ * @brief HomeGui::on_btn_frm1_AddRate_6_clicked
+ * show rate fram
+ */
 void HomeGui::on_btn_frm1_AddRate_6_clicked()
 {
     if (ui->btn_frm1_Login_7->text() == "Log in")
@@ -1535,6 +1956,11 @@ void HomeGui::on_btn_frm1_AddRate_6_clicked()
     ui->txtbrowser_Description_0_6->setFixedHeight(265);
     ui->frm3_AddFeedback_0_6->setGeometry(0, 340, 911, 71);
 }
+
+/**
+ * @brief HomeGui::on_btn_frm3_Submit_0_6_clicked
+ * take rate data from user then ckeck validation of data then save it
+ */
 void HomeGui::on_btn_frm3_Submit_0_6_clicked()
 {
     ui->frm3_AddFeedback_0_6->setGeometry(0, 440, 911, 71);
@@ -1575,6 +2001,13 @@ void HomeGui::on_btn_frm3_Submit_0_6_clicked()
     ui->txtEdit_frm3_Rate_0_6->setText("");
     ui->txtEdit_frm3_Comment_0_6->setText("");
 }
+
+/**
+ * @brief HomeGui::SwitchAd_SetSellerViewPage
+ * switch between ads
+ *
+ * this function called after each timer
+ */
 void HomeGui::SwitchAd_SetSellerViewPage() // Swicht Ads
 {
     if (IndexOfAdSellerInfoView > 3) IndexOfAdSellerInfoView=1;
@@ -1587,7 +2020,20 @@ void HomeGui::SwitchAd_SetSellerViewPage() // Swicht Ads
 
 
 
+
+
+
+
+
+
+
 //   -------->  Admin Page  <-----------
+
+/**
+ * @brief HomeGui::on_btn_Customers_clicked
+ * clear layout then make each customer as a widget then connect buttons with
+ * functions then push it to layout then go to customers page in the admin page
+ */
 void HomeGui::on_btn_Customers_clicked()
 {
     clearLayout(ui->verticalLayout_38);
@@ -1612,6 +2058,12 @@ void HomeGui::on_btn_Customers_clicked()
 
     ui->stackedWidget_admin->setCurrentIndex(0);
 }
+
+/**
+ * @brief HomeGui::on_btn_Sellers_clicked
+ * clear layout then make each seller as a widget then connect buttons with
+ * functions then push it to layout then go to sellers page in the admin page
+ */
 void HomeGui::on_btn_Sellers_clicked()
 {
     clearLayout(ui->verticalLayout_35);
@@ -1636,11 +2088,22 @@ void HomeGui::on_btn_Sellers_clicked()
 
     ui->stackedWidget_admin->setCurrentIndex(1);
 }
+
+/**
+ * @brief HomeGui::on_btn_Products_clicked
+ * call function that push product to layout the go to products page in the admin page
+ */
 void HomeGui::on_btn_Products_clicked()
 {
     AddProductToLists(ui->verticalLayout_32, ui->frm_scroll_1_7, "#0c3d5a", users->data->ProductArr2, "Admin", 8);
     ui->stackedWidget_admin->setCurrentIndex(2);
 }
+
+/**
+ * @brief HomeGui::on_btn_Feedback_clicked
+ * make each comment in label then make it with custom style then
+ * push it to layout then go to comments page to the admin page
+ */
 void HomeGui::on_btn_Feedback_clicked()
 {
     if (users->data->AdminComments.empty()) ui->lb_NoFeedBack_8_8->setVisible(true);
@@ -1667,16 +2130,31 @@ void HomeGui::on_btn_Feedback_clicked()
 
     ui->stackedWidget_admin->setCurrentIndex(3);
 }
+
+/**
+ * @brief HomeGui::on_btn_ClearComments_3_8_clicked
+ * clear layout of comments then recall the page
+ */
 void HomeGui::on_btn_ClearComments_3_8_clicked()
 {
     users->data->AdminComments.clear();
     on_btn_Feedback_clicked();
 }
+
+/**
+ * @brief HomeGui::on_btn_back_8_clicked
+ * call function that relaod data in each datastructure then call function that reset every thing then go to home page
+ */
 void HomeGui::on_btn_back_8_clicked()
 {
     users->ReloadData();
     GoToHome();
 }
+
+/**
+ * @brief HomeGui::on_btn_Home_8_clicked
+ * go to home page in admin page
+ */
 void HomeGui::on_btn_Home_8_clicked()
 {
     ui->stackedWidget_admin->setCurrentIndex(4);

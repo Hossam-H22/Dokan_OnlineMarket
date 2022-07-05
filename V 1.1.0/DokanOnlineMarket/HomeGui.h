@@ -56,7 +56,7 @@ private slots:
     void on_btn_frm3_ContactUs_3_clicked();
 
 
-    //   -------->  Customer Profile  <-----------
+    //   -------->  Customer Profile Page  <-----------
     void on_btn_frm2_fav_4_clicked();
     void on_btn_frm2_Cart_4_clicked();
     void on_btn_frm2_Home_4_clicked();
@@ -80,7 +80,7 @@ private slots:
 
 
 
-    //   -------->  Seller Profile  <-----------
+    //   -------->  Seller Profile Page  <-----------
     void on_btn_frm2_Home_5_clicked();
     void on_btn_frm2_Products_5_clicked();
     void on_btn_frm2_Wallet_5_clicked();
@@ -95,7 +95,7 @@ private slots:
 
 
 
-    //   -------->  Seller View  <-----------
+    //   -------->  Seller View Page  <-----------
     void on_btn_frm1_AddRate_6_clicked();
     void on_btn_frm3_Submit_0_6_clicked();
     void on_btn_frm2_Home_6_clicked();
@@ -140,7 +140,7 @@ public:
     void ShowErrorPage();
 
 
-    //   -------->  Customer Profile  <-----------
+    //   -------->  Customer Profile Page  <-----------
     void SetCustomerProfile();
     void SwitchAd_CustomerPage();
     void RemoveFromList(int id, string container);
@@ -152,14 +152,14 @@ public:
     void SetProductPage();
 
 
-    //   -------->  Seller Profile  <-----------
+    //   -------->  Seller Profile Page  <-----------
     void SetSellerProfile();
     void SwitchAd_SellerProfile();
     void EditProduct(Product *pro);
     void DeleteProductForEver(int id, QLayout *ly);
 
 
-    //   -------->  Seller View  <-----------
+    //   -------->  Seller View Page  <-----------
     void SetSellerViewPage();
     void SwitchAd_SetSellerViewPage();
 

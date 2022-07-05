@@ -1,6 +1,14 @@
 #include "ProductInSearchGuiWidget.h"
 #include "ui_ProductInSearchGuiWidget.h"
 
+
+/**
+ * @brief ProductInSearchGuiWidget::ProductInSearchGuiWidget
+ * @param p ->> pointer of product
+ * @param path ->> path of files in computer
+ * make widget of product and set labels with product information
+ */
+
 ProductInSearchGuiWidget::ProductInSearchGuiWidget(Product *p, string path, QWidget *parent) :
     QWidget(parent), ui(new Ui::ProductInSearchGuiWidget)
 {

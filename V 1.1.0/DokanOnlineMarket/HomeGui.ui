@@ -53,7 +53,7 @@ background-color: #2880AE;
 }</string>
       </property>
       <property name="currentIndex">
-       <number>8</number>
+       <number>7</number>
       </property>
       <widget class="QWidget" name="pg_0_Start">
        <property name="styleSheet">

@@ -1,6 +1,7 @@
 #include "SellerSearchGui.h"
 #include "./ui_SellerSearchGui.h"
 
+
 SellerSearchGui::SellerSearchGui(Controller *user, QWidget *parent) :
     QDialog(parent), ui(new Ui::SellerSearchGui)
 {
@@ -9,6 +10,11 @@ SellerSearchGui::SellerSearchGui(Controller *user, QWidget *parent) :
     ui->lb_NoProduct->setVisible(false);
 }
 
+/**
+ * @brief SellerSearchGui::clearLayout
+ * @param layout ->> the layout that will remove
+ * make widget of product and set labels with product information
+ */
 void SellerSearchGui::clearLayout(QLayout *layout)
 {
     if (layout == NULL) return;
@@ -25,6 +31,11 @@ void SellerSearchGui::clearLayout(QLayout *layout)
     }
 }
 
+/**
+ * @brief SellerSearchGui::on_btn_search_clicked
+ * it's take input from user to search with it in products list and
+ * if found the product will push to layout to show for user
+ */
 void SellerSearchGui::on_btn_search_clicked()
 {
     ui->lb_NoProduct->setVisible(false);

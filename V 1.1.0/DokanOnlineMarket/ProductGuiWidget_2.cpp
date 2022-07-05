@@ -1,6 +1,17 @@
 #include "ProductGuiWidget_2.h"
 #include "ui_ProductGuiWidget_2.h"
 
+
+/**
+ * @brief ProductGuiWidget_2::ProductGuiWidget_2
+ * @param p ->> pointer of product
+ * @param path ->> path of files in computer
+ * @param container ->> name of place that will widget show at it
+ * @param color ->> background color of widget
+ * @param quantity ->> quantity of this product
+ * make widget of product and set labels with product information and set icons on buttons depended on container that will apper on it
+ */
+
 ProductGuiWidget_2::ProductGuiWidget_2(Product *p, string path, string container, string color, int quantity, QWidget *parent) :
     QWidget(parent), ui(new Ui::ProductGuiWidget_2)
 {

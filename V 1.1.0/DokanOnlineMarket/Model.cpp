@@ -5,18 +5,8 @@ Model::Model(string s)
 {
     this->PathOfFile = s;
     Get_Data();
-
-
-//    AdminComments.push_back("usjkbgrf#liksanmdvf#ligknrdf");
-//    AdminComments.push_back("usjkbgrf#liksanmdvf#ligknrdf");
-//    AdminComments.push_back("usjkbgrf#liksanmdvf#ligknrdf");
-//    AdminComments.push_back("usjkbgrf#liksanmdvf#ligknrdf");
-//    AdminComments.push_back("usjkbgrf#liksanmdvf#ligknrdf");
-//    AdminComments.push_back("usjkbgrf#liksanmdvf#ligknrdf");
-//    AdminComments.push_back("usjkbgrf#liksanmdvf#ligknrdf");
-//    AdminComments.push_back("usjkbgrf#liksanmdvf#ligknrdf");
-//    AdminComments.push_back("usjkbgrf#liksanmdvf#ligknrdf");
 }
+
 Model::Model()
 {
     Get_Data();
@@ -26,6 +16,7 @@ Model::~Model() {}
 
 /**
  * @brief Model::Get_Data
+ * Call all funcition which get data from files to the program
  */
 void Model::Get_Data()
 {
@@ -41,8 +32,10 @@ void Model::Get_Data()
 
 }
 
+
 /**
  * @brief Model::Get_Seller_Data
+ * Get Seller information from files to the program
  */
 void Model::Get_Seller_Data()
 {
@@ -83,13 +76,13 @@ void Model::Get_Seller_Data()
         CountSeller = max(ID, CountSeller);
     }
     file.close();
-//    file.remove();
-
     CountSeller++;
 }
 
+
 /**
  * @brief Model::Get_SellerComments_Data
+ * Get Comments of each seller from files to the program
  */
 void Model::Get_SellerComments_Data()
 {
@@ -112,11 +105,12 @@ void Model::Get_SellerComments_Data()
         SellerArr[Seller_mail].Comments.push_back(Comment);
     }
     file.close();
-//    file.remove();
 }
+
 
 /**
  * @brief Model::Get_SellerWalletHistory_Data
+ * Get wallet history of each seller from files to the program
  */
 void Model::Get_SellerWalletHistory_Data()
 {
@@ -145,11 +139,12 @@ void Model::Get_SellerWalletHistory_Data()
         SellerArr[Seller_mail].Wallet_History2.push_back(new_data);
     }
     file.close();
-//    file.remove();
 }
+
 
 /**
  * @brief Model::Get_Product_Data
+ * Get Product details from files to the program
  */
 void Model::Get_Product_Data()
 {
@@ -199,13 +194,13 @@ void Model::Get_Product_Data()
         CountProduct = max(ID,CountProduct);
     }
     file.close();
-//    file.remove();
-
     CountProduct++;
 }
 
+
 /**
  * @brief Model::Get_ProductComments_Data
+ * Get Comments of each product from files to the program
  */
 void Model::Get_ProductComments_Data()
 {
@@ -229,11 +224,12 @@ void Model::Get_ProductComments_Data()
         ProductArr2[Product_ID]->Comments.push_back(Comment);
     }
     file.close();
-//    file.remove();
 }
+
 
 /**
  * @brief Model::Get_Customer_Data
+ * Get Customer information from files to the program
  */
 void Model::Get_Customer_Data()
 {
@@ -268,13 +264,13 @@ void Model::Get_Customer_Data()
         CountCustomer = max(CountCustomer, c.ID);
     }
     file.close();
-//    file.remove();
-
     CountCustomer++;
 }
 
+
 /**
  * @brief Model::Get_CustomerFavorite_Data
+ * Get favorite list of each customer from files to the program
  */
 void Model::Get_CustomerFavorite_Data()
 {
@@ -299,11 +295,12 @@ void Model::Get_CustomerFavorite_Data()
         CustomerArr[Customer_mail].Favorite[Product_ID] = ProductArr2[Product_ID];
     }
     file.close();
-//    file.remove();
 }
+
 
 /**
  * @brief Model::Get_CustomerCartProduct_Data
+ * Get Cart details of each customer from files to the program
  */
 void Model::Get_CustomerCartProduct_Data()
 {
@@ -329,10 +326,13 @@ void Model::Get_CustomerCartProduct_Data()
         CustomerArr[Customer_mail].My_Cart.AddProduct(ProductArr2[Product_ID], quantity);
     }
     file.close();
-//    file.remove();
 }
 
 
+/**
+ * @brief Model::Get_AdminComments
+ * Get Admin Comments from files to the program
+ */
 void Model::Get_AdminComments()
 {
     string x = PathOfFile + "data/Admin Comment.csv";
@@ -580,6 +580,15 @@ void Model::Push_Product_Data()
 }
 
 
+/**
+ * @brief Model::Push_Product_Data
+ *
+ * this fuction take Comments where saved in data structure
+ *
+ * -->> vector<string> AdminComments;
+ *
+ * and push them in files CSV to store them in your local storage in your computer
+ */
 void Model::Push_AdminComments()
 {
     string x1 = PathOfFile + "data/Admin Comment.csv";

@@ -62,6 +62,12 @@ Seller::Seller(int Id, string FirstName, string SecondName, string Phone, string
     CalculateRate();
 }
 
+
+/**
+ * @brief Seller::CalculateRate
+ * @param UserRate ->> the rate that user add it
+ * calculate final rate after user add his rate
+ */
 void Seller::CalculateRate(float UserRate)
 {
     if (UserRate != -1)
@@ -80,6 +86,13 @@ void Seller::IsCompletedProfile(){
     else
         ProfileCompleted = true;
 }
+
+/**
+ * @brief Seller::AddToWallet
+ * @param pro ->> pointer of product
+ * @param quantity ->> quantity of this product
+ * add details of selled product to wallet of seller
+ */
 void Seller::AddToWallet(Product *pro, int quantity)
 {
     WalletData a;
@@ -92,8 +105,11 @@ void Seller::AddToWallet(Product *pro, int quantity)
     Wallet += pro->PriceAfterOffer;
 }
 
+/**
+ * @brief Seller::RemoveProduct
+ * @param id ->> product id who will remove for ever
+ */
 void Seller::RemoveProduct(int id)
 {
-//    if (SelledProducts[id] == nullptr) return;
     SelledProducts.erase(id);
 }
