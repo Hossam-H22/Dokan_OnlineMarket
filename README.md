@@ -1,9 +1,12 @@
 # Dokan Online Market
 
 <br>
+
 > ## Description
 An online marketplace is an e-commerce platform that links sellers with customers ander control of Admin, whish seller can offer products and Every customer can browse or add products to his cart, display the total cost (receipt) for the customer.
 To facilitate the search process, the products are divided into categories.
+
+<br>
 
 <details>
   <summary>:zap: Dimo Video</summary>
@@ -71,7 +74,10 @@ To facilitate the search process, the products are divided into categories.
 
 <br>
 
-#### <a href="">Entity relationship diagram explanation</a>
+![Dokan ERD](https://user-images.githubusercontent.com/88390970/177413189-304e518a-4977-4303-843c-b50f6026e6f6.jpg)
+
+
+#### <a href="https://user-images.githubusercontent.com/88390970/177413189-304e518a-4977-4303-843c-b50f6026e6f6.jpg">Entity relationship diagram explanation</a>
 
 
 
