@@ -5,7 +5,7 @@
 > ## Description
 An online marketplace is an e-commerce platform that links sellers with customers ander control of Admin, whish seller can offer products and Every customer can browse or add products to his cart, display the total cost (receipt) for the customer.
 To facilitate the search process, the products are divided into categories.
-*<a href="">For Dimo Video Click Here</a>*
+*<a href="#" target="_blank">Dimo Video⚡</a>*
 
 
 <br>
@@ -71,7 +71,7 @@ To facilitate the search process, the products are divided into categories.
 <br>
 
 <!-- ![Dokan ERD](https://user-images.githubusercontent.com/88390970/177413189-304e518a-4977-4303-843c-b50f6026e6f6.jpg) -->
-#### <a href="https://user-images.githubusercontent.com/88390970/177413189-304e518a-4977-4303-843c-b50f6026e6f6.jpg">Entity relationship diagram explanation</a>
+#### <a href="https://user-images.githubusercontent.com/88390970/177413189-304e518a-4977-4303-843c-b50f6026e6f6.jpg" target="_blank">Entity relationship diagram explanation</a>
 
 
 
