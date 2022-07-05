@@ -11,7 +11,7 @@ To facilitate the search process, the products are divided into categories.
 <br>
 
 > ### Actons in Project
-    There is 3 kinds of users
+    There is 3 kinds of users. 
     1. Customer
         - Register by entering his information (name, email, …).
         - Login using Email & Password.
