@@ -1,1 +1,83 @@
-# Dokan_OnlineMarket
+# Dokan Online Market
+
+> ## Description
+An online marketplace is an e-commerce platform that links sellers with customers ander control of Admin, whish seller can offer products and Every customer can browse or add products to his cart, display the total cost (receipt) for the customer.
+To facilitate the search process, the products are divided into categories.
+
+
+
+<br>
+
+> ### Actons in Project
+    There is 3 kinds of users
+    1. Customer
+        - Register by entering his information (name, email, …).
+        - Login using Email & Password.
+        - Browse products by its category, or name.
+        - Sort the products in any category by rate, name, price.
+        - Add product to his cart if this is available with custom quantity.
+        - Checkout of products in cart.
+        - Add rate and comment for any product, or seller. 
+        - Edit profile information.
+        - Type comments to admin.
+    2. Seller
+        - Register by entering his information (name, email, …).
+        - Login using Email & Password.
+        - Add new product and determine its details (name, category, quantity, price, …).
+        - Edit product information.
+        - remove any product that he selled 
+        - The seller can view his history wallet and total profit.
+        - Show his feedback page.
+        - The seller can search on any product by its name.
+        - Edit profile information.
+        - Type comments to admin.
+    3. Admin
+        - Delete any Customer.
+        - Delete any Seller.
+        - Delete any product.
+        - Read comments from users.
+
+<br>
+
+> ### Designs & Models are used
+    - MVC model.
+    - Qt FrameWork (GUI).
+
+<br>
+
+> ## Versions of app
+    - v 1.0.0
+    - v 1.1.0
+        a. admin page that can dalete any customer, seler, product.
+        b. any user can type comments for admin.
+
+<br>
+
+> ### Progaraming language
+    - C++
+
+<br>
+
+> ### DataSructures are used
+    - unordered_map
+    - vector
+    - stack
+    - array
+
+
+<br>
+
+#### <a href="">Entity relationship diagram explanation</a>
+
+
+
+<br>
+
+|                                  Our Team Members                                  | 
+| ---------------------------------------------------------------------------------- | 
+|    *<a href="https://github.com/Dragon-H22/" target="_blank">Hossam Hatem</a>*     | 
+| *<a href="https://github.com/BassantHossam20" target="_blank">Bassant Hossam</a>*  | 
+|      *<a href="https://github.com/aya-mourad" target="_blank">Aya Usama</a>*       |
+|       *<a href="https://github.com/0mar01" target="_blank">Omar Khaled</a>*        | 
+|  *<a href="https://github.com/KarimMetwaly19" target="_blank">Karim Metwaly</a>*   | 
+|      *<a href="https://github.com/OsaamaAlaa" target="_blank">Usama Alaa</a>*      | 
