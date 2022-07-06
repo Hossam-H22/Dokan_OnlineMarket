@@ -5,7 +5,7 @@
 > ## Description
 An online marketplace is an e-commerce platform that links sellers with customers ander control of Admin, whish seller can offer products and Every customer can browse or add products to his cart, display the total cost (receipt) for the customer.
 To facilitate the search process, the products are divided into categories.
-*<a href="#" target="_blank"> Dimo Video⚡</a>*
+*<a href="https://youtu.be/59D82BSQSIY" target="_blank"> Demo Video⚡</a>*
 
 
 <br>
@@ -67,6 +67,39 @@ To facilitate the search process, the products are divided into categories.
     - array
 
 
+<br>
+
+> ### UI Forms
+    The UI contains mainly 8 forms (Views):
+    1. Register new users ( customers , sellers )
+    2. Login for normal users ( customers , sellers )
+    3. Home page
+        - Categories
+        - Products list
+    4. Product page
+        - Home
+        - Feedback
+    5. Customer profile
+        - Home
+        - Cart
+        - Favorite
+        - Edit profile
+    6. Seller profile
+        - Home
+        - Available
+        - Wallet History
+        - Feedback
+        - Edit profile
+        - Add product
+    7. Seller veiw profile for customers
+        - Home
+        - Available
+        - Feedback
+    8. Admin page
+        - Home
+        - Customers
+        - Sellers
+        - Feedback
 
 <br>
 
@@ -83,5 +116,5 @@ To facilitate the search process, the products are divided into categories.
 | *<a href="https://github.com/BassantHossam20" target="_blank">Bassant Hossam</a>*  | 
 |      *<a href="https://github.com/aya-mourad" target="_blank">Aya Usama</a>*       |
 |       *<a href="https://github.com/0mar01" target="_blank">Omar Khaled</a>*        | 
-|  *<a href="https://github.com/KarimMetwaly19" target="_blank">Karim Metwaly</a>*   | 
 |      *<a href="https://github.com/OsaamaAlaa" target="_blank">Usama Alaa</a>*      | 
+|  *<a href="https://github.com/KarimMetwaly19" target="_blank">Karim Metwaly</a>*   | 
