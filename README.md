@@ -1,8 +1,5 @@
 # Dokan Online Market
 
-<br>
-
-> ## Description
 An online marketplace is an e-commerce platform that links sellers with customers under the control of the Admin, in which the sellers can offer products and Every customer can browse or add products to his cart, and display the total cost (receipt) for the customer.
 To facilitate the search process, the products are divided into categories.
 
