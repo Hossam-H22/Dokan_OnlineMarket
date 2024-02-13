@@ -124,10 +124,9 @@ To facilitate the search process, the products are divided into categories.
 
 
 
+<br>
 
 
-
-
-
+![Screenshot 2024-02-13 214631](https://github.com/Hossam-H22/Dokan_OnlineMarket/assets/88390970/4b9d2543-7153-4c27-994c-f227c738833c)
 
 
